@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/NQ-website1/static/css/main.1ae99299.css",
-    "main.js": "/NQ-website1/static/js/main.5a78a138.js",
+    "main.js": "/NQ-website1/static/js/main.524b6160.js",
     "static/js/453.f4d0d7a5.chunk.js": "/NQ-website1/static/js/453.f4d0d7a5.chunk.js",
     "static/media/CoveraCombo.png": "/NQ-website1/static/media/CoveraCombo.7fb78ed0baa45fee6265.png",
     "static/media/ThreeSixtyCombo.png": "/NQ-website1/static/media/ThreeSixtyCombo.e77887d76881f5d5b031.png",
@@ -17,11 +17,11 @@
     "static/media/Ecommerce2.png": "/NQ-website1/static/media/Ecommerce2.e60079c28793b1b701c6.png",
     "index.html": "/NQ-website1/index.html",
     "main.1ae99299.css.map": "/NQ-website1/static/css/main.1ae99299.css.map",
-    "main.5a78a138.js.map": "/NQ-website1/static/js/main.5a78a138.js.map",
+    "main.524b6160.js.map": "/NQ-website1/static/js/main.524b6160.js.map",
     "453.f4d0d7a5.chunk.js.map": "/NQ-website1/static/js/453.f4d0d7a5.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1ae99299.css",
-    "static/js/main.5a78a138.js"
+    "static/js/main.524b6160.js"
   ]
 }
