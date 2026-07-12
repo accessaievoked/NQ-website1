@@ -10,7 +10,7 @@ import Contact from "./pages/Contact";
 
 function App() {
   return (
-    <BrowserRouter basename="/Nq-website">
+    <BrowserRouter basename="/NQ-website1">
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
