@@ -7,12 +7,13 @@ import PromiseDifference from "../components/Promisedifference";
 import Services from "../components/Services";
 import Audiencesection from "../components/Audiencesection";
 import WhyChooseus from "../components/WhyChooseus";
+import Herosection from "../components/Herosection";
 
 const Home = (props) => {
 	return (
 		<div className="flex flex-col bg-white">
 			<div className="flex flex-col items-start self-stretch bg-white">
-        <Ecommerce/>
+        <Herosection/>
 				<LogoTicker/>
         <Perform/>
         <Services/>

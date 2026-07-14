@@ -2,39 +2,6 @@ import React from "react";
 export default (props) => {
 	return (
 		<div className="flex flex-col bg-white">
-			<div className="self-stretch bg-white">
-				<div className="flex justify-between items-start self-stretch bg-white pt-[37px] px-20 mb-[75px]">
-					<img
-						src={"https://storage.googleapis.com/tagjs-prod.appspot.com/v1/hyrhs0Ks0b/acyn3lwu_expires_30_days.png"} 
-						className="w-[108px] h-[43px] object-fill"
-					/>
-					<div className="flex shrink-0 items-center">
-						<span className="text-black text-lg font-bold mr-[33px]" >
-							{"Services"}
-						</span>
-						<span className="text-black text-lg mr-[35px]" >
-							{"Our Work"}
-						</span>
-						<span className="text-black text-lg mr-9" >
-							{"Blogs"}
-						</span>
-						<span className="text-black text-lg" >
-							{"About Us"}
-						</span>
-					</div>
-					<button className="flex shrink-0 items-center bg-[#001930] text-left py-2.5 px-[26px] gap-4 rounded-[100px] border-0"
-						onClick={()=>alert("Pressed!")}>
-						<span className="text-white text-sm" >
-							{"Contact Us"}
-						</span>
-						<img
-							src={"https://storage.googleapis.com/tagjs-prod.appspot.com/v1/hyrhs0Ks0b/5zx4dv8d_expires_30_days.png"} 
-							className="w-5 h-5 object-fill"
-						/>
-					</button>
-				</div>
-				<div className="self-stretch bg-[#D9D9D9] h-[822px] mb-[200px]">
-				</div>
 				<div className="flex flex-col items-start self-stretch mb-[99px] mx-20">
 					<span className="text-black text-[100px] w-[947px] mb-20" >
 						{"CRO Optimization \n& Revenue Diagnosis"}
@@ -327,7 +294,6 @@ export default (props) => {
 					</div>
 				</div>
 			</div>
-		</div>
 	)
 }
 

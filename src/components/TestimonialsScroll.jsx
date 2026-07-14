@@ -31,7 +31,7 @@ const Row = ({ direction = "left" }) => {
   const animClass = direction === "left" ? "animate-scroll-left" : "animate-scroll-right";
 
   return (
-    <div className="overflow-hidden w-screen max-w-full">
+    <div className="overflow-hidden w-full min-w-0">
       <div className={`flex w-max gap-3 sm:gap-4 md:gap-6 ${animClass}`}>
         {items.map((t, i) => (
           <Card key={i} testimonial={t} />
@@ -44,7 +44,7 @@ const Row = ({ direction = "left" }) => {
 export default function TestimonialsScroll() {
   return (
     <section
-      className="bg-white py-10 sm:py-14 md:py-20"
+      className="bg-white py-10 sm:py-14 md:py-20 w-full"
       style={{ overflow: "hidden", maxWidth: "100vw" }}
     >
       <style>{`
@@ -70,7 +70,7 @@ export default function TestimonialsScroll() {
         }
       `}</style>
 
-      <div className="flex flex-col gap-3 sm:gap-4 md:gap-6">
+      <div className="flex flex-col gap-3 sm:gap-4 md:gap-6 min-w-0">
         <Row direction="left" />
         <Row direction="right" />
       </div>

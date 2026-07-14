@@ -8,7 +8,7 @@ const slides = [
       "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/hyrhs0Ks0b/d7zl24i1_expires_30_days.png",
     label: "Our Approach",
     copy:
-      "During our discovery process, we learned that many customers, particularly women aged 35–60, were unsure of their exact measurements and often required WhatsApp video calls for sizing assistance. To simplify this journey, we introduced a Customize Your Size option beside the size selector. A short guided flow with visual body-shape references helps customers identify their best fit with confidence, reducing friction and making the purchase process more intuitive.",
+      "Replace this with the second case study's approach copy. Swap topImage and bottomImage above for screenshots specific to this slide.",
   },
   {
     topImage:
@@ -64,15 +64,14 @@ export default function ConversionScienceSection() {
   };
 
   return (
-    <div className="bg-black rounded-tl-[80px] mb-[20px]">
+    <div className="w-full bg-black rounded-tl-[40px] mb-[20px] overflow-hidden">
 
       {/* ===================== MOBILE / TABLET (below lg) ===================== */}
-      <div className="flex flex-col items-start lg:hidden px-6 py-10 gap-8">
+      <div className="flex flex-col items-start lg:hidden px-3 py-10 gap-8">
         <div className="flex flex-col items-start gap-2">
           <span className="text-white text-xs">
             {"[ The Science of Conversion ]"}
           </span>
-          {/* Dots — single control for the whole carousel: changes images + Our Approach text below */}
           <Dots className="" idPrefix="mobile-top" size="sm" />
         </div>
         <h2 className="text-white font-bold text-3xl md:text-4xl lg:text-5xl leading-tight">
@@ -81,7 +80,7 @@ export default function ConversionScienceSection() {
 
         <p className="text-white text-sm leading-relaxed">
           {
-            "Before we design anything, we take the time to understand who your customers are, what drives their decisions, and where they encounter friction. Through discovery workshops, competitor analysis, customer profiling, and analytics reviews, we build a foundation for decisions that convert."
+            "Before we design anything, we take the time to understand who your customers are, what drives their decisions, and where they encounter friction."
           }
         </p>
 
@@ -97,17 +96,16 @@ export default function ConversionScienceSection() {
           />
         </button>
 
-        {/* Active slide images, swapped on rotation/dot click */}
-        <div className="flex flex-col items-center gap-3 w-full">
+        <div className="flex flex-col items-start gap-3 w-full mt-2">
           <img
             alt=""
             src={active.topImage}
-            className="w-full max-w-[340px] h-auto object-contain"
+            className="w-full h-auto object-contain"
           />
           <img
             alt=""
             src={active.bottomImage}
-            className="w-full max-w-[340px] h-auto object-contain"
+            className="w-full h-auto object-contain"
           />
         </div>
 
@@ -119,27 +117,27 @@ export default function ConversionScienceSection() {
         </div>
       </div>
 
-      {/* ===================== DESKTOP (lg and up) — same structure as original ===================== */}
-      <div className="hidden lg:flex lg:justify-between lg:items-start lg:self-stretch lg:p-20">
-        <div className="flex flex-col shrink-0 items-start">
-          <div className="flex flex-col items-start gap-3 mb-[34px] mr-[365px]">
+      {/* ===================== DESKTOP (lg and up) — fully responsive, full width ===================== */}
+      <div className="hidden lg:flex lg:items-start lg:p-12 xl:p-15 w-full">
+        {/* Left column */}
+        <div className="flex flex-col items-start flex-1 min-w-0">
+          <div className="flex flex-col items-start gap-3 mb-8">
             <span className="text-white text-sm">
               {"[ The Science of Conversion ]"}
             </span>
-            {/* Dots — single control for the whole carousel: changes images + Our Approach text below */}
             <Dots idPrefix="desktop" size="sm" />
           </div>
-          <div className="flex flex-col items-start">
-            <h2 className="text-white font-bold text-3xl md:text-4xl lg:text-5xl leading-tight w-[554px] mb-[68px]">
+          <div className="flex flex-col items-start w-full max-w-[554px]">
+            <h2 className="text-white font-bold text-3xl xl:text-5xl leading-tight mb-8">
               {"Why Does Understanding Your Audience Matter?"}
             </h2>
-            <p className="text-white text-base w-[468px] mb-[70px] mr-[85px] leading-relaxed">
+            <p className="text-white text-base leading-relaxed mb-8 max-w-[468px]">
               {
                 "Before we design anything, we take the time to understand who your customers are, what drives their decisions, and where they encounter friction. Through discovery workshops, competitor analysis, customer profiling, and analytics reviews, we build a foundation for decisions that convert."
               }
             </p>
             <button
-              className="flex items-center bg-white text-left py-[17px] px-[42px] ml-[1px] mr-[345px] gap-[15px] rounded-[100px] border-0"
+              className="flex items-center bg-white text-left py-4 px-8 gap-4 rounded-[100px] border-0"
               onClick={() => alert("Pressed!")}
             >
               <span className="text-[#03235E] text-sm">{"Case Studies"}</span>
@@ -152,28 +150,26 @@ export default function ConversionScienceSection() {
           </div>
         </div>
 
-        <div className="flex flex-col shrink-0 items-center pb-[1px] gap-14">
-          <div className="flex flex-col items-center gap-[13px]">
-            {/* Active slide images — swap on rotation/dot click, same sizing as original */}
+        {/* Right column */}
+        <div className="flex flex-col items-center flex-1 min-w-0 max-w-[480px] pb-1 gap-10">
+          <div className="flex flex-col items-center gap-3 w-full max-w-[450px] mx-auto">
             <img
               alt=""
               src={active.topImage}
-              className="w-[612px] h-[234px] object-fill"
+              className="w-full h-auto object-contain"
             />
             <img
               alt=""
               src={active.bottomImage}
-              className="w-[612px] h-[420px] object-fill"
+              className="w-full h-auto object-contain"
             />
           </div>
 
-          {/* Dots removed — desktop now auto-rotates only */}
-
-          <div className="flex flex-col items-start">
-            <span className="text-white text-xs mb-[20px] mr-[522px]">
+          <div className="flex flex-col items-start w-full max-w-[450px] mx-auto">
+            <span className="text-white text-xs mb-5">
               {active.label}
             </span>
-            <span className="text-white text-xs w-[611px]">
+            <span className="text-white text-xs leading-relaxed">
               {active.copy}
             </span>
           </div>

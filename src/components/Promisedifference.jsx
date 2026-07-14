@@ -43,7 +43,7 @@ export default function PromiseDifference() {
       {/* Desktop */}
       <div className="hidden md:block px-6 py-10 md:px-20 md:py-20">
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-12 lg:mb-16">
-          We Promise
+          <span className = "ml-4"> We Promise  </span>
           <br />
           <span style={{
             display: 'inline',
@@ -85,7 +85,7 @@ export default function PromiseDifference() {
       {/* Mobile */}
       <div className="md:hidden px-6 py-10">
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-10">
-          We Promise
+         <span className = "ml-4"> We Promise  </span>
           <br />
           <span style={{
             display: 'inline',

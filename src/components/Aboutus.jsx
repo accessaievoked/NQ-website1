@@ -1,6 +1,5 @@
 import React from "react";
-import Testimonals from "../components/TestimonialsScroll";
-import Ecommerce from "../components/Ecommerce";
+
 
 export default function Aboutus (){
 	return (

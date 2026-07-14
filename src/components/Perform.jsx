@@ -26,7 +26,7 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section className="px-6 py-10 md:px-20 md:py-20" style={{
+    <section className="px-6 py-10 md:px-20 md:py-2" style={{
       background: '#ffffff',
       display: 'flex',
       flexDirection: 'column',
@@ -51,7 +51,7 @@ export default function HeroSection() {
           line-height: 1.4;
         }
         .hero-image-wrap {
-          width: 100%;
+          width: 80%;
           overflow: hidden;
           
           aspect-ratio: 16/10;
@@ -82,7 +82,7 @@ export default function HeroSection() {
         }
       `}</style>
 
-      <h2 className="hero-heading text-center text-xl md:text-2xl lg:text-4xl text-gray-900 leading-tight max-w-[940px] mx-auto mb-[clamp(40px,6vw,72px)] tracking-tight">
+      <h2 className="hero-heading text-center text-xl md:text-2xl lg:text-4xl text-black leading-tight max-w-[940px] mx-auto mb-[clamp(40px,6vw,72px)] tracking-tight">
         Your Store Will Perform Better{' '}
         <span className="highlight">Next Quarter</span>
         <br />

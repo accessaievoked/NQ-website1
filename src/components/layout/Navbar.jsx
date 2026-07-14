@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Menu, X, ArrowUpRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import logo from '../../assets/logos/Logo.png';
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -13,7 +14,7 @@ export default function Navbar() {
 
   return (
     <header className="absolute top-0 left-0 w-full z-50 bg-transparent">
-      <nav className="relative flex items-center justify-between px-6 md:px-10 py-5">
+      <nav className="relative flex items-center justify-between px-6 md:px-20 py-5">
         {/* Mobile: hamburger on left */}
         <button
           className="lg:hidden text-neutral-900"
@@ -25,7 +26,9 @@ export default function Navbar() {
 
         {/* Logo */}
         <div className="text-2xl font-semibold tracking-wide text-neutral-900 absolute left-1/2 -translate-x-1/2 lg:static lg:left-0 lg:translate-x-0">
-          <Link to="/">NQ</Link>
+          <Link to="/">
+          <img src={logo} alt="Logo" className = "w-20 h-auto"/>
+          </Link>
         </div>
 
         {/* Desktop nav links - centered */}

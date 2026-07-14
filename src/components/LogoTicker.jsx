@@ -19,7 +19,10 @@ const all = [...logos, ...logos];
 
 export default function LogoTicker() {
   return (
-    <section style={{ position: 'relative', overflow: 'hidden' }} className="py-10 md:py-20">
+    <section
+      style={{ position: 'relative', overflow: 'hidden', width: '100%', maxWidth: '100vw' }}
+      className="py-10 md:py-20"
+    >
       <style>{`
         @keyframes logo-scroll {
           from { transform: translateX(0); }
@@ -28,6 +31,8 @@ export default function LogoTicker() {
         .ticker-wrapper {
           overflow: hidden;
           width: 100%;
+          max-width: 100%;
+          min-width: 0; /* prevents flex/grid parents from stretching to fit content */
         }
         .ticker-inner {
           display: flex;
@@ -35,6 +40,7 @@ export default function LogoTicker() {
           flex-wrap: nowrap;
           width: max-content;
           animation: logo-scroll 30s linear infinite;
+          will-change: transform;
         }
         .ticker-inner:hover {
           animation-play-state: paused;
@@ -70,8 +76,6 @@ export default function LogoTicker() {
           background: linear-gradient(to left, var(--bg-primary), transparent);
         }
 
-        /* Tablets and small laptops: tighten spacing/sizing so the row still
-           reads as a ticker instead of two oversized logos at a time */
         @media (max-width: 1024px) {
           .ticker-item { margin: 0 28px; }
           .ticker-item img { height: 32px; }
@@ -79,7 +83,6 @@ export default function LogoTicker() {
           .ticker-inner { animation-duration: 24s; }
         }
 
-        /* Phones */
         @media (max-width: 640px) {
           .ticker-item { margin: 0 18px; }
           .ticker-item img { height: 26px; }
@@ -87,7 +90,6 @@ export default function LogoTicker() {
           .ticker-inner { animation-duration: 18s; }
         }
 
-        /* Very narrow phones */
         @media (max-width: 380px) {
           .ticker-item { margin: 0 14px; }
           .ticker-item img { height: 22px; }
@@ -99,7 +101,6 @@ export default function LogoTicker() {
         }
       `}</style>
 
-      {/* Edge fades */}
       <div className="ticker-fade left" />
       <div className="ticker-fade right" />
 
@@ -115,4 +116,3 @@ export default function LogoTicker() {
     </section>
   );
 }
-

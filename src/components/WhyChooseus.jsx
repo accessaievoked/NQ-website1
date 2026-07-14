@@ -73,7 +73,7 @@ export default function WhyChooseUs() {
 
           {/* Far left — label */}
           <div className="lg:w-[220px] shrink-0 pt-1">
-            <p className="text-xs font-semibold tracking-widest text-gray-400 uppercase">
+            <p className="text-xs font-semibold tracking-widest text-[#000] uppercase">
               Why Choose Us?
             </p>
           </div>
@@ -86,7 +86,7 @@ export default function WhyChooseUs() {
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
               We build revenue engines.
             </h2>
-            <p className="mt-4 text-sm md:text-base text-gray-500 max-w-sm leading-relaxed">
+            <p className="mt-4 text-sm md:text-base text-[#000] max-w-sm leading-relaxed">
               Every decision is guided by data, user behavior, and business
               objectives to create a store that delivers lasting results, not
               just a better appearance.
@@ -97,8 +97,8 @@ export default function WhyChooseUs() {
         {/* ── ROW 2: Slide text (bottom-aligned) | Image ── */}
         <div className="flex flex-col lg:flex-row gap-6 lg:gap-16 lg:items-end">
 
-          {/* Left — slide text, bottom-aligned with image */}
-          <div className="lg:w-[420px] shrink-0 flex flex-col justify-end">
+          {/* Left — slide text, bottom-aligned with image (mobile: shown first / on top) */}
+          <div className="order-1 lg:order-none lg:w-[420px] shrink-0 flex flex-col justify-end">
             <div
               style={{ transition: `opacity ${FADE_MS}ms ease, transform ${FADE_MS}ms ease` }}
               className={animating ? "opacity-0 translate-y-2" : "opacity-100 translate-y-0"}
@@ -129,8 +129,8 @@ export default function WhyChooseUs() {
             </div>
           </div>
 
-          {/* Right — image */}
-          <div className="flex-1">
+          {/* Right — image (mobile: shown second / below text) */}
+          <div className="order-2 lg:order-none flex-1">
             <div
               style={{ transition: `opacity ${FADE_MS}ms ease, transform ${FADE_MS}ms ease` }}
               className={animating ? "opacity-0 scale-[0.99]" : "opacity-100 scale-100"}
