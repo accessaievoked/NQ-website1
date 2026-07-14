@@ -8,20 +8,21 @@ import Services from "../components/Services";
 import Audiencesection from "../components/Audiencesection";
 import WhyChooseus from "../components/WhyChooseus";
 import Herosection from "../components/Herosection";
+import RevealOnScroll from "../components/RevealOnScroll";
 
 const Home = (props) => {
 	return (
 		<div className="flex flex-col bg-white">
 			<div className="flex flex-col items-start self-stretch bg-white">
-        <Herosection/>
-				<LogoTicker/>
-        <Perform/>
-        <Services/>
-				<Audiencesection/>
-        <WhyChooseus/>
-        <PromiseDifference/>
-			  <Ecommerce/>
-				 <Testimonals/>
+				<Herosection/>
+				<RevealOnScroll><LogoTicker/></RevealOnScroll>
+				<RevealOnScroll><Perform/></RevealOnScroll>
+				<RevealOnScroll><Services/></RevealOnScroll>
+				<RevealOnScroll><Audiencesection/></RevealOnScroll>
+				<RevealOnScroll><WhyChooseus/></RevealOnScroll>
+				<RevealOnScroll><PromiseDifference/></RevealOnScroll>
+				<RevealOnScroll><Ecommerce/></RevealOnScroll>
+				<RevealOnScroll><Testimonals/></RevealOnScroll>
 			</div>
 		</div>
 	)

@@ -64,7 +64,7 @@ export default function ConversionScienceSection() {
   };
 
   return (
-    <div className="w-full bg-black rounded-tl-[40px] mb-[20px] overflow-hidden">
+    <div className="w-full bg-black rounded-tl-[40px] overflow-hidden">
 
       {/* ===================== MOBILE / TABLET (below lg) ===================== */}
       <div className="flex flex-col items-start lg:hidden px-3 py-10 gap-8">

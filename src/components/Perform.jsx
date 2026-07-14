@@ -26,7 +26,7 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section className="px-6 py-10 md:px-20 md:py-2" style={{
+    <section className="relative overflow-hidden px-6 py-10 md:px-20 md:py-2" style={{
       background: '#ffffff',
       display: 'flex',
       flexDirection: 'column',
@@ -82,21 +82,37 @@ export default function HeroSection() {
         }
       `}</style>
 
-      <h2 className="hero-heading text-center text-xl md:text-2xl lg:text-4xl text-black leading-tight max-w-[940px] mx-auto mb-[clamp(40px,6vw,72px)] tracking-tight">
+      <h2 className="relative z-10 hero-heading text-center text-xl md:text-2xl lg:text-4xl text-black leading-tight max-w-[940px] mx-auto mb-[clamp(40px,6vw,72px)] tracking-tight">
         Your Store Will Perform Better{' '}
         <span className="highlight">Next Quarter</span>
         <br />
         Than It Does Today.
       </h2>
 
-      <div className="hero-image-wrap">
-        <img
-          src={slides[current].src}
-          alt={slides[current].alt}
-          className={fading ? 'fading' : ''}
+      <div className="relative w-full flex justify-center">
+        {/* Background glow — desktop only, positioned to match the centered image's bounds */}
+        <div
+          className="hidden md:block absolute pointer-events-none"
+          style={{
+            top: '-8%',
+            bottom: '-8%',
+            left: '7%',
+            right: '7%',
+            background: `
+              radial-gradient(ellipse 60% 65% at 40% 15%, rgba(245,208,226,0.5) 0%, transparent 65%),
+              radial-gradient(ellipse 55% 55% at 60% 65%, rgba(0,200,255,0.28) 0%, transparent 65%)
+            `,
+          }}
         />
+
+        <div className="relative z-10 hero-image-wrap">
+          <img
+            src={slides[current].src}
+            alt={slides[current].alt}
+            className={fading ? 'fading' : ''}
+          />
+        </div>
       </div>
     </section>
   );
 }
-

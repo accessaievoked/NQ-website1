@@ -1,9 +1,9 @@
 import { useState, useEffect, useRef } from "react";
 
 
-import img1 from "../Images/Data.png";  
-import img2 from "../Images/Data.png";
-import img3 from "../Images/Data.png";
+import img1 from "../assets/images/home/WhyChooseus/Google Analysis.png";  
+import img2 from "../assets/images/home/WhyChooseus/Google Analysis.png"; 
+import img3 from "../assets/images/home/WhyChooseus/Google Analysis.png"; 
 
 
 const slides = [
@@ -65,8 +65,19 @@ export default function WhyChooseUs() {
   const current = slides[active];
 
   return (
-    <section className="w-full px-6 py-10 md:px-20 md:py-20">
-      <div className="max-w-6xl mx-auto">
+    <section className="relative w-full overflow-hidden px-6 py-10 md:px-20 md:py-20 bg-white">
+
+      {/* Background glow — desktop only */}
+      <div
+        className="hidden md:block absolute inset-0 pointer-events-none"
+        style={{
+          background: `
+            radial-gradient(ellipse 65% 130% at 100% 100%, rgba(0,200,255,0.22) 0%, transparent 65%)
+          `,
+        }}
+      />
+
+      <div className="relative z-10 max-w-6xl mx-auto">
 
         {/* ── ROW 1: Label | Headline + Description ── */}
         <div className="flex flex-col lg:flex-row gap-6 lg:gap-16 mb-10 lg:mb-14">
@@ -97,8 +108,8 @@ export default function WhyChooseUs() {
         {/* ── ROW 2: Slide text (bottom-aligned) | Image ── */}
         <div className="flex flex-col lg:flex-row gap-6 lg:gap-16 lg:items-end">
 
-          {/* Left — slide text, bottom-aligned with image (mobile: shown first / on top) */}
-          <div className="order-1 lg:order-none lg:w-[420px] shrink-0 flex flex-col justify-end">
+          {/* Left — slide text, bottom-aligned with image (mobile: shown second / below image) */}
+          <div className="order-2 lg:order-none lg:w-[420px] shrink-0 flex flex-col justify-end">
             <div
               style={{ transition: `opacity ${FADE_MS}ms ease, transform ${FADE_MS}ms ease` }}
               className={animating ? "opacity-0 translate-y-2" : "opacity-100 translate-y-0"}
@@ -129,8 +140,8 @@ export default function WhyChooseUs() {
             </div>
           </div>
 
-          {/* Right — image (mobile: shown second / below text) */}
-          <div className="order-2 lg:order-none flex-1">
+          {/* Right — image (mobile: shown first / above text) */}
+          <div className="order-1 lg:order-none flex-1">
             <div
               style={{ transition: `opacity ${FADE_MS}ms ease, transform ${FADE_MS}ms ease` }}
               className={animating ? "opacity-0 scale-[0.99]" : "opacity-100 scale-100"}
