@@ -1,115 +1,165 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from "react";
 
-import CoveraCombo from '../Images/CoveraCombo.png';
-import ThreeSixtyCombo from '../Images/ThreeSixtyCombo.png';
-import HovCombo from '../Images/HovCombo.png';
+import CoveraCombo from "../Images/CoveraCombo.png";
+import ThreeSixtyCombo from "../Images/ThreeSixtyCombo.png";
+import HovCombo from "../Images/HovCombo.png";
 
 const slides = [
-  { id: 1, src: CoveraCombo,     alt: 'Covera store screenshot'     },
-  { id: 2, src: ThreeSixtyCombo, alt: 'ThreeSixty store screenshot' },
-  { id: 3, src: HovCombo,        alt: 'Hov store screenshot'        },
+  { id: 1, src: CoveraCombo, alt: "Covera store screenshot" },
+  { id: 2, src: ThreeSixtyCombo, alt: "ThreeSixty store screenshot" },
+  { id: 3, src: HovCombo, alt: "Hov store screenshot" },
 ];
 
-export default function HeroSection() {
+export default function Perform() {
   const [current, setCurrent] = useState(0);
   const [fading, setFading] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setFading(true);
+
       setTimeout(() => {
-        setCurrent(prev => (prev + 1) % slides.length);
+        setCurrent((previous) => (previous + 1) % slides.length);
         setFading(false);
       }, 400);
     }, 3000);
+
     return () => clearInterval(interval);
   }, []);
 
   return (
-    <section className="relative overflow-hidden px-6 py-10 md:px-20 md:py-2" style={{
-      background: '#ffffff',
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
-      fontFamily: 'inherit',
-    }}>
+    <section className="performance-section relative flex min-h-[400px] flex-col items-center justify-start overflow-hidden bg-white px-5 py-14 md:h-[100svh] md:min-h-0 md:justify-start md:px-8 md:pt-28">
       <style>{`
-        .hero-heading {
+        .performance-heading {
+          position: relative;
+          z-index: 10;
+          margin: 0 0 24px;
           font-weight: 400;
           line-height: 1.2;
           letter-spacing: -0.02em;
           text-align: center;
-          margin: 0 0 clamp(32px, 5vw, 56px);
         }
-        .hero-heading .highlight {
+
+        .performance-heading .highlight {
           display: inline-block;
           background: #dbeafe;
           color: #000;
           padding: 2px 12px;
-          border-left :3px solid #87B5DA;
-          border-right :3px solid #87B5DA;
+          border-left: 3px solid #87b5da;
+          border-right: 3px solid #87b5da;
           line-height: 1.4;
         }
-        .hero-image-wrap {
-          width: 80%;
-          overflow: hidden;
-          
-          aspect-ratio: 16/10;
-          position: relative;
+
+        /* Mobile: plain white background */
+        .ambient-orbs {
+          display: none;
         }
-        .hero-image-wrap img {
+
+        .performance-image-wrap {
+          position: relative;
+          z-index: 10;
+          width: 100%;
+          height: auto;
+          aspect-ratio: 4 / 3;
+          margin-top :20px;
+        }
+
+        .performance-image-wrap img {
+          display: block;
           width: 100%;
           height: 100%;
-          object-fit: cover;
-          display: block;
+          object-fit: contain;
           transition: opacity 0.4s ease;
         }
-        .hero-image-wrap img.fading {
+
+        .performance-image-wrap img.fading {
           opacity: 0;
         }
-        .hero-dots {
-          display: flex;
-          gap: 8px;
-          margin-top: 20px;
-          justify-content: center;
-        }
-       
-        @media (max-width: 600px) {
-          .hero-image-wrap {
-            border-radius: 10px;
-            aspect-ratio: 4/3;
+
+        @media (min-width: 768px) {
+          /* Soft circles behind the image only */
+          .ambient-orbs {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+            display: block;
+            overflow: hidden;
+            pointer-events: none;
+          }
+
+          .orb {
+            position: absolute;
+            border-radius: 9999px;
+          }
+
+          /* Soft pink circle behind image */
+          .orb-pink-top {
+            left: 42%;
+            top: 18%;
+            width: 38vw;
+            height: 42vh;
+            background: rgba(255, 211, 235, 0.42);
+            filter: blur(85px);
+          }
+
+          /* Soft blue circle behind bottom-right of image */
+          .orb-blue-bottom-right {
+            left: 48%;
+            bottom: -17vh;
+            width: 36vw;
+            height: 38vh;
+            background: rgba(185, 237, 255, 0.58);
+            filter: blur(70px);
+          }
+
+          /* Removes the straight blue line at the section end */
+          .performance-section::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 5;
+            height: 190px;
+            pointer-events: none;
+            background: linear-gradient(
+              to bottom,
+              rgba(255, 255, 255, 0) 0%,
+              rgba(255, 255, 255, 0.72) 58%,
+              #ffffff 100%
+            );
+          }
+
+          .performance-image-wrap {
+            width: min(100vw, 1260px);
+            height: min(67vh, 620px);
+          }
+
+          .performance-image-wrap img {
+            transform: scale(1);
           }
         }
       `}</style>
 
-      <h2 className="relative z-10 hero-heading text-center text-xl md:text-2xl lg:text-4xl text-black leading-tight max-w-[940px] mx-auto mb-[clamp(40px,6vw,72px)] tracking-tight">
-        Your Store Will Perform Better{' '}
+      {/* Desktop gradient circles */}
+      <div className="ambient-orbs">
+        <div className="orb orb-pink-top" />
+        <div className="orb orb-blue-bottom-right" />
+      </div>
+
+      <h2 className="performance-heading max-w-[940px] text-xl leading-tight tracking-tight text-black md:text-2xl lg:text-4xl">
+        Your Store Will Perform Better{" "}
         <span className="highlight">Next Quarter</span>
         <br />
         Than It Does Today.
       </h2>
 
-      <div className="relative w-full flex justify-center">
-        {/* Background glow — desktop only, positioned to match the centered image's bounds */}
-        <div
-          className="hidden md:block absolute pointer-events-none"
-          style={{
-            top: '-8%',
-            bottom: '-8%',
-            left: '7%',
-            right: '7%',
-            background: `
-              radial-gradient(ellipse 60% 65% at 40% 15%, rgba(245,208,226,0.5) 0%, transparent 65%),
-              radial-gradient(ellipse 55% 55% at 60% 65%, rgba(0,200,255,0.28) 0%, transparent 65%)
-            `,
-          }}
-        />
-
-        <div className="relative z-10 hero-image-wrap">
+      <div className="relative z-10 flex w-full justify-center">
+        <div className="performance-image-wrap">
           <img
             src={slides[current].src}
             alt={slides[current].alt}
-            className={fading ? 'fading' : ''}
+            className={fading ? "fading" : ""}
           />
         </div>
       </div>

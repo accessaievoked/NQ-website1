@@ -26,13 +26,13 @@ export default function Footer() {
           <div style={{ display:'flex', flexWrap:'wrap', justifyContent:'space-between', gap:'clamp(16px,2vw,32px)', alignItems:'start' }}>
             {/* Brand */}
             <div className="reveal" style={{ flex:'0 0 auto' }}>
-              <h2 style={{ fontSize:'clamp(22px,3vw,48px)', fontWeight:500, color:'#ffffff', lineHeight:'32px', letterSpacing:'-0.005em', marginBottom:4 }}>Next Quarter</h2>
-              <p style={{ fontSize:15,margintop:'15px', color:'#a3a3a3', lineHeight:'18px' }}>Shopify CRO Agency</p>
+              <h2 style={{ fontSize:'clamp(22px,3vw,48px)', fontWeight:500, color:'#ffffff', lineHeight:'32px', letterSpacing:'-0.005em', marginBottom:15 }}>Next Quarter</h2>
+              <p style={{ fontSize:15,margintop:'15px', color:'#fff', lineHeight:'18px' }}>Shopify CRO Agency</p>
             </div>
             {/* CTA */}
             <div className="reveal d2 footer-cta" style={{ flex:'0 1 360px' }}>
-              <h3 style={{ fontSize:'clamp(25px,1.6vw,18px)', fontWeight:400, color:'#ffffff', lineHeight:'22px', letterSpacing:'-0.002em', marginBottom:12 }}>We are just a message away</h3>
-              <p style={{ fontSize:15, color:'#a3a3a3', margintop:15 , lineHeight:'16px', marginBottom:12 }}>We'll get back to you in one business day.</p>
+              <h3 style={{ fontSize:'clamp(25px,1.6vw,18px)', fontWeight:400, color:'#ffffff', lineHeight:'22px', letterSpacing:'-0.002em', marginBottom:24 }}>We are just a message away</h3>
+              <p style={{ fontSize:15, color:'#a3a3a3', margintop:15 , lineHeight:'16px', marginBottom:24 }}>We'll get back to you in one business day.</p>
               <div className="footer-cta-btn-row" style={{ display:'flex', justifyContent:'flex-start' }}>
               <a
                 href="mailto:hello@nextquarter.co"

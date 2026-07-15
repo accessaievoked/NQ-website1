@@ -1,7 +1,7 @@
 import React from "react";
 import Testimonals from "../components/TestimonialsScroll";
 import Ecommerce from "../components/Ecommerce";
-import LogoTicker from "../components/LogoTicker";
+// import LogoTicker from "../components/LogoTicker";
 import Perform from "../components/Perform";
 import PromiseDifference from "../components/Promisedifference";
 import Services from "../components/Services";
@@ -12,10 +12,10 @@ import RevealOnScroll from "../components/RevealOnScroll";
 
 const Home = (props) => {
 	return (
-		<div className="flex flex-col bg-white">
-			<div className="flex flex-col items-start self-stretch bg-white">
+		<div className="flex flex-col">
+			<div className="flex flex-col items-start self-stretch">
 				<Herosection/>
-				<RevealOnScroll><LogoTicker/></RevealOnScroll>
+				{/* <RevealOnScroll><LogoTicker/></RevealOnScroll> */}
 				<RevealOnScroll><Perform/></RevealOnScroll>
 				<RevealOnScroll><Services/></RevealOnScroll>
 				<RevealOnScroll><Audiencesection/></RevealOnScroll>

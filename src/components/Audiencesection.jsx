@@ -1,33 +1,58 @@
 import { useState, useEffect } from "react";
+import ClauraDesktop from "../assets/images/home/Casestudy/Claura.png"
+import ClauraMobile from "../assets/images/home/Casestudy/ClauraMobile.png"
+
+
 
 const slides = [
   {
-    topImage:
-      "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/hyrhs0Ks0b/emxali7l_expires_30_days.png",
-    bottomImage:
-      "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/hyrhs0Ks0b/d7zl24i1_expires_30_days.png",
+    desktopImage:
+  ClauraDesktop,
+    mobileImage:
+  ClauraMobile,
     label: "Our Approach",
+    heading: "The Hidden Revenue Between ? PDP & Checkout",
+    paragraph:
+      "The greatest opportunities for revenue growth often exist between the Product Detail Page and checkout. While customers have already shown purchase intent, small moments of friction can quietly reduce conversions and average order value.",
+    mobileHeading: "The Hidden Revenue Between ? PDP & Checkout",
+    mobileParagraph:
+      "The greatest opportunities for revenue growth often exist between the Product Detail Page and checkout. While customers have already shown purchase intent, small moments of friction can quietly reduce conversions and average order value.",
+    ctaLabel: "Case Studies",
     copy:
-      "Replace this with the second case study's approach copy. Swap topImage and bottomImage above for screenshots specific to this slide.",
+      "By analyzing customer behavior across this journey, we identified overlooked opportunities to improve purchase motivation, encourage larger baskets, and create a smoother, more intuitive path to checkout through targeted CRO optimizations.",
   },
-  {
-    topImage:
-      "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/hyrhs0Ks0b/emxali7l_expires_30_days.png",
-    bottomImage:
-      "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/hyrhs0Ks0b/d7zl24i1_expires_30_days.png",
-    label: "Our Approach",
-    copy:
-      "Replace this with the second case study's approach copy. Swap topImage and bottomImage above for screenshots specific to this slide.",
-  },
-  {
-    topImage:
-      "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/hyrhs0Ks0b/emxali7l_expires_30_days.png",
-    bottomImage:
-      "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/hyrhs0Ks0b/d7zl24i1_expires_30_days.png",
-    label: "Our Approach",
-    copy:
-      "Replace this with the third case study's approach copy. Swap topImage and bottomImage above for screenshots specific to this slide.",
-  },
+  // {
+  //   desktopImage:
+  //     "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/hyrhs0Ks0b/emxali7l_expires_30_days.png",
+  //   mobileImage:
+  //     "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/hyrhs0Ks0b/d7zl24i1_expires_30_days.png",
+  //   label: "Our Approach",
+  //   heading: "How Do We Turn Browsers Into Buyers?",
+  //   paragraph:
+  //     "We map every step of the path to purchase, flagging the moments where hesitation creeps in. From there, we test layout, copy, and pricing presentation until the path from interest to checkout feels effortless.",
+  //   mobileHeading: "How Do We Turn Browsers Into Buyers?",
+  //   mobileParagraph:
+  //     "We map every step of the path to purchase, flagging the moments where hesitation creeps in. From there, we test layout, copy, and pricing presentation until the path from interest to checkout feels effortless.",
+  //   ctaLabel: "Case Studies",
+  //   copy:
+  //     "Replace this with the second case study's approach copy. Swap desktopImage and mobileImage above for screenshots specific to this slide.",
+  // },
+  // {
+  //   desktopImage:
+  //     "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/hyrhs0Ks0b/emxali7l_expires_30_days.png",
+  //   mobileImage:
+  //     "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/hyrhs0Ks0b/d7zl24i1_expires_30_days.png",
+  //   label: "Our Approach",
+  //   heading: "What Keeps Customers Coming Back?",
+  //   paragraph:
+  //     "Conversion doesn't end at checkout. We look at post-purchase touchpoints, order confirmation, follow-up, and repeat-visit design, to build trust that turns a single sale into a lasting customer relationship.",
+  //   mobileHeading: "What Keeps Customers Coming Back?",
+  //   mobileParagraph:
+  //     "Conversion doesn't end at checkout. We look at post-purchase touchpoints, order confirmation, follow-up, and repeat-visit design, to build trust that turns a single sale into a lasting customer relationship.",
+  //   ctaLabel: "Case Studies",
+  //   copy:
+  //     "Replace this with the third case study's approach copy. Swap desktopImage and mobileImage above for screenshots specific to this slide.",
+  // },
 ];
 
 const AUTOPLAY_MS = 5000;
@@ -75,20 +100,18 @@ export default function ConversionScienceSection() {
           <Dots className="" idPrefix="mobile-top" size="sm" />
         </div>
         <h2 className="text-white font-bold text-3xl md:text-4xl lg:text-5xl leading-tight">
-          {"Why Does Understanding Your Audience Matter?"}
+          {active.mobileHeading}
         </h2>
 
         <p className="text-white text-sm leading-relaxed">
-          {
-            "Before we design anything, we take the time to understand who your customers are, what drives their decisions, and where they encounter friction."
-          }
+          {active.mobileParagraph}
         </p>
 
         <button
           className="flex items-center bg-white text-left py-3 px-7 gap-3 rounded-[100px] border-0"
           onClick={() => alert("Pressed!")}
         >
-          <span className="text-[#03235E] text-sm">{"Case Studies"}</span>
+          <span className="text-[#03235E] text-sm">{active.ctaLabel}</span>
           <img
             alt=""
             src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/hyrhs0Ks0b/72inuo2e_expires_30_days.png"
@@ -96,15 +119,10 @@ export default function ConversionScienceSection() {
           />
         </button>
 
-        <div className="flex flex-col items-start gap-3 w-full mt-2">
+        <div className="flex flex-col items-start w-full mt-2">
           <img
             alt=""
-            src={active.topImage}
-            className="w-full h-auto object-contain"
-          />
-          <img
-            alt=""
-            src={active.bottomImage}
+            src={active.mobileImage}
             className="w-full h-auto object-contain"
           />
         </div>
@@ -121,26 +139,24 @@ export default function ConversionScienceSection() {
       <div className="hidden lg:flex lg:items-start lg:p-12 xl:p-15 w-full">
         {/* Left column */}
         <div className="flex flex-col items-start flex-1 min-w-0">
-          <div className="flex flex-col items-start gap-3 mb-8">
+          <div className="flex flex-col items-start gap-3 mb-24">
             <span className="text-white text-sm">
               {"[ The Science of Conversion ]"}
             </span>
             <Dots idPrefix="desktop" size="sm" />
           </div>
           <div className="flex flex-col items-start w-full max-w-[554px]">
-            <h2 className="text-white font-bold text-3xl xl:text-5xl leading-tight mb-8">
-              {"Why Does Understanding Your Audience Matter?"}
+            <h2 className="text-white font-normal text-3xl xl:text-5xl leading-tight mb-8">
+              {active.heading}
             </h2>
             <p className="text-white text-base leading-relaxed mb-8 max-w-[468px]">
-              {
-                "Before we design anything, we take the time to understand who your customers are, what drives their decisions, and where they encounter friction. Through discovery workshops, competitor analysis, customer profiling, and analytics reviews, we build a foundation for decisions that convert."
-              }
+              {active.paragraph}
             </p>
             <button
               className="flex items-center bg-white text-left py-4 px-8 gap-4 rounded-[100px] border-0"
               onClick={() => alert("Pressed!")}
             >
-              <span className="text-[#03235E] text-sm">{"Case Studies"}</span>
+              <span className="text-[#03235E] text-sm">{active.ctaLabel}</span>
               <img
                 alt=""
                 src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/hyrhs0Ks0b/72inuo2e_expires_30_days.png"
@@ -151,16 +167,11 @@ export default function ConversionScienceSection() {
         </div>
 
         {/* Right column */}
-        <div className="flex flex-col items-center flex-1 min-w-0 max-w-[480px] pb-1 gap-10">
-          <div className="flex flex-col items-center gap-3 w-full max-w-[450px] mx-auto">
+        <div className="flex flex-col items-center flex-1 min-w-0 max-w-[880px] pb-1 gap-10">
+          <div className="flex flex-col items-center w-full max-w-[450px] mx-auto">
             <img
               alt=""
-              src={active.topImage}
-              className="w-full h-auto object-contain"
-            />
-            <img
-              alt=""
-              src={active.bottomImage}
+              src={active.desktopImage}
               className="w-full h-auto object-contain"
             />
           </div>

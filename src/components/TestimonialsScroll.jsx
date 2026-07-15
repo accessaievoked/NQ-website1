@@ -16,7 +16,7 @@ const testimonials = [
 ];
 
 const Card = ({ testimonial }) => (
-  <div className="flex-shrink-0 w-[240px] sm:w-[300px] md:w-[380px] bg-neutral-100 rounded-lg p-4 sm:p-6 md:p-8">
+  <div className="flex-shrink-0 w-[240px] sm:w-[300px] md:w-[480px] bg-neutral-100 rounded-lg p-4 sm:p-6 md:p-8">
     <p className="text-xs sm:text-sm md:text-base text-neutral-700 leading-relaxed mb-3 sm:mb-5">
       {testimonial.text}
     </p>

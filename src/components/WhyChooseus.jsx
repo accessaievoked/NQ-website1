@@ -2,8 +2,8 @@ import { useState, useEffect, useRef } from "react";
 
 
 import img1 from "../assets/images/home/WhyChooseus/Google Analysis.png";  
-import img2 from "../assets/images/home/WhyChooseus/Google Analysis.png"; 
-import img3 from "../assets/images/home/WhyChooseus/Google Analysis.png"; 
+import img2 from "../assets/images/home/WhyChooseus/Clarity.png"; 
+import img3 from "../assets/images/home/WhyChooseus/platform.png"; 
 
 
 const slides = [
@@ -16,14 +16,14 @@ const slides = [
   {
     id: 1,
     image: img2,
-    heading: "We build for conversion, not just aesthetics.",
-    body: "Every UI element — from button placement to color contrast — is tested against real shopper psychology. We remove friction, increase trust signals, and design pathways that nudge customers from browsing to buying without them ever noticing the invisible hand guiding them.",
+    heading: "Built Around Your Customers",
+    body: "Design for people, not opinions.? Every interface is shaped around how your customers browse, compare, hesitate, and purchase, not personal preferences.",
   },
   {
     id: 2,
     image: img3,
-    heading: "We ship fast and iterate faster.",
-    body: "You'll never wait months to see results. We work in focused sprints, deploy improvements rapidly, and track impact in real time. Speed without recklessness — every change is measured, every iteration purposeful, and every deploy moves you closer to your revenue targets.",
+    heading: "More Than Shopify Experts",
+    body: "We understand ecommerce, not just Shopify.? Brand positioning, merchandising, psychology, CRO, UX, analytics, retention, and technical implementation all work together to drive growth.",
   },
 ];
 
@@ -80,7 +80,7 @@ export default function WhyChooseUs() {
       <div className="relative z-10 max-w-6xl mx-auto">
 
         {/* ── ROW 1: Label | Headline + Description ── */}
-        <div className="flex flex-col lg:flex-row gap-6 lg:gap-16 mb-10 lg:mb-14">
+        <div className="flex flex-col lg:flex-row gap-6 lg:gap-32 mb-10 lg:mb-14">
 
           {/* Far left — label */}
           <div className="lg:w-[220px] shrink-0 pt-1">
@@ -91,10 +91,10 @@ export default function WhyChooseUs() {
 
           {/* Right — headline + description */}
           <div className="flex-1">
-            <p className="text-3xl md:text-4xl lg:text-5xl font-light text-gray-400 leading-tight">
+            <p className="text-[23px] md:text-4xl lg:text-5xl font-light text-gray-400 leading-tight">
               We build more than storefronts.
             </p>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
+            <h2 className="text-2xl md:text-4xl lg:text-5xl font-normal text-gray-900 leading-tight">
               We build revenue engines.
             </h2>
             <p className="mt-4 text-sm md:text-base text-[#000] max-w-sm leading-relaxed">
@@ -106,7 +106,7 @@ export default function WhyChooseUs() {
         </div>
 
         {/* ── ROW 2: Slide text (bottom-aligned) | Image ── */}
-        <div className="flex flex-col lg:flex-row gap-6 lg:gap-16 lg:items-end">
+        <div className="flex flex-col lg:flex-row gap-6 lg:gap-32 lg:items-end">
 
           {/* Left — slide text, bottom-aligned with image (mobile: shown second / below image) */}
           <div className="order-2 lg:order-none lg:w-[420px] shrink-0 flex flex-col justify-end">
@@ -150,7 +150,9 @@ export default function WhyChooseUs() {
                 key={current.id}
                 src={current.image}
                 alt={current.heading}
-                className="w-full h-auto rounded-2xl shadow-xl object-cover"
+                width={1200}
+                height={1500}
+                className="w-full h-auto rounded-xl shadow-xl object-cover"
               />
             </div>
           </div>

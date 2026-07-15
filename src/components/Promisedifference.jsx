@@ -52,7 +52,7 @@ export default function PromiseDifference() {
 
       {/* Desktop */}
       <div className="relative hidden md:block px-6 py-10 md:px-20 md:py-20">
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-12 lg:mb-16">
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-normal text-gray-900 leading-tight mb-12 lg:mb-16">
           <span className = "ml-4"> We Promise  </span>
           <br />
           <span style={{
@@ -80,10 +80,10 @@ export default function PromiseDifference() {
                 {item.body}
               </p>
               <div className="mt-6">
-                <p className="text-4xl  font-semibold leading-none" style={{ color: item.statColor }}>
+                <p className="text-4xl  font-normal leading-none" style={{ color: item.statColor }}>
                   {item.stat}
                 </p>
-                <p className="text-sm mt-1 font-medium" style={{ color: item.textColor }}>
+                <p className="text-sm mt-1 font-normal" style={{ color: item.textColor }}>
                   {item.label}
                 </p>
               </div>
@@ -94,7 +94,7 @@ export default function PromiseDifference() {
 
       {/* Mobile */}
       <div className="relative md:hidden px-6 py-10">
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-10">
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-normal text-gray-900 leading-tight mb-10">
          <span className = "ml-4"> We Promise  </span>
           <br />
           <span style={{
@@ -121,10 +121,10 @@ export default function PromiseDifference() {
                   {item.body}
                 </p>
                 <div className="mt-5">
-                  <p className="text-3xl font-semibold leading-none" style={{ color: item.statColor }}>
+                  <p className="text-3xl font-normal leading-none" style={{ color: item.statColor }}>
                     {item.stat}
                   </p>
-                  <p className="text-sm mt-1 font-medium" style={{ color: item.textColor }}>
+                  <p className="text-sm mt-1 font-normal" style={{ color: item.textColor }}>
                     {item.label}
                   </p>
                 </div>
