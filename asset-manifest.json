@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/NQ-website1/static/css/main.cdfae140.css",
-    "main.js": "/NQ-website1/static/js/main.7bdbc759.js",
+    "main.css": "/NQ-website1/static/css/main.4f28ce0f.css",
+    "main.js": "/NQ-website1/static/js/main.036529b3.js",
     "static/js/453.f4d0d7a5.chunk.js": "/NQ-website1/static/js/453.f4d0d7a5.chunk.js",
     "static/media/Claura.png": "/NQ-website1/static/media/Claura.d8913adb81cb6144a750.png",
     "static/media/mrja1.png": "/NQ-website1/static/media/mrja1.dca5c3099977583db163.png",
@@ -37,12 +37,12 @@
     "static/media/Ecommerce1.png": "/NQ-website1/static/media/Ecommerce1.26ea9fa8dbb08a32f0ca.png",
     "static/media/Ecommerce2.png": "/NQ-website1/static/media/Ecommerce2.e60079c28793b1b701c6.png",
     "index.html": "/NQ-website1/index.html",
-    "main.cdfae140.css.map": "/NQ-website1/static/css/main.cdfae140.css.map",
-    "main.7bdbc759.js.map": "/NQ-website1/static/js/main.7bdbc759.js.map",
+    "main.4f28ce0f.css.map": "/NQ-website1/static/css/main.4f28ce0f.css.map",
+    "main.036529b3.js.map": "/NQ-website1/static/js/main.036529b3.js.map",
     "453.f4d0d7a5.chunk.js.map": "/NQ-website1/static/js/453.f4d0d7a5.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.cdfae140.css",
-    "static/js/main.7bdbc759.js"
+    "static/css/main.4f28ce0f.css",
+    "static/js/main.036529b3.js"
   ]
 }
