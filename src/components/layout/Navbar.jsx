@@ -12,7 +12,6 @@ export default function Navbar() {
     { label: "About Us", to: "/about" },
   ];
 
-  // Lock body scroll while the mobile menu is open
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
     return () => {
@@ -23,22 +22,25 @@ export default function Navbar() {
   return (
     <header className="absolute top-0 left-0 w-full z-50 bg-transparent">
       <nav className="relative flex items-center justify-between px-6 md:px-20 py-5">
-        {/* Mobile: hamburger on left - hidden once the overlay is open, overlay has its own close button */}
-        <button
-          className={`lg:hidden text-neutral-900 relative transition-opacity ${
-            open ? "opacity-0 pointer-events-none" : "opacity-100"
-          }`}
-          onClick={() => setOpen(!open)}
-          aria-label="Toggle menu"
-        >
-          <Menu size={26} />
-        </button>
 
-        {/* Logo */}
-        <div className="text-2xl font-semibold tracking-wide text-neutral-900 absolute left-1/2 -translate-x-1/2 lg:static lg:left-0 lg:translate-x-0">
-          <Link to="/">
-          <img src={logo} alt="Logo" className = "w-20 h-auto"/>
-          </Link>
+        {/* Left group: hamburger + logo (mobile), just logo (desktop) */}
+        <div className="flex items-center gap-3 lg:contents">
+          <button
+            className={`lg:hidden text-neutral-900 relative transition-opacity ${
+              open ? "opacity-0 pointer-events-none" : "opacity-100"
+            }`}
+            onClick={() => setOpen(!open)}
+            aria-label="Toggle menu"
+          >
+            <Menu size={26} />
+          </button>
+
+          {/* Logo */}
+          <div className="text-2xl font-semibold tracking-wide text-neutral-900">
+            <Link to="/">
+              <img src={logo} alt="Logo" className="w-20 h-auto" />
+            </Link>
+          </div>
         </div>
 
         {/* Desktop nav links - centered */}
@@ -47,7 +49,7 @@ export default function Navbar() {
             <Link
               key={link.label}
               to={link.to}
-              className="text-sm font-medium text-neutral-800 hover:text-neutral-500 transition-colors"
+              className="text-md font-medium text-[#000] hover:text-[#000] transition-colors"
             >
               {link.label}
             </Link>
@@ -57,10 +59,10 @@ export default function Navbar() {
         {/* CTA */}
         <Link
           to="/contact"
-          className="inline-flex items-center gap-2 bg-neutral-900 text-white text-sm font-medium px-4 sm:px-5 py-2.5 sm:py-3 rounded-full hover:bg-neutral-800 transition-colors whitespace-nowrap"
+          className="inline-flex items-center gap-2 bg-[#001931] text-white text-sm font-medium px-4 sm:px-5 py-2.5 sm:py-3 rounded-full hover:bg-[#001931] transition-colors whitespace-nowrap"
         >
           <span className="hidden sm:inline">Contact Us</span>
-          <span className="sm:hidden">Contact</span>
+          <span className="sm:hidden">Contact Us</span>
           <ArrowUpRight size={16} />
         </Link>
       </nav>
@@ -74,7 +76,6 @@ export default function Navbar() {
         }`}
       >
         <div className="h-full w-full flex flex-col">
-          {/* Top bar inside overlay: close button on left, logo centered */}
           <div className="relative flex items-center px-6 py-5">
             <button
               className="text-neutral-900 z-10"
@@ -90,14 +91,13 @@ export default function Navbar() {
             </div>
           </div>
 
-          {/* Left-aligned links, stacked one after another */}
-          <div className="flex flex-col items-start px-6 pt-4 gap-6">
+          <div className="flex flex-col items-start px-6 pt-4 gap-6 mt-5">
             {links.map((link, i) => (
               <Link
                 key={link.label}
                 to={link.to}
                 onClick={() => setOpen(false)}
-                className={`text-lg font-medium text-neutral-800 hover:text-neutral-500 transition-all duration-300 ${
+                className={`text-lg font-medium text-black hover:text-black transition-all duration-300 ml-2 ${
                   open ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
                 }`}
                 style={{ transitionDelay: open ? `${i * 60 + 100}ms` : "0ms" }}
@@ -106,11 +106,10 @@ export default function Navbar() {
               </Link>
             ))}
 
-            {/* Contact Us follows right after the links, same left alignment */}
             <Link
               to="/contact"
               onClick={() => setOpen(false)}
-              className={`inline-flex items-center gap-2 bg-neutral-900 text-white text-sm font-medium px-5 py-3 rounded-full hover:bg-neutral-800 transition-all duration-300 ${
+              className={`inline-flex items-center gap-2 bg-[#001931] text-white text-sm font-medium px-5 py-3 rounded-full hover:bg-[#001931] transition-all duration-300 ${
                 open ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
               }`}
               style={{ transitionDelay: open ? `${links.length * 60 + 100}ms` : "0ms" }}

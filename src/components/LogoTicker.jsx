@@ -17,7 +17,7 @@ const allLogos = [...logos, ...logos];
 
 export default function LogoTicker() {
   return (
-  <div className="logo-ticker absolute bottom-0 left-0 z-20 flex h-[68px] w-full items-center overflow-hidden bg-white md:h-[96px] md:bg-transparent">
+   <div className="logo-ticker absolute bottom-[0px] left-0 z-20 flex h-[68px] w-full items-center overflow-hidden bg-transparent md:h-[96px] md:bottom-[60px]">
     <style>{`
         @keyframes logo-scroll {
           from {

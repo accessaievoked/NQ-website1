@@ -1,7 +1,6 @@
 import React from "react";
 import Testimonals from "../components/TestimonialsScroll";
 import Ecommerce from "../components/Ecommerce";
-// import LogoTicker from "../components/LogoTicker";
 import Perform from "../components/Perform";
 import PromiseDifference from "../components/Promisedifference";
 import Services from "../components/Services";
@@ -19,8 +18,12 @@ const Home = (props) => {
 				<RevealOnScroll><Perform/></RevealOnScroll>
 				<RevealOnScroll><Services/></RevealOnScroll>
 				<RevealOnScroll><Audiencesection/></RevealOnScroll>
-				<RevealOnScroll><WhyChooseus/></RevealOnScroll>
-				<RevealOnScroll><PromiseDifference/></RevealOnScroll>
+				<RevealOnScroll>
+				<div className= "">
+				<WhyChooseus/>
+				<PromiseDifference/>
+				</div>
+				</RevealOnScroll>
 				<RevealOnScroll><Ecommerce/></RevealOnScroll>
 				<RevealOnScroll><Testimonals/></RevealOnScroll>
 			</div>

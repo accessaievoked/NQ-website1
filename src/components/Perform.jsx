@@ -28,7 +28,7 @@ export default function Perform() {
   }, []);
 
   return (
-    <section className="performance-section relative flex min-h-[400px] flex-col items-center justify-start overflow-hidden bg-white px-5 py-14 md:h-[100svh] md:min-h-0 md:justify-start md:px-8 md:pt-28">
+    <section className="performance-section relative flex min-h-[400px] flex-col items-center justify-start overflow-hidden bg-white px-5 py-14 md:h-[110svh] md:min-h-0 md:justify-start md:px-8 md:pt-28">
       <style>{`
         .performance-heading {
           position: relative;

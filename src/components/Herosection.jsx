@@ -9,6 +9,7 @@ import bottom3 from "../assets/images/home/Herosection/Desktop/mrja1.png";
 import bottom4 from "../assets/images/home/Herosection/Desktop/threesixtycollection.png";
 
 import LogoTicker from "./LogoTicker";
+import { ArrowUpRight } from "lucide-react";
 
 const topImages = [top1, top2, top3, top4];
 const bottomImages = [bottom1, bottom2, bottom3, bottom4];
@@ -46,13 +47,7 @@ function FloatingSite({ src, className = "", fadeBottom = false }) {
 
 export default function Hero() {
   return (
-    <section className="relative isolate h-[550px] w-screen overflow-hidden bg-[radial-gradient(circle_at_52%_46%,#ffffff_0%,transparent_43%),linear-gradient(125deg,#dff6ff_0%,#fff_30%,#ffe4f2_73%,#dff6ff_100%)] md:h-[140svh]">
-      {/* Mobile cards sit inside a fixed-size 400x550 canvas, centered.
-          This makes every phone render the exact same layout — narrower
-          screens just crop the edges evenly instead of the cards
-          drifting into each other. md:contents removes this wrapper
-          from the layout on desktop, so the md: positions below still
-          resolve against the section as before. */}
+   <section className="relative isolate h-[750px] w-screen overflow-hidden bg-[linear-gradient(180deg,#ffe4f2_0%,#f3e6f7_25%,#dff6ff_55%,#ffffff_85%)] md:h-[140svh] md:bg-[radial-gradient(circle_at_52%_46%,#ffffff_0%,transparent_43%),linear-gradient(125deg,#dff6ff_0%,#fff_30%,#ffe4f2_73%,#dff6ff_100%)]">
       <div className="absolute left-1/2 top-0 h-full w-[400px] -translate-x-1/2 md:contents">
         <FloatingSite
           src={topImages[0]}
@@ -127,18 +122,20 @@ export default function Hero() {
         </p>
 
         <a
-          href="#demo"
-          className="mt-6 rounded-full bg-[#001931] px-7 py-3 text-[15px] text-white transition duration-300 hover:scale-105 md:mt-9 md:px-8 md:py-4 md:text-[15px]"
-        >
-          Book a Demo &nbsp; ↗
-        </a>
+           href="#demo"
+  className="mt-6 flex items-center gap-1.5 rounded-full bg-[#001931] px-7 py-3 text-[15px] text-white transition duration-300 hover:scale-105 md:mt-9 md:px-8 md:py-4 md:text-[15px]"
+>
+  Book a Demo
+  <ArrowUpRight size={16} />
+</a>
+
       </div>
 
-
-  <div className="pointer-events-none absolute bottom-0 left-0 z-20 h-[260px] w-full bg-gradient-to-b from-transparent from-0% via-[#dff6ff]/60 via-45% to-white to-90% md:h-[340px]" />
 <LogoTicker />
 
-       </section>
+{/* Thin white fade right at the very bottom, after the logos — not before them */}
+<div className="pointer-events-none absolute bottom-0 left-0 z-10 h-[40px] w-full bg-gradient-to-b from-transparent to-white md:h-[60px]" />
+</section>
 
   );
 }

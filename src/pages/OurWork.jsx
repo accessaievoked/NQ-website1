@@ -2,37 +2,7 @@ import React from "react";
 export default (props) => {
 	return (
 		<div className="flex flex-col bg-white">
-			<div className="self-stretch bg-white">
-				<div className="flex justify-between items-start self-stretch bg-white pt-[37px] px-20 mb-[168px]">
-					<img
-						src={"https://storage.googleapis.com/tagjs-prod.appspot.com/v1/hyrhs0Ks0b/n9i2sdsr_expires_30_days.png"} 
-						className="w-[108px] h-[43px] object-fill"
-					/>
-					<div className="flex shrink-0 items-center">
-						<span className="text-black text-lg mr-[33px]" >
-							{"Services"}
-						</span>
-						<span className="text-black text-lg font-bold mr-[34px]" >
-							{"Our Work"}
-						</span>
-						<span className="text-black text-lg mr-9" >
-							{"Blogs"}
-						</span>
-						<span className="text-black text-lg" >
-							{"About Us"}
-						</span>
-					</div>
-					<button className="flex shrink-0 items-center bg-[#001930] text-left py-2.5 px-[26px] gap-4 rounded-[100px] border-0"
-						onClick={()=>alert("Pressed!")}>
-						<span className="text-white text-sm" >
-							{"Contact Us"}
-						</span>
-						<img
-							src={"https://storage.googleapis.com/tagjs-prod.appspot.com/v1/hyrhs0Ks0b/8ovvb2g6_expires_30_days.png"} 
-							className="w-5 h-5 object-fill"
-						/>
-					</button>
-				</div>
+			<div className="self-stretch">
 				<div className="flex items-start self-stretch relative mb-[39px] mx-20">
 					<div className="flex flex-1 flex-col items-start mr-[52px]">
 						<div className="flex flex-col items-start self-stretch mb-8">
@@ -268,39 +238,6 @@ export default (props) => {
 							</span>
 						</div>
 					</div>
-				</div>
-				<div className="flex flex-col items-start self-stretch bg-black pt-[60px]">
-					<div className="flex justify-between items-center self-stretch mb-2 mx-20">
-						<span className="text-white text-[64px]" >
-							{"Next Quarter"}
-						</span>
-						<div className="flex flex-col shrink-0 items-start gap-2">
-							<span className="text-white text-[28px]" >
-								{"We are just a message away"}
-							</span>
-							<span className="text-[#D9D9D9] text-base mr-[58px]" >
-								{"We’ll get back to you in one business day."}
-							</span>
-						</div>
-					</div>
-					<div className="flex justify-between items-start self-stretch max-w-[1128px] mb-[294px] ml-20 mr-[232px]">
-						<span className="text-white text-base" >
-							{"Shopify CRO Agency"}
-						</span>
-						<button className="flex shrink-0 items-center bg-white text-left py-[18px] px-[42px] mt-5 gap-[19px] rounded-[100px] border-0"
-							onClick={()=>alert("Pressed!")}>
-							<span className="text-[#03235E] text-sm" >
-								{"Get In Touch"}
-							</span>
-							<img
-								src={"https://storage.googleapis.com/tagjs-prod.appspot.com/v1/hyrhs0Ks0b/zj5ykeca_expires_30_days.png"} 
-								className="w-6 h-6 object-fill"
-							/>
-						</button>
-					</div>
-					<span className="text-white text-[200px]" >
-						{"NEXT QUARTER"}
-					</span>
 				</div>
 			</div>
 		</div>

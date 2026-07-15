@@ -11,10 +11,10 @@ const slides = [
     mobileImage:
   ClauraMobile,
     label: "Our Approach",
-    heading: "The Hidden Revenue Between ? PDP & Checkout",
+    heading: "The Hidden Revenue Between PDP & Checkout",
     paragraph:
       "The greatest opportunities for revenue growth often exist between the Product Detail Page and checkout. While customers have already shown purchase intent, small moments of friction can quietly reduce conversions and average order value.",
-    mobileHeading: "The Hidden Revenue Between ? PDP & Checkout",
+    mobileHeading: "The Hidden Revenue Between  PDP & Checkout",
     mobileParagraph:
       "The greatest opportunities for revenue growth often exist between the Product Detail Page and checkout. While customers have already shown purchase intent, small moments of friction can quietly reduce conversions and average order value.",
     ctaLabel: "Case Studies",
