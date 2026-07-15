@@ -22,7 +22,7 @@ export default function HeroSection() {
             alt=""
             src={Ecommerce1}
             className="absolute object-cover rounded-md"
-            style={{ left: "25.4%", top: "0px", width: "17%", height: "128px", zIndex: 0 }}
+            style={{ left: "25.4%", top: "0px", width: "27%", height: "128px", zIndex: 0 }}
           />
           <img
             alt=""

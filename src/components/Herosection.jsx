@@ -135,8 +135,8 @@ export default function Hero() {
       </div>
 
 
-     <div className="pointer-events-none absolute bottom-0 left-0 z-20 h-[220px] w-full bg-gradient-to-b from-transparent via-white/85 via-30% to-white to-75% md:h-[280px]" />
-      <LogoTicker />
+  <div className="pointer-events-none absolute bottom-0 left-0 z-20 h-[260px] w-full bg-gradient-to-b from-transparent from-0% via-[#dff6ff]/60 via-45% to-white to-90% md:h-[340px]" />
+<LogoTicker />
 
        </section>
 

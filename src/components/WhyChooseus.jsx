@@ -91,10 +91,10 @@ export default function WhyChooseUs() {
 
           {/* Right — headline + description */}
           <div className="flex-1">
-            <p className="text-[23px] md:text-4xl lg:text-5xl font-light text-gray-400 leading-tight">
+            <p className="text-[20px] md:text-4xl lg:text-5xl font-light text-gray-400 leading-tight">
               We build more than storefronts.
             </p>
-            <h2 className="text-2xl md:text-4xl lg:text-5xl font-normal text-gray-900 leading-tight">
+            <h2 className="text-[20px] md:text-4xl lg:text-5xl font-normal text-gray-900 leading-tight">
               We build revenue engines.
             </h2>
             <p className="mt-4 text-sm md:text-base text-[#000] max-w-sm leading-relaxed">
@@ -109,13 +109,13 @@ export default function WhyChooseUs() {
         <div className="flex flex-col lg:flex-row gap-6 lg:gap-32 lg:items-end">
 
           {/* Left — slide text, bottom-aligned with image (mobile: shown second / below image) */}
-          <div className="order-2 lg:order-none lg:w-[420px] shrink-0 flex flex-col justify-end">
+          <div className="order-2 lg:order-none lg:w-[420px] shrink-0 flex flex-col justify-end w-[240px]">
             <div
               style={{ transition: `opacity ${FADE_MS}ms ease, transform ${FADE_MS}ms ease` }}
               className={animating ? "opacity-0 translate-y-2" : "opacity-100 translate-y-0"}
             >
               <div className="flex items-start gap-2 mb-2">
-                <h3 className="text-lg md:text-xl font-bold text-gray-900 leading-snug">
+                <h3 className="text-[12px] md:text-xl font-bold text-gray-900 leading-snug">
                   {current.heading}
                 </h3>
                 <a
