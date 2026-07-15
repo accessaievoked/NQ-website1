@@ -1,12 +1,13 @@
 {
   "files": {
-    "main.css": "/NQ-website1/static/css/main.d7057784.css",
-    "main.js": "/NQ-website1/static/js/main.a5ce6259.js",
+    "main.css": "/NQ-website1/static/css/main.cdfae140.css",
+    "main.js": "/NQ-website1/static/js/main.d5fa4b02.js",
     "static/js/453.f4d0d7a5.chunk.js": "/NQ-website1/static/js/453.f4d0d7a5.chunk.js",
     "static/media/Claura.png": "/NQ-website1/static/media/Claura.d8913adb81cb6144a750.png",
     "static/media/mrja1.png": "/NQ-website1/static/media/mrja1.dca5c3099977583db163.png",
     "static/media/mrja.png": "/NQ-website1/static/media/mrja.079c5a40f4ebb5864e8b.png",
     "static/media/que.png": "/NQ-website1/static/media/que.a850d51d28fb71f68360.png",
+    "static/media/ServicesBanner.png": "/NQ-website1/static/media/ServicesBanner.f0e7cf124856f300d806.png",
     "static/media/hov.png": "/NQ-website1/static/media/hov.f0e7cf124856f300d806.png",
     "static/media/threesixtycollection.png": "/NQ-website1/static/media/threesixtycollection.3610b6b352f2e520e11d.png",
     "static/media/covera.png": "/NQ-website1/static/media/covera.783d9d50270ff6610dc1.png",
@@ -19,24 +20,29 @@
     "static/media/platform.png": "/NQ-website1/static/media/platform.ad7de8adcd5e4bb03460.png",
     "static/media/Aboutus4.png": "/NQ-website1/static/media/Aboutus4.64f87f80dce5db1d9b0b.png",
     "static/media/B Testing.png": "/NQ-website1/static/media/B Testing.edd7c051f9ca5b19af7e.png",
+    "static/media/Testing.png": "/NQ-website1/static/media/Testing.edd7c051f9ca5b19af7e.png",
     "static/media/Aboutus3.png": "/NQ-website1/static/media/Aboutus3.6690e5f69a75443a5e8f.png",
     "static/media/Design & Development.png": "/NQ-website1/static/media/Design & Development.c1b145840debf8f27b28.png",
+    "static/media/Design.png": "/NQ-website1/static/media/Design.c1b145840debf8f27b28.png",
     "static/media/Aboutus1.png": "/NQ-website1/static/media/Aboutus1.bf770400355c9e4c3c3c.png",
+    "static/media/SEO.png": "/NQ-website1/static/media/SEO.90fe36b2f607e7965615.png",
     "static/media/Google Analysis.png": "/NQ-website1/static/media/Google Analysis.87ae9987eecc98bd77e8.png",
     "static/media/ClauraMobile.png": "/NQ-website1/static/media/ClauraMobile.ec20a32b2eb264deac2d.png",
     "static/media/Platform Migration.png": "/NQ-website1/static/media/Platform Migration.c3f848e05d5fe66b0022.png",
+    "static/media/Platform.png": "/NQ-website1/static/media/Platform.c3f848e05d5fe66b0022.png",
+    "static/media/Audit.png": "/NQ-website1/static/media/Audit.777126f71b8bed70a695.png",
     "static/media/CRO Optimization.png": "/NQ-website1/static/media/CRO Optimization.777126f71b8bed70a695.png",
     "static/media/Ecommerce4.png": "/NQ-website1/static/media/Ecommerce4.0ef12053f4175e6d082a.png",
     "static/media/Ecommerce3.png": "/NQ-website1/static/media/Ecommerce3.7770dddc1accf624dd87.png",
     "static/media/Ecommerce1.png": "/NQ-website1/static/media/Ecommerce1.26ea9fa8dbb08a32f0ca.png",
     "static/media/Ecommerce2.png": "/NQ-website1/static/media/Ecommerce2.e60079c28793b1b701c6.png",
     "index.html": "/NQ-website1/index.html",
-    "main.d7057784.css.map": "/NQ-website1/static/css/main.d7057784.css.map",
-    "main.a5ce6259.js.map": "/NQ-website1/static/js/main.a5ce6259.js.map",
+    "main.cdfae140.css.map": "/NQ-website1/static/css/main.cdfae140.css.map",
+    "main.d5fa4b02.js.map": "/NQ-website1/static/js/main.d5fa4b02.js.map",
     "453.f4d0d7a5.chunk.js.map": "/NQ-website1/static/js/453.f4d0d7a5.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d7057784.css",
-    "static/js/main.a5ce6259.js"
+    "static/css/main.cdfae140.css",
+    "static/js/main.d5fa4b02.js"
   ]
 }
