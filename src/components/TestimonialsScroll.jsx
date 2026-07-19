@@ -61,8 +61,8 @@ export default function TestimonialsScroll() {
         .animate-scroll-left:hover,
         .animate-scroll-right:hover { animation-play-state: paused; }
         @media (max-width: 640px) {
-          .animate-scroll-left  { animation-duration: 22s; }
-          .animate-scroll-right { animation-duration: 22s; }
+          .animate-scroll-left  { animation-duration: 42s; }
+          .animate-scroll-right { animation-duration: 42s; }
         }
         @media (prefers-reduced-motion: reduce) {
           .animate-scroll-left,

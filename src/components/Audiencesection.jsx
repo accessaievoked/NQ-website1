@@ -99,7 +99,7 @@ export default function ConversionScienceSection() {
           </span>
           <Dots className="" idPrefix="mobile-top" size="sm" />
         </div>
-        <h2 className="text-white font-bold text-3xl md:text-4xl lg:text-5xl leading-tight">
+        <h2 className="text-white font-normal text-3xl md:text-3xl lg:text-4xl leading-tight">
           {active.mobileHeading}
         </h2>
 
@@ -127,8 +127,8 @@ export default function ConversionScienceSection() {
           />
         </div>
 
-        <div className="flex flex-col items-start gap-3">
-          <span className="text-white text-xs">{active.label}</span>
+        <div className="flex flex-col items-start gap-14">
+          <span className="text-white text-[10px]">[{active.label}]</span>
           <span className="text-white text-xs leading-relaxed">
             {active.copy}
           </span>
@@ -156,7 +156,7 @@ export default function ConversionScienceSection() {
               className="flex items-center bg-white text-left py-4 px-8 gap-4 rounded-[100px] border-0"
               onClick={() => alert("Pressed!")}
             >
-              <span className="text-[#03235E] text-sm">{active.ctaLabel}</span>
+              <span className="text-[#03235E] text-md">{active.ctaLabel}</span>
               <img
                 alt=""
                 src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/hyrhs0Ks0b/72inuo2e_expires_30_days.png"
@@ -176,9 +176,9 @@ export default function ConversionScienceSection() {
             />
           </div>
 
-          <div className="flex flex-col items-start w-full max-w-[450px] mx-auto">
+          <div className="flex flex-col items-start w-full max-w-[450px] mx-auto gap-6">
             <span className="text-white text-xs mb-5">
-              {active.label}
+              [ {active.label} ]
             </span>
             <span className="text-white text-xs leading-relaxed">
               {active.copy}

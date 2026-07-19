@@ -101,9 +101,9 @@ export default function Hero() {
           <span className="block">Is Your Shopify Store</span>
 
           <span
-            className="mt-2 inline-block text-[25px] font-normal tracking-[-0.06em] text-[#03235E] md:mt-4 md:text-[62px]"
+            className="mt-2 inline-block text-[25px] font-normal tracking-[-0.06em] text-[#03235E] md:mt-4 md:text-[52px]"
             style={{
-              background: "#eff2f3",
+              background: "#dbeaffbf",
               color: "#03235E",
               padding: "2px 12px",
               borderLeft: "3px solid #87B5DA",

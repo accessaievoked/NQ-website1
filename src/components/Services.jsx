@@ -54,7 +54,7 @@ export default function ServicesSection() {
   return (
     <section
       ref={sectionRef}
-      className="px-6 py-10 md:px-20 md:py-20 md:my-20"
+      className="px-6 py-10 md:px-20 md:py-10 md:pb-20"
     >
       <h2 className="text-center text-xl md:text-2xl lg:text-4xl text-gray-900 leading-tight max-w-[940px] mx-auto mb-[clamp(40px,6vw,72px)] tracking-tight">
         We partner with ecommerce brands to build{' '}
@@ -197,7 +197,7 @@ export default function ServicesSection() {
               }`}
             >
               <div className="w-[58%] flex flex-col items-center gap-2.5">
-                <div className="w-full rounded-xl overflow-hidden bg-slate-100 shadow-sm aspect-[4/3]">
+                <div className="w-full rounded-md overflow-hidden bg-slate-100 shadow-sm aspect-[4/3]">
                   <img
                     src={svc.img}
                     alt={svc.title}

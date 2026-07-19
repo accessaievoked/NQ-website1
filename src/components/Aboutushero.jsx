@@ -4,34 +4,19 @@ import AboutImage1 from '../assets/images/Aboutus/Aboutus1.png';
 import AboutImage2 from '../assets/images/Aboutus/Aboutus2.png';
 import AboutImage3 from '../assets/images/Aboutus/Aboutus3.png';
 import AboutImage4 from '../assets/images/Aboutus/Aboutus4.png';
+import { ArrowUpRight } from "lucide-react";
 
 const heroImages = [
-  {
-    src: AboutImage1,
-    alt: 'Ecommerce project one',
-    className: 'translate-y-8 md:translate-y-10',
-  },
-  {
-    src: AboutImage2,
-    alt: 'Ecommerce project two',
-    className: 'translate-y-0',
-  },
-  {
-    src: AboutImage3,
-    alt: 'Ecommerce project three',
-    className: 'translate-y-6 md:translate-y-8',
-  },
-  {
-    src: AboutImage4,
-    alt: 'Ecommerce project four',
-    className: 'translate-y-10 md:translate-y-12',
-  },
+  { src: AboutImage1, alt: 'Ecommerce project one' },
+  { src: AboutImage2, alt: 'Ecommerce project two' },
+  { src: AboutImage3, alt: 'Ecommerce project three' },
+  { src: AboutImage4, alt: 'Ecommerce project four' },
 ];
 
 export default function AboutHero() {
   return (
     <section
-      className="relative left-1/2 min-h-[680px] w-screen -translate-x-1/2 overflow-hidden bg-white pt-24 md:min-h-[740px] md:pt-28"
+      className="relative left-1/2 w-screen -translate-x-1/2 bg-white pt-24 md:pt-28"
       style={{
         backgroundImage: `
           radial-gradient(circle at 50% 8%, rgba(255, 212, 235, 0.62), transparent 31%),
@@ -42,18 +27,26 @@ export default function AboutHero() {
     >
       {/* Hero content */}
       <div className="relative z-10 mx-auto max-w-6xl px-5 text-center">
-        <h1 className="mx-auto max-w-5xl text-[clamp(32px,4.1vw,58px)] font-medium leading-[1.08] tracking-[-0.055em] text-[#061b32]">
+        <h1 className="text-[20px] font-normal tracking-[-0.04em] text-black md:text-[54px]">
           We Believe Great Ecommerce Starts With
         </h1>
 
-        <div className="mt-3 inline-flex items-center border-x border-[#84b8ec] bg-[#dbeaff]/75 px-4 py-1.5 md:mt-4 md:px-7 md:py-2">
-          <span className="text-[clamp(31px,4vw,56px)] font-medium leading-none tracking-[-0.06em] text-[#0b4375]">
-            Understanding People
+         <span
+            className="mt-2 inline-block text-[22px] font-normal tracking-[-0.06em] text-[#03235E] md:mt-4 md:text-[52px]"
+            style={{
+              background: "#dbeaffbf",
+              color: "#0b4375",
+              padding: "2px 12px",
+              borderLeft: "3px solid #87B5DA",
+              borderRight: "3px solid #87B5DA",
+              lineHeight: 1.4,
+            }}
+          >
+           Understanding People
           </span>
-        </div>
 
         <p className="mx-auto mt-7 max-w-[570px] text-[12px] font-medium leading-[1.35] text-[#071d32] md:mt-8 md:text-[14px]">
-          We’re a team of strategists, designers, developers, analysts, and
+          We're a team of strategists, designers, developers, analysts, and
           growth specialists united by one goal: helping brands grow through
           better ecommerce experiences.
         </p>
@@ -63,29 +56,51 @@ export default function AboutHero() {
           className="group mt-6 inline-flex items-center gap-3 rounded-full bg-[#031d38] px-6 py-3 text-[11px] font-medium text-white transition hover:-translate-y-0.5 hover:bg-[#073661] md:mt-7"
         >
           Get In Touch
-          <span className="text-base leading-none transition-transform group-hover:translate-x-1">
-            ↗
-          </span>
+           <ArrowUpRight size={16} />
         </a>
       </div>
 
-      {/* Static bottom image collage */}
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[310px] overflow-hidden md:h-[365px]">
-        <div className="absolute bottom-[-26px] left-1/2 flex w-max -translate-x-1/2 items-end gap-3 md:bottom-[-35px] md:gap-5">
+      {/* Image collage - full cards, no cropping */}
+      <div className="relative mt-10 w-full md:mt-14">
+        {/* Mobile: static row, no scroll. Cards are narrow enough that the middle
+            two sit fully inside the viewport while the first and last are
+            deliberately clipped by the viewport edge on both sides. */}
+        <div className="flex items-end justify-center gap-3 overflow-hidden md:hidden">
           {heroImages.map((image, index) => (
             <div
               key={image.alt}
-              className={[
-                'relative shrink-0 overflow-hidden rounded-[10px] bg-white',
-                'w-[152px] shadow-[0_8px_28px_rgba(28,68,100,0.13)]',
-                'md:w-[min(20vw,255px)]',
-                image.className,
-              ].join(' ')}
-            >
+              className="relative w-[118px] shrink-0 overflow-hidden rounded-[10px] bg-white shadow-[0_8px_20px_rgba(28,68,100,0.08)]"
+style={{
+  WebkitMaskImage: 'linear-gradient(to bottom, black 0%, black 78%, transparent 100%)',
+  maskImage: 'linear-gradient(to bottom, black 0%, black 78%, transparent 100%)',
+}}>
               <img
                 src={image.src}
                 alt={image.alt}
-                className="aspect-[0.76] w-full object-cover opacity-80"
+                className="h-auto w-full object-contain opacity-80"
+              />
+
+              <div className="absolute inset-0 bg-gradient-to-b from-white/10 via-white/0 to-[#e8f6ff]/20" />
+            </div>
+          ))}
+        </div>
+
+        {/* Desktop: static row, no scroll. Cards are wide enough that the row
+            overflows the viewport, so the first and last cards are deliberately
+            clipped by the edges while the middle ones show fully. */}
+        <div className="hidden w-full items-end justify-center gap-6 overflow-hidden md:flex">
+          {heroImages.map((image, index) => (
+            <div
+              key={image.alt}
+              className="relative w-[min(26vw,340px)] shrink-0 overflow-hidden rounded-[10px] bg-white shadow-[0_8px_20px_rgba(28,68,100,0.08)]"
+style={{
+  WebkitMaskImage: 'linear-gradient(to bottom, black 0%, black 78%, transparent 100%)',
+  maskImage: 'linear-gradient(to bottom, black 0%, black 78%, transparent 100%)',
+}}>
+              <img
+                src={image.src}
+                alt={image.alt}
+                className="h-auto w-full object-contain opacity-80"
               />
 
               <div className="absolute inset-0 bg-gradient-to-b from-white/10 via-white/0 to-[#e8f6ff]/20" />
@@ -99,8 +114,9 @@ export default function AboutHero() {
           ))}
         </div>
 
-        <div className="absolute inset-x-0 bottom-0 h-14 bg-gradient-to-t from-white/65 to-transparent" />
-      </div>
+        {/* Fade-out strip — pulled up to overlap the card shadows so that edge blurs away too */}
+  <div className="pointer-events-none -mt-10 h-20 w-full bg-gradient-to-b from-transparent to-white md:-mt-16 md:h-28" />
+   </div>
     </section>
   );
 }

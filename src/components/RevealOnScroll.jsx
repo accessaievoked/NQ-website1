@@ -7,10 +7,8 @@ const RevealOnScroll = ({ children, className = "", delay = 0 }) => {
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          observer.unobserve(entry.target); // fires exactly once
-        }
+        // no unobserve here — keep tracking so it re-fires both ways
+        setIsVisible(entry.isIntersecting);
       },
       { threshold: 0.1, rootMargin: "0px 0px -100px 0px" }
     );
@@ -22,10 +20,15 @@ const RevealOnScroll = ({ children, className = "", delay = 0 }) => {
   return (
     <div
       ref={ref}
-      className={`w-full self-stretch transition-all duration-700 ease-out will-change-transform ${
+      className={`w-full self-stretch transition-all duration-700 will-change-transform ${
         isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
       } ${className}`}
-      style={{ transitionDelay: `${delay}ms` }}
+      style={{
+        transitionDelay: `${delay}ms`,
+        transitionTimingFunction: isVisible
+          ? "cubic-bezier(0.34, 1.56, 0.64, 1)" // overshoot bounce on reveal (scrolling down)
+          : "cubic-bezier(0.36, 0, 0.66, -0.56)", // slight anticipation dip on hide (scrolling up)
+      }}
     >
       {children}
     </div>

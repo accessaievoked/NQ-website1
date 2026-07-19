@@ -28,7 +28,7 @@ export default function Perform() {
   }, []);
 
   return (
-    <section className="performance-section relative flex min-h-[400px] flex-col items-center justify-start overflow-hidden bg-white px-5 py-14 md:h-[110svh] md:min-h-0 md:justify-start md:px-8 md:pt-28">
+    <section className="performance-section relative flex min-h-[400px] flex-col items-center justify-start overflow-hidden bg-white px-5 py-14 md:h-auto md:min-h-[95svh] md:justify-start md:px-8 md:pt-8 md:pb-28">
       <style>{`
         .performance-heading {
           position: relative;
@@ -42,7 +42,7 @@ export default function Perform() {
 
         .performance-heading .highlight {
           display: inline-block;
-          background: #dbeafe;
+          background: #dbeaffbf;
           color: #000;
           padding: 2px 12px;
           border-left: 3px solid #87b5da;
@@ -102,14 +102,15 @@ export default function Perform() {
             filter: blur(85px);
           }
 
-          /* Soft blue circle behind bottom-right of image */
+          /* Soft blue circle behind bottom-center of image, bleeding toward next section */
           .orb-blue-bottom-right {
-            left: 48%;
-            bottom: -17vh;
-            width: 36vw;
-            height: 38vh;
-            background: rgba(185, 237, 255, 0.58);
-            filter: blur(70px);
+            left: 50%;
+            bottom: -12vh;
+            width: 62vw;
+            height: 52vh;
+            transform: translateX(-50%);
+            background: rgba(185, 237, 255, 0.65);
+            filter: blur(90px);
           }
 
           /* Removes the straight blue line at the section end */
@@ -132,7 +133,7 @@ export default function Perform() {
 
           .performance-image-wrap {
             width: min(100vw, 1260px);
-            height: min(67vh, 620px);
+            height: min(78vh, 720px);
           }
 
           .performance-image-wrap img {

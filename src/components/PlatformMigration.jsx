@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Platform from '../assets/images/Services/Platform/Platform.png'
 
 
@@ -12,28 +12,65 @@ const items = [
 	{ id: "07", label: "07 Launch & Quality Assurance", image: Platform },
 ];
 
+
+
+
 export default (props) => {
 	const [activeIndex, setActiveIndex] = useState(0);
 	const [mobileIndex, setMobileIndex] = useState(0);
+	const pausedRef = useRef(false);
+	const resumeTimeoutRef = useRef(null);
 
-	// Autoscroll effect for mobile image carousel
 	useEffect(() => {
 		const interval = setInterval(() => {
-			setMobileIndex((prev) => (prev + 1) % items.length);
+			if (!pausedRef.current) {
+				setMobileIndex((prev) => (prev + 1) % items.length);
+			}
 		}, 2500);
 		return () => clearInterval(interval);
 	}, []);
 
+	const handleMobileSelect = (idx) => {
+		setMobileIndex(idx);
+		pausedRef.current = true;
+		if (resumeTimeoutRef.current) clearTimeout(resumeTimeoutRef.current);
+		resumeTimeoutRef.current = setTimeout(() => {
+			pausedRef.current = false;
+		}, 5000); // resume autoplay 5s after a manual tap
+	};
+
+	useEffect(() => {
+		return () => {
+			if (resumeTimeoutRef.current) clearTimeout(resumeTimeoutRef.current);
+		};
+	}, []);
+
 	return (
 		<div className="flex flex-col items-start self-stretch mb-[60px] md:mb-[99px] mx-4 sm:mx-8 md:mx-20">
-			<span className="text-black text-[36px] sm:text-[48px] md:text-[80px] w-full md:w-[947px] mb-10 md:mb-20 leading-tight" >
-				{"Platform Migration \n To Shopify"}
+			<span className="text-black text-[36px] sm:text-[48px] md:text-[60px] w-full md:w-[947px] mb-10 md:mb-10 leading-tight block">
+				<span
+					className="relative inline-block"
+					style={{
+						background: "#dbeaffbf",
+						color: "#03235E",
+						padding: "2px 12px",
+						borderLeft: "3px solid #87B5DA",
+						borderRight: "3px solid #87B5DA",
+						lineHeight: 1.4,
+					}}
+				>
+				Platform
+				</span>
+				{" Migration"}
+				<br className="hidden md:block" />
+				{"To Shopify"}
+		
 			</span>
 
 			{/* ---------- DESKTOP LAYOUT ---------- */}
 			<div className="hidden md:flex justify-between items-center self-stretch">
 				<div className="flex flex-col shrink-0 items-center">
-					<span className="text-black text-lg w-[471px] mb-[93px]" >
+					<span className="text-black text-lg w-[471px] mb-[43px]" >
 						{"Seamless migrations that protect your data, preserve SEO value, and set the foundation for future growth."}
 					</span>
 					<div className="relative w-[400px] h-[281px] overflow-hidden bg-[#D9D9D9]">
@@ -42,7 +79,7 @@ export default (props) => {
 								key={item.id}
 								src={item.image}
 								alt={item.label}
-								className={`absolute inset-0 w-full h-full object-contain transition-opacity duration-500 ${
+								className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
 									idx === activeIndex ? "opacity-100" : "opacity-0"
 								}`}
 							/>
@@ -54,11 +91,26 @@ export default (props) => {
 						<React.Fragment key={item.id}>
 							<span
 								onMouseEnter={() => setActiveIndex(idx)}
-								className={`text-lg mb-4 ml-[22px] cursor-pointer transition-colors ${
-									idx === activeIndex ? "text-black font-medium" : "text-black/70"
-								}`}
+								className="relative inline-block mb-4 ml-[22px] cursor-pointer overflow-visible"
 							>
-								{item.label}
+								{/* gradient wash, extends beyond the word on both sides */}
+								<span
+									aria-hidden="true"
+									className={`pointer-events-none absolute -inset-x-16 -inset-y-6 blur-2xl transition-opacity duration-500 ease-out ${
+										idx === activeIndex ? "opacity-100" : "opacity-0"
+									}`}
+									style={{
+										background:
+											"linear-gradient(100deg, rgba(255,255,255,0) 0%, rgba(255,190,225,0.55) 30%, rgba(210,200,240,0.5) 50%, rgba(170,215,255,0.55) 70%, rgba(255,255,255,0) 100%)",
+									}}
+								/>
+								<span
+									className={`relative text-lg transition-colors duration-300 ${
+										idx === activeIndex ? "text-black font-medium" : "text-black/70"
+									}`}
+								>
+									{item.label}
+								</span>
 							</span>
 							<div className="w-[630px] h-[1px] mb-[15px] bg-[#0000004D]">
 							</div>
@@ -68,34 +120,54 @@ export default (props) => {
 			</div>
 
 			{/* ---------- MOBILE LAYOUT ---------- */}
-			{/* Order: heading (above) -> subheading -> numbered list -> autoscrolling image */}
+			{/* Order: heading (above) -> subheading -> image (tap-synced) -> numbered list (tappable, gradient highlight) */}
 			<div className="flex md:hidden flex-col items-start self-stretch">
 				<span className="text-black text-lg mb-[40px]" >
 					{"Uncover friction, identify hidden revenue leaks, and prioritize the opportunities that drive measurable growth."}
 				</span>
 
-				<div className="flex flex-col items-start self-stretch mb-8">
-					{items.map((item, idx) => (
-						<React.Fragment key={item.id}>
-							<span className="text-black text-lg mb-4" >
-								{item.label}
-							</span>
-							<div className="bg-[#0000004D] self-stretch h-[1px] mb-[15px]">
-							</div>
-						</React.Fragment>
-					))}
-				</div>
-
-				<div className="relative w-full aspect-[474/281] overflow-hidden bg-[#D9D9D9]">
+				<div className="relative w-full aspect-[424/300] overflow-hidden bg-[#D9D9D9] mb-8">
 					{items.map((item, idx) => (
 						<img
 							key={item.id}
 							src={item.image}
 							alt={item.label}
-							className={`absolute inset-0 w-full h-full object-contain transition-opacity duration-700 ${
+							className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ${
 								idx === mobileIndex ? "opacity-100" : "opacity-0"
 							}`}
 						/>
+					))}
+				</div>
+
+				<div className="flex flex-col items-start self-stretch">
+					{items.map((item, idx) => (
+						<React.Fragment key={item.id}>
+							<span
+								onClick={() => handleMobileSelect(idx)}
+								className="relative inline-block mb-4 cursor-pointer overflow-visible"
+							>
+								{/* gradient wash, tap-triggered */}
+								<span
+									aria-hidden="true"
+									className={`pointer-events-none absolute -inset-x-8 -inset-y-6 blur-2xl transition-opacity duration-500 ease-out ${
+										idx === mobileIndex ? "opacity-100" : "opacity-0"
+									}`}
+									style={{
+										background:
+											"linear-gradient(100deg, rgba(255,255,255,0) 0%, rgba(255,190,225,0.55) 30%, rgba(210,200,240,0.5) 50%, rgba(170,215,255,0.55) 70%, rgba(255,255,255,0) 100%)",
+									}}
+								/>
+								<span
+									className={`relative text-lg transition-colors duration-300 ${
+										idx === mobileIndex ? "text-black font-medium" : "text-black/70"
+									}`}
+								>
+									{item.label}
+								</span>
+							</span>
+							<div className="bg-[#0000004D] self-stretch h-[1px] mb-[15px]">
+							</div>
+						</React.Fragment>
 					))}
 				</div>
 			</div>

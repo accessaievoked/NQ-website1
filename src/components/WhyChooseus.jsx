@@ -65,7 +65,7 @@ export default function WhyChooseUs() {
   const current = slides[active];
 
   return (
-    <section className="relative w-full overflow-hidden px-6 py-10 md:px-20 md:py-20 bg-white">
+    <section className="relative w-full overflow-hidden px-6 py-10 md:px-20 md:py-24 bg-white">
 
       {/* Background glow — desktop only */}
       <div
@@ -84,17 +84,17 @@ export default function WhyChooseUs() {
 
           {/* Far left — label */}
           <div className="lg:w-[220px] shrink-0 pt-1">
-            <p className="text-xs font-semibold tracking-widest text-[#000] uppercase">
+            <p className="text-xs font-normal tracking-widest text-[#000]">
               Why Choose Us?
             </p>
           </div>
 
           {/* Right — headline + description */}
           <div className="flex-1">
-            <p className="text-[20px] md:text-4xl lg:text-5xl font-light text-gray-400 leading-tight">
+            <p className="text-[24px] md:text-4xl lg:text-5xl font-light text-gray-400 leading-tight">
               We build more than storefronts.
             </p>
-            <h2 className="text-[20px] md:text-4xl lg:text-5xl font-normal text-gray-900 leading-tight">
+            <h2 className="text-[24px] md:text-4xl lg:text-5xl font-normal text-gray-900 leading-tight">
               We build revenue engines.
             </h2>
             <p className="mt-4 text-sm md:text-base text-[#000] max-w-sm leading-relaxed">
@@ -106,7 +106,7 @@ export default function WhyChooseUs() {
         </div>
 
         {/* ── ROW 2: Slide text (bottom-aligned) | Image ── */}
-        <div className="flex flex-col lg:flex-row gap-6 lg:gap-32 lg:items-end">
+        <div className="flex flex-col lg:flex-row gap-16 lg:gap-32 lg:items-end">
 
           {/* Left — slide text, bottom-aligned with image (mobile: shown second / below image) */}
           <div className="order-2 lg:order-none lg:w-[420px] shrink-0 flex flex-col justify-end w-[240px]">
@@ -126,7 +126,7 @@ export default function WhyChooseUs() {
                   <svg width="13" height="13" viewBox="0 0 13 13" fill="none">
                     <path
                       d="M2.5 10.5L10.5 2.5M10.5 2.5H5M10.5 2.5V8"
-                      stroke="#4f46e5"
+                      stroke="#03235E"
                       strokeWidth="1.5"
                       strokeLinecap="round"
                       strokeLinejoin="round"
@@ -152,7 +152,7 @@ export default function WhyChooseUs() {
                 alt={current.heading}
                 width={1200}
                 height={1500}
-                className="w-full h-auto rounded-xl shadow-xl object-cover"
+                className="w-full h-auto rounded-xl shadow-md object-cover"
               />
             </div>
           </div>

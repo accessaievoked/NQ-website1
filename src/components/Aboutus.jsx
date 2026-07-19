@@ -3,13 +3,13 @@ import React from "react";
 
 export default function Aboutus (){
 	return (
-<div className="self-stretch bg-white">
-  <div className="self-stretch bg-white h-[167px] mb-11" />
+<div className="self-stretch">
+  <div className="self-stretch bg-white" />
 
   <div className="flex flex-col lg:flex-row justify-between items-center self-stretch mb-[50px] px-6 lg:ml-20 lg:mr-6 gap-12 lg:gap-0">
 
     {/* TEXT — always first */}
-    <div className="flex flex-col shrink-0 items-start gap-12">
+    <div className="flex flex-col shrink-0 items-start gap-7 md:gap-12">
       <span className="text-black text-[28px] lg:text-[40px] w-full lg:w-[389px]">
         {"Our Story Began With A Realization"}
       </span>

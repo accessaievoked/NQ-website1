@@ -57,7 +57,7 @@ export default function PromiseDifference() {
           <br />
           <span style={{
             display: 'inline',
-            background: '#dbeafe',
+            background: '#dbeaffbf',
             color: '#000',
             padding: '2px 12px',
             margin:'10px 0px',
