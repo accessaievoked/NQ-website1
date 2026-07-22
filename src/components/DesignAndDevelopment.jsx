@@ -47,7 +47,7 @@ export default (props) => {
 
 	return (
 		<div className="flex flex-col items-start self-stretch mb-[60px] md:mb-[99px] mx-4 sm:mx-8 md:mx-20">
-			<span className="text-black text-[36px] sm:text-[48px] md:text-[60px] w-full md:w-[947px] mb-10 md:mb-10 leading-tight block">
+			<span className="text-black text-[33px] sm:text-[48px] md:text-[60px] w-full md:w-[947px] mb-10 md:mb-10 leading-tight block">
 				<span
 					className="relative inline-block"
 					style={{
@@ -62,7 +62,7 @@ export default (props) => {
 				Design 
 				</span>
 				<br className="hidden md:block" />
-				{"& Development"}
+				{" & Development"}
 		
 			</span>
 

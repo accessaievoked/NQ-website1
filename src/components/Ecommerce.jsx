@@ -2,6 +2,7 @@ import Ecommerce1 from "../Images/Ecommerce2.png";
 import Ecommerce2 from "../Images/Ecommerce4.png";
 import Ecommerce3 from "../Images/Ecommerce1.png";
 import Ecommerce4 from "../Images/Ecommerce3.png";
+import { ArrowUpRight } from "lucide-react";
 
 export default function Ecommerce() {
   return (
@@ -58,10 +59,12 @@ export default function Ecommerce() {
 
         {/* Button */}
         <div className="flex justify-center relative" style={{ marginTop: "6px", zIndex: 10 }}>
-          <button
+          <a
+            href="https://calendly.com/skillsparkmedia-emp/skillspark-media-discovery-call"
+            target="_blank"
+            rel="noopener noreferrer"
             className="flex items-center bg-[#001930] text-left rounded-[100px] border-0"
             style={{ padding: "10px 22px", gap: "8px" }}
-            onClick={() => alert("Pressed!")}
           >
             <span className="text-white text-sm whitespace-nowrap">
               {"Get In Touch"}
@@ -72,7 +75,7 @@ export default function Ecommerce() {
               className="object-fill"
               style={{ width: "18px", height: "18px" }}
             />
-          </button>
+          </a>
         </div>
       </div>
 
@@ -114,16 +117,17 @@ export default function Ecommerce() {
           </p>
 
           <div className="mt-6 flex justify-center">
-            <button className="flex items-center bg-[#001930] text-left py-[17px] px-11 rounded-[100px] border-0"
-              onClick={() => alert("Pressed!")}>
+            <a
+              href="https://calendly.com/skillsparkmedia-emp/skillspark-media-discovery-call"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center rounded-full bg-[#001931] px-7 py-3 text-[15px] text-white  hover:bg-[#001931] transition-all duration-300 md:mt-9 md:px-8 md:py-4 md:text-[15px] gap-1.5"
+            >
               <span className="text-white text-sm" >
                 {"Get In Touch"}
               </span>
-              <img alt=""
-                src={"https://storage.googleapis.com/tagjs-prod.appspot.com/v1/hyrhs0Ks0b/r0rjs34g_expires_30_days.png"}
-                className="w-6 h-6 object-fill"
-              />
-            </button>
+                <ArrowUpRight size={16} />
+            </a>
           </div>
         </div>
       </div>

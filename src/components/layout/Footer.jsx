@@ -35,7 +35,7 @@ export default function Footer() {
               {/* Social icons */}
               <div style={{ display:'flex', alignItems:'center', gap:12 }}>
                 <a
-                  href="https://www.linkedin.com/company/next-quarter"
+                  href="https://www.linkedin.com/company/nxtqtr"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="LinkedIn"
@@ -59,7 +59,7 @@ export default function Footer() {
                 </a>
 
                 <a
-                  href="mailto:hello@nextquarter.co"
+                  href="mailto:contact@aievoked.com"
                   aria-label="Email"
                   style={{
                     display:'inline-flex',
@@ -106,6 +106,31 @@ export default function Footer() {
                     <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
                   </svg>
                 </a>
+
+                <a
+                  href="https://wa.me/919266101567"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="WhatsApp"
+                  style={{
+                    display:'inline-flex',
+                    alignItems:'center',
+                    justifyContent:'center',
+                    width:36,
+                    height:36,
+                    borderRadius:'50%',
+                    border:'1px solid rgba(255,255,255,0.2)',
+                    color:'#ffffff',
+                    transition:'background .2s, border-color .2s'
+                  }}
+                  onMouseEnter={(e) => { e.currentTarget.style.background = 'rgba(255,255,255,0.1)'; e.currentTarget.style.borderColor = 'rgba(255,255,255,0.4)'; }}
+                  onMouseLeave={(e) => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.borderColor = 'rgba(255,255,255,0.2)'; }}
+                >
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+                    <path d="M12.004 2.003c-5.514 0-9.997 4.483-9.997 9.997 0 1.762.462 3.485 1.34 5.002L2 22l5.116-1.324a9.965 9.965 0 0 0 4.888 1.318h.004c5.514 0 9.997-4.483 9.997-9.997 0-2.671-1.04-5.182-2.929-7.071a9.93 9.93 0 0 0-7.072-2.923zm5.848 15.845a8.281 8.281 0 0 1-5.85 2.424h-.003a8.29 8.29 0 0 1-4.229-1.158l-.303-.18-3.037.786.81-2.96-.198-.304a8.276 8.276 0 0 1-1.269-4.406c0-4.573 3.723-8.296 8.302-8.296a8.244 8.244 0 0 1 5.868 2.432 8.234 8.234 0 0 1 2.43 5.868 8.281 8.281 0 0 1-2.521 5.794z"/>
+                  </svg>
+                </a>
               </div>
             </div>
             {/* CTA */}
@@ -114,7 +139,7 @@ export default function Footer() {
               <p style={{ fontSize:15, color:'#a3a3a3', margintop:15 , lineHeight:'16px', marginBottom:24 }}>We'll get back to you in one business day.</p>
               <div className="footer-cta-btn-row" style={{ display:'flex', justifyContent:'flex-start' }}>
               <a
-                href="mailto:hello@nextquarter.co"
+                href="https://calendly.com/skillsparkmedia-emp/skillspark-media-discovery-call"
                 style={{
                   display:'inline-flex',
                   alignItems:'center',

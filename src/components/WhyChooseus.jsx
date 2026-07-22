@@ -84,7 +84,7 @@ export default function WhyChooseUs() {
 
           {/* Far left — label */}
           <div className="lg:w-[220px] shrink-0 pt-1">
-            <p className="text-xs font-normal tracking-widest text-[#000]">
+            <p className="text-md font-medium tracking-widest text-[#000]">
               Why Choose Us?
             </p>
           </div>

@@ -1,9 +1,20 @@
 
-import Hov from "../Images/Hov.png";
-import Que from "../Images/Que.png";
-import MasculinoLatino from "../Images/Masculino Latino.png";
-import ThreeSixty from "../Images/ThreeSixty.png";
-import Covera from "../Images/Covera.png";
+import Hov from "../assets/logos/Hov.png";
+import Que from "../assets/logos/Que.png";
+import MasculinoLatino from "../assets/logos/Masculino Latino.png";
+import ThreeSixty from "../assets/logos/ThreeSixty.png";
+import Covera from "../assets/logos/Covera.png";
+import mrja from "../assets/logos/Mrja.png";
+import SumanNathwani from "../assets/logos/Suman Nathwani.png";
+import Gil from "../assets/logos/GIL.png";
+import Sienna from "../assets/logos/sienna.png";
+import Kerrato from "../assets/logos/kerrato.png";
+import StitchInc from "../assets/logos/StitchInc.png";
+import Indethnic from "../assets/logos/Indethnic.png";
+import Bellofox from "../assets/logos/Bellofox.png";
+import Bigsmall from "../assets/logos/bigsmall.png";
+
+
 
 const logos = [
   { src: Hov, alt: "Hov" },
@@ -11,6 +22,15 @@ const logos = [
   { src: MasculinoLatino, alt: "Masculino Latino" },
   { src: ThreeSixty, alt: "ThreeSixty" },
   { src: Covera, alt: "Covera" },
+  { src: mrja, alt: "mrja" },
+  { src: SumanNathwani, alt: "Suman Nathwani" },
+  { src: Gil, alt: "Gil" },
+  { src: Sienna, alt: "Sienna" },
+  { src: Kerrato, alt: "Kerrato" },
+  { src: StitchInc, alt: "StitchInc" },
+  { src: Indethnic, alt: "Indethnic" },
+  { src: Bellofox, alt: "Bellofox" },
+  { src: Bigsmall, alt: "Bigsmall" },
 ];
 
 const allLogos = [...logos, ...logos];

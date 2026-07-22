@@ -1,4 +1,5 @@
 import React from "react";
+import AboutRightImage from '../assets/images/Aboutus/Aboutusright.png';
 
 
 export default function Aboutus (){
@@ -6,79 +7,53 @@ export default function Aboutus (){
 <div className="self-stretch">
   <div className="self-stretch bg-white" />
 
-  <div className="flex flex-col lg:flex-row justify-between items-center self-stretch mb-[50px] px-6 lg:ml-20 lg:mr-6 gap-12 lg:gap-0">
+  <div className="flex flex-col lg:flex-row justify-between items-center self-stretch mb-[50px] px-6 lg:px-6 gap-12 lg:gap-0">
 
     {/* TEXT — always first */}
     <div className="flex flex-col shrink-0 items-start gap-7 md:gap-12">
-      <span className="text-black text-[28px] lg:text-[40px] w-full lg:w-[389px]">
-        {"Our Story Began With A Realization"}
+      <span className="text-[28px] lg:text-[35px] w-full lg:w-[389px]">
+        <span className="text-black font-semibold">{"Our Story "}</span>
+        <span className="text-gray-400 font-normal">{"Began With A Realization"}</span>
       </span>
-      <span className="text-black text-base lg:text-lg w-full lg:w-[590px]">
-        {"While the ecommerce industry in India is filled with talented design and development agencies, we noticed that very few were approaching projects through the lens of conversion optimization. Most conversations revolved around aesthetics, features, and launches, while customer behavior, analytics, conversion funnels, and revenue impact were often left unexplored.\nWe believed there was a better way. One where design decisions are backed by data, user journeys are shaped by real customer insights, and success is measured not by how a store looks, but by how it performs. That's why we built a team that combines strategy, analytics, CRO, design, and development to help brands grow beyond launch day."}
+      <span className="text-base lg:text-lg w-full lg:w-[590px] leading-relaxed block text-justify text-[10px] lg:text-[18px]">
+        <span className="text-gray-400 font-normal">
+          {"While the ecommerce industry in India is filled with talented design and development agencies, "}
+        </span>
+        <span className="text-black font-semibold">
+          {"we noticed that very few were approaching projects through the lens of conversion optimization. "}
+        </span>
+        <span className="text-gray-400 font-normal">
+          {"Most conversations revolved around aesthetics, features, and launches, while customer behavior, analytics, conversion funnels, and revenue impact were often left unexplored. "}
+        </span>
+        <span className="text-black font-semibold">
+          {"We believed there was a better way. "}
+        </span>
+        <span className="text-gray-400 font-normal">
+          {"One where design decisions are backed by data, user journeys are shaped by real customer insights, and success is measured not by how a store looks, but by how it performs. "}
+        </span>
+        <span className="text-black font-semibold">
+          {"That's why we built a team that combines strategy, analytics, CRO, design, and development to help brands grow beyond launch day."}
+        </span>
       </span>
     </div>
 
-    {/* IMAGES — hidden on mobile, shown as simple stacked grid; desktop keeps original layout */}
-    
-    {/* Mobile image layout */}
+    {/* IMAGE — single image, shown on both mobile and desktop */}
+
+    {/* Mobile image */}
     <div className="flex lg:hidden w-full justify-center">
-      <div className="relative w-full max-w-sm mx-auto" style={{ height: "420px" }}>
-        {/* Main tall center image */}
-        <img
-          alt=""
-          src={"https://storage.googleapis.com/tagjs-prod.appspot.com/v1/hyrhs0Ks0b/1uqbysvf_expires_30_days.png"}
-          className="absolute left-1/2 -translate-x-1/2 top-0 w-[52%] h-auto object-cover rounded-xl"
-        />
-        {/* Top-left small image */}
-        <img
-          alt=""
-          src={"https://storage.googleapis.com/tagjs-prod.appspot.com/v1/hyrhs0Ks0b/ubmsrqsa_expires_30_days.png"}
-          className="absolute top-0 left-0 w-[32%] h-auto object-cover rounded-xl"
-        />
-        {/* Left tall image */}
-        <img
-          alt=""
-          src={"https://storage.googleapis.com/tagjs-prod.appspot.com/v1/hyrhs0Ks0b/r3aypwqc_expires_30_days.png"}
-          className="absolute top-[120px] left-0 w-[30%] h-auto object-cover rounded-xl"
-        />
-        {/* Bottom-left overlapping image */}
-        <img
-          alt=""
-          src={"https://storage.googleapis.com/tagjs-prod.appspot.com/v1/hyrhs0Ks0b/jh9inwx3_expires_30_days.png"}
-          className="absolute bottom-0 left-[10%] w-[36%] h-auto object-cover rounded-xl"
-        />
-        {/* Right small strip */}
-        <img
-          alt=""
-          src={"https://storage.googleapis.com/tagjs-prod.appspot.com/v1/hyrhs0Ks0b/n8tjrnic_expires_30_days.png"}
-          className="absolute bottom-[80px] right-0 w-[28%] h-auto object-cover rounded-xl"
-        />
-      </div>
+      <img
+        alt=""
+        src={AboutRightImage}
+        className="w-full max-w-sm h-auto object-cover rounded-xl"
+      />
     </div>
 
-    {/* Desktop image layout — original, untouched */}
+    {/* Desktop image — centered spacing, no extra shift */}
     <div className="hidden lg:flex shrink-0 items-start relative">
-      <img alt=""
-        src={"https://storage.googleapis.com/tagjs-prod.appspot.com/v1/hyrhs0Ks0b/r3aypwqc_expires_30_days.png"}
-        className="w-[152px] h-[291px] mt-[22px] mr-5 object-fill"
-      />
-      <div className="flex flex-col shrink-0 items-center relative my-[66px] mr-8">
-        <img alt=""
-          src={"https://storage.googleapis.com/tagjs-prod.appspot.com/v1/hyrhs0Ks0b/1uqbysvf_expires_30_days.png"}
-          className="w-[249px] h-[557px] object-fill"
-        />
-        <img alt=""
-          src={"https://storage.googleapis.com/tagjs-prod.appspot.com/v1/hyrhs0Ks0b/jh9inwx3_expires_30_days.png"}
-          className="w-[161px] h-[283px] absolute bottom-[-73px] left-[-95px] object-fill"
-        />
-      </div>
-      <img alt=""
-        src={"https://storage.googleapis.com/tagjs-prod.appspot.com/v1/hyrhs0Ks0b/n8tjrnic_expires_30_days.png"}
-        className="w-[151px] h-[59px] mt-[239px] object-fill"
-      />
-      <img alt=""
-        src={"https://storage.googleapis.com/tagjs-prod.appspot.com/v1/hyrhs0Ks0b/ubmsrqsa_expires_30_days.png"}
-        className="w-[169px] h-[218px] absolute top-0 right-[75px] object-fill"
+      <img
+        alt=""
+        src={AboutRightImage}
+        className="w-[420px] h-[500px] object-cover rounded-md"
       />
     </div>
 
@@ -86,4 +61,3 @@ export default function Aboutus (){
 </div>
     )
 }
-

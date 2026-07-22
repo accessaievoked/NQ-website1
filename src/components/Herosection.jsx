@@ -47,7 +47,7 @@ function FloatingSite({ src, className = "", fadeBottom = false }) {
 
 export default function Hero() {
   return (
-   <section className="relative isolate h-[750px] w-screen overflow-hidden bg-[linear-gradient(180deg,#ffe4f2_0%,#f3e6f7_25%,#dff6ff_55%,#ffffff_85%)] md:h-[140svh] md:bg-[radial-gradient(circle_at_52%_46%,#ffffff_0%,transparent_43%),linear-gradient(125deg,#dff6ff_0%,#fff_30%,#ffe4f2_73%,#dff6ff_100%)]">
+   <section className="relative isolate h-[750px] w-full max-w-full overflow-x-hidden bg-[linear-gradient(180deg,#ffe4f2_0%,#f3e6f7_25%,#dff6ff_55%,#ffffff_85%)] md:h-[140svh] md:bg-[radial-gradient(circle_at_52%_46%,#ffffff_0%,transparent_43%),linear-gradient(125deg,#dff6ff_0%,#fff_30%,#ffe4f2_73%,#dff6ff_100%)]">
       <div className="absolute left-1/2 top-0 h-full w-[400px] -translate-x-1/2 md:contents">
         <FloatingSite
           src={topImages[0]}
@@ -96,7 +96,7 @@ export default function Hero() {
       </div>
 
       {/* Hero content */}
-      <div className="relative z-10 flex h-full flex-col items-center justify-center text-center">
+      <div className="relative z-10 flex h-full flex-col items-center justify-center text-center mt-[-35px]">
         <h1 className="text-[30px] font-normal tracking-[-0.04em] text-black md:text-[54px]">
           <span className="block">Is Your Shopify Store</span>
 
@@ -122,8 +122,8 @@ export default function Hero() {
         </p>
 
         <a
-           href="#demo"
-  className="mt-6 flex items-center gap-1.5 rounded-full bg-[#001931] px-7 py-3 text-[15px] text-white transition duration-300 hover:scale-105 md:mt-9 md:px-8 md:py-4 md:text-[15px]"
+           href="https://calendly.com/skillsparkmedia-emp/skillspark-media-discovery-call"
+  className="mt-6 flex items-center gap-1.5 rounded-full bg-[#001931] px-7 py-3 text-[15px] text-white  hover:bg-[#001931] transition-all duration-300 md:mt-9 md:px-8 md:py-4 md:text-[15px]"
 >
   Book a Demo
   <ArrowUpRight size={16} />

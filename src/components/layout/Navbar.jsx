@@ -8,7 +8,7 @@ export default function Navbar() {
   const links = [
     { label: "Services", to: "/services" },
     { label: "Our Work", to: "/our-work" },
-    { label: "Blogs", to: "/blogs" },
+    // { label: "Blogs", to: "/blogs" },
     { label: "About Us", to: "/about" },
   ];
 
@@ -57,14 +57,16 @@ export default function Navbar() {
         </div>
 
         {/* CTA */}
-        <Link
-          to="/contact"
+        <a
+          href="https://calendly.com/skillsparkmedia-emp/skillspark-media-discovery-call"
+          target="_blank"
+          rel="noopener noreferrer"
           className="inline-flex items-center gap-2 bg-[#001931] text-white text-sm font-medium px-4 sm:px-5 py-2.5 sm:py-3 rounded-full hover:bg-[#001931] transition-colors whitespace-nowrap"
         >
           <span className="hidden sm:inline">Contact Us</span>
           <span className="sm:hidden">Contact Us</span>
           <ArrowUpRight size={16} />
-        </Link>
+        </a>
       </nav>
 
       {/* Mobile full-height menu overlay */}
@@ -106,8 +108,10 @@ export default function Navbar() {
               </Link>
             ))}
 
-            <Link
-              to="/contact"
+            <a
+              href="https://calendly.com/skillsparkmedia-emp/skillspark-media-discovery-call"
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={() => setOpen(false)}
               className={`inline-flex items-center gap-2 bg-[#001931] text-white text-sm font-medium px-5 py-3 rounded-full hover:bg-[#001931] transition-all duration-300 ${
                 open ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
@@ -116,7 +120,7 @@ export default function Navbar() {
             >
               <span>Contact Us</span>
               <ArrowUpRight size={16} />
-            </Link>
+            </a>
           </div>
         </div>
       </div>

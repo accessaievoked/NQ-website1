@@ -4,6 +4,7 @@ import AboutImage1 from '../assets/images/Aboutus/Aboutus1.png';
 import AboutImage2 from '../assets/images/Aboutus/Aboutus2.png';
 import AboutImage3 from '../assets/images/Aboutus/Aboutus3.png';
 import AboutImage4 from '../assets/images/Aboutus/Aboutus4.png';
+import AboutImage5 from '../assets/images/Aboutus/Aboutus5.png';
 import { ArrowUpRight } from "lucide-react";
 
 const heroImages = [
@@ -11,10 +12,12 @@ const heroImages = [
   { src: AboutImage2, alt: 'Ecommerce project two' },
   { src: AboutImage3, alt: 'Ecommerce project three' },
   { src: AboutImage4, alt: 'Ecommerce project four' },
+  { src: AboutImage5, alt: 'Ecommerce project five' },
 ];
 
 export default function AboutHero() {
   return (
+    <div className="w-full max-w-full overflow-x-hidden">
     <section
       className="relative left-1/2 w-screen -translate-x-1/2 bg-white pt-24 md:pt-28"
       style={{
@@ -53,7 +56,7 @@ export default function AboutHero() {
 
         <a
           href="#contact"
-          className="group mt-6 inline-flex items-center gap-3 rounded-full bg-[#031d38] px-6 py-3 text-[11px] font-medium text-white transition hover:-translate-y-0.5 hover:bg-[#073661] md:mt-7"
+          className="group mt-6 inline-flex items-center  gap-1.5 rounded-full bg-[#001931] px-7 py-3 text-[15px] text-white  hover:bg-[#001931] transition-all duration-300 md:mt-9 md:px-8 md:py-4 md:text-[15px]"
         >
           Get In Touch
            <ArrowUpRight size={16} />
@@ -118,5 +121,6 @@ style={{
   <div className="pointer-events-none -mt-10 h-20 w-full bg-gradient-to-b from-transparent to-white md:-mt-16 md:h-28" />
    </div>
     </section>
+    </div>
   );
 }
