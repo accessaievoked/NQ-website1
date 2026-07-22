@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/NQ-website1/static/css/main.db0ce2cb.css",
-    "main.js": "/NQ-website1/static/js/main.08290efa.js",
+    "main.css": "/NQ-website1/static/css/main.7301e636.css",
+    "main.js": "/NQ-website1/static/js/main.b9443bf0.js",
     "static/js/453.f4d0d7a5.chunk.js": "/NQ-website1/static/js/453.f4d0d7a5.chunk.js",
     "static/media/Claura.png": "/NQ-website1/static/media/Claura.d8913adb81cb6144a750.png",
     "static/media/mrja1.png": "/NQ-website1/static/media/mrja1.dca5c3099977583db163.png",
@@ -15,6 +15,7 @@
     "static/media/ThreeSixtyCombo.png": "/NQ-website1/static/media/ThreeSixtyCombo.e77887d76881f5d5b031.png",
     "static/media/threesixty.png": "/NQ-website1/static/media/threesixty.753fc37d82aae13dd62e.png",
     "static/media/HovCombo.png": "/NQ-website1/static/media/HovCombo.35fcccb7b7b383979859.png",
+    "static/media/Aboutusright.png": "/NQ-website1/static/media/Aboutusright.b8f14fbda2165dfee41f.png",
     "static/media/Clarity.png": "/NQ-website1/static/media/Clarity.20f43abc7556f64f2ac0.png",
     "static/media/Aboutus2.png": "/NQ-website1/static/media/Aboutus2.88ec2c18bd3a73709a4d.png",
     "static/media/platform.png": "/NQ-website1/static/media/platform.ad7de8adcd5e4bb03460.png",
@@ -25,6 +26,7 @@
     "static/media/Design & Development.png": "/NQ-website1/static/media/Design & Development.c1b145840debf8f27b28.png",
     "static/media/Design.png": "/NQ-website1/static/media/Design.c1b145840debf8f27b28.png",
     "static/media/Aboutus1.png": "/NQ-website1/static/media/Aboutus1.bf770400355c9e4c3c3c.png",
+    "static/media/Aboutus5.png": "/NQ-website1/static/media/Aboutus5.d061ebbebe0532450704.png",
     "static/media/SEO.png": "/NQ-website1/static/media/SEO.90fe36b2f607e7965615.png",
     "static/media/Google Analysis.png": "/NQ-website1/static/media/Google Analysis.87ae9987eecc98bd77e8.png",
     "static/media/ClauraMobile.png": "/NQ-website1/static/media/ClauraMobile.ec20a32b2eb264deac2d.png",
@@ -35,14 +37,16 @@
     "static/media/Ecommerce4.png": "/NQ-website1/static/media/Ecommerce4.0ef12053f4175e6d082a.png",
     "static/media/Ecommerce3.png": "/NQ-website1/static/media/Ecommerce3.7770dddc1accf624dd87.png",
     "static/media/Ecommerce1.png": "/NQ-website1/static/media/Ecommerce1.26ea9fa8dbb08a32f0ca.png",
+    "static/media/Suman Nathwani.png": "/NQ-website1/static/media/Suman Nathwani.1a6c080db022d5fa6433.png",
     "static/media/Ecommerce2.png": "/NQ-website1/static/media/Ecommerce2.e60079c28793b1b701c6.png",
+    "static/media/sienna.png": "/NQ-website1/static/media/sienna.32ce5b82416cafd9acc5.png",
     "index.html": "/NQ-website1/index.html",
-    "main.db0ce2cb.css.map": "/NQ-website1/static/css/main.db0ce2cb.css.map",
-    "main.08290efa.js.map": "/NQ-website1/static/js/main.08290efa.js.map",
+    "main.7301e636.css.map": "/NQ-website1/static/css/main.7301e636.css.map",
+    "main.b9443bf0.js.map": "/NQ-website1/static/js/main.b9443bf0.js.map",
     "453.f4d0d7a5.chunk.js.map": "/NQ-website1/static/js/453.f4d0d7a5.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.db0ce2cb.css",
-    "static/js/main.08290efa.js"
+    "static/css/main.7301e636.css",
+    "static/js/main.b9443bf0.js"
   ]
 }
