@@ -1,8 +1,5 @@
 import React, { useState, useEffect } from "react";
 
-// Update these image paths to point to your actual uploaded assets.
-// Each feature = 1 rotation slide: front mockup image + 2 decoy images
-// (left/right), a callout label, and the Opportunity/Solution/Impact copy.
 import feature1Front from "../../../assets/images/Casestudy/Claura/Impact1.png";
 import feature1DecoyLeft from "../../../assets/images/Casestudy/Claura/Impact2.png";
 import feature1DecoyRight from "../../../assets/images/Casestudy/Claura/Impact3.png";
@@ -15,7 +12,6 @@ import feature3Front from "../../../assets/images/Casestudy/Claura/Impact3.png";
 import feature3DecoyLeft from "../../../assets/images/Casestudy/Claura/Impact1.png";
 import feature3DecoyRight from "../../../assets/images/Casestudy/Claura/Impact2.png";
 
-
 const features = [
   {
     calloutLabel: "Cart Progress Bar",
@@ -25,95 +21,110 @@ const features = [
     optimizations: [
       {
         heading: "Opportunity :",
-        subheading: "Customers lost visibility of promotional incentives after entering the cart",
+        subheading:
+          "Customers lost visibility of promotional incentives after entering the cart.",
       },
       {
         heading: "Solution :",
-        subheading: "Added a visual reward tracker in the cart to encourage larger baskets before checkout.",
+        subheading:
+          "Added a visual reward tracker in the cart to encourage larger baskets before checkout.",
       },
       {
         heading: "Impact :",
-        subheading: "↑ Basket Size    ↑ Offer Redemption",
+        subheading: "↑ Basket Size\n↑ Offer Redemption",
       },
     ],
   },
   {
-    calloutLabel: "Feature 2 Label",
+    calloutLabel: "Sticky Add to Cart",
     frontImage: feature2Front,
     decoyLeftImage: feature2DecoyLeft,
     decoyRightImage: feature2DecoyRight,
     optimizations: [
-      { heading: "Opportunity :", subheading: "TODO — describe the problem this feature solves." },
-      { heading: "Solution :", subheading: "TODO — describe what was built." },
-      { heading: "Impact :", subheading: "TODO — describe the measured result." },
+      {
+        heading: "Opportunity :",
+        subheading:
+          "Customers needed easier access to purchasing while browsing the PDP.",
+      },
+      {
+        heading: "Solution :",
+        subheading:
+          "Introduced a persistent sticky Add to Cart section on mobile devices.",
+      },
+      {
+        heading: "Impact :",
+        subheading: "↑ Add to Cart\n↑ Checkout Starts",
+      },
     ],
   },
   {
-    calloutLabel: "Feature 3 Label",
+    calloutLabel: "Trust Badges",
     frontImage: feature3Front,
     decoyLeftImage: feature3DecoyLeft,
     decoyRightImage: feature3DecoyRight,
     optimizations: [
-      { heading: "Opportunity :", subheading: "TODO — describe the problem this feature solves." },
-      { heading: "Solution :", subheading: "TODO — describe what was built." },
-      { heading: "Impact :", subheading: "TODO — describe the measured result." },
+      {
+        heading: "Opportunity :",
+        subheading:
+          "Users lacked confidence before completing their purchase.",
+      },
+      {
+        heading: "Solution :",
+        subheading:
+          "Added payment security, COD and shipping assurance badges throughout the buying journey.",
+      },
+      {
+        heading: "Impact :",
+        subheading: "↑ Trust\n↑ Conversion Rate",
+      },
     ],
   },
 ];
 
 function CartStack({ feature, onNext }) {
   return (
-    <div className="relative w-full max-w-[620px] mx-auto md:mx-0 flex items-center justify-center py-4 md:py-0">
-      {/* Decoy image — previous card, peeking out on the left */}
-      <div
-        key={`left-${feature.calloutLabel}`}
-        className="block absolute -left-2 md:-left-6 top-1/2 -translate-y-1/2 w-[160px] md:w-[200px] opacity-60 blur-[1px] -z-0 transition-opacity duration-500 ease-in-out animate-[fadeIn_0.5s_ease-in-out]"
-      >
-        <img
-          src={feature.decoyLeftImage}
-          alt=""
-          className="w-full h-auto object-contain"
-        />
-      </div>
-
-      {/* Decoy image — next card, peeking out on the right */}
-      <div
-        key={`right-${feature.calloutLabel}`}
-        className="block absolute -right-2 md:-right-6 top-1/2 -translate-y-1/2 w-[160px] md:w-[200px] opacity-50 blur-[1px] -z-0 transition-opacity duration-500 ease-in-out animate-[fadeIn_0.5s_ease-in-out]"
-      >
-        <img
-          src={feature.decoyRightImage}
-          alt=""
-          className="w-full h-auto object-contain"
-        />
-      </div>
-
-      {/* Front image + callout, side by side at every breakpoint (matches image 2) */}
-      <div className="relative z-10 flex items-center gap-2 md:gap-3">
-        <div
-          key={`front-${feature.calloutLabel}`}
-          className="w-[230px] sm:w-[260px] md:w-[350px] transition-opacity duration-500 ease-in-out animate-[fadeIn_0.5s_ease-in-out]"
-        >
+    <div className="flex items-center justify-center w-full md:pl-14">
+      {/* Stacked image group */}
+      <div className="relative w-[230px] sm:w-[300px] md:w-[500px]">
+        {/* Left decoy */}
+        <div className="block absolute -left-6 sm:-left-8 md:-left-10 top-1/2 -translate-y-1/2 w-[140px] sm:w-[190px] md:w-[300px] opacity-40 blur-[0.5px] z-0">
           <img
-            src={feature.frontImage}
-            alt={feature.calloutLabel}
-            className="w-full h-auto object-contain shadow-[0_8px_30px_rgba(0,0,0,0.08)]"
+            src={feature.decoyLeftImage}
+            alt=""
+            className="w-full object-contain rounded-sm shadow-md"
           />
         </div>
 
-        {/* Arrow + label — clickable, advances to the next feature manually */}
+        {/* Right decoy */}
+        <div className="block absolute -right-6 sm:-right-8 md:-right-10 top-1/2 -translate-y-1/2 w-[140px] sm:w-[190px] md:w-[300px] opacity-40 blur-[0.5px] z-0">
+          <img
+            src={feature.decoyRightImage}
+            alt=""
+            className="w-full object-contain rounded-sm shadow-md"
+          />
+        </div>
+
+        {/* Main front card */}
+        <div className="relative z-20 w-full overflow-hidden">
+          <img
+            src={feature.frontImage}
+            alt={feature.calloutLabel}
+            className="w-full h-auto object-contain"
+          />
+        </div>
+
+        {/* Arrow + label, centered vertically, overlapping the right edge of the image */}
         <button
-          type="button"
           onClick={onNext}
-          aria-label="Show next feature"
-          className="flex items-center gap-2 shrink-0 group"
+          className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-[45%] sm:translate-x-1/2 z-30 flex items-center gap-1.5 sm:gap-2 group"
         >
-          <span className="w-8 h-8 md:w-9 md:h-9 rounded-full bg-white border border-gray-200 flex items-center justify-center text-gray-500 text-sm shadow-sm group-hover:bg-gray-50 group-hover:text-gray-800 transition-colors">
+          <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full border border-gray-300 bg-white flex items-center justify-center text-sm shadow-md transition-all group-hover:bg-gray-100">
             →
-          </span>
-          <span className="text-xs text-gray-600 bg-white border border-gray-200 rounded-full px-3 md:px-4 py-2 whitespace-nowrap shadow-sm group-hover:text-gray-800 transition-colors">
+          </div>
+
+          <div className="px-3 py-1.5 sm:px-4 sm:py-2 rounded-full border border-gray-300 bg-white text-[11px] sm:text-[13px] text-gray-700 whitespace-nowrap shadow-md">
             {feature.calloutLabel}
-          </span>
+          </div>
         </button>
       </div>
     </div>
@@ -127,8 +138,9 @@ export default function KeyOptimizations() {
     const timer = setInterval(() => {
       setFeatureIndex((prev) => (prev + 1) % features.length);
     }, 5000);
+
     return () => clearInterval(timer);
-  }, [featureIndex]);
+  }, []);
 
   const handleNext = () => {
     setFeatureIndex((prev) => (prev + 1) % features.length);
@@ -137,38 +149,47 @@ export default function KeyOptimizations() {
   const activeFeature = features[featureIndex];
 
   return (
-    <section className="w-full px-6 py-10 md:px-16 md:py-14 bg-gray-50">
-
-      {/* Top: mockup + copy panel, both synced to activeFeature */}
-      <div className="grid md:grid-cols-2 gap-8 md:gap-6 items-center mb-8 md:mb-10">
-        <div className="flex justify-center">
+    <section className="w-full bg-[#fafafa] py-12 lg:py-16 px-6 md:px-12 lg:px-16">
+      <div className="w-full">
+        {/* Top Section */}
+        <div className="flex flex-col md:flex-row items-center md:items-start gap-5 mb-6 justify-between">
+          {/* Image Stack */}
           <CartStack feature={activeFeature} onNext={handleNext} />
+
+          {/* Opportunity Card */}
+          <div
+            key={featureIndex}
+            className="w-full md:w-[250px] shrink-0 h-full flex flex-col justify-between bg-white border border-gray-100 rounded-sm shadow-sm px-6 py-5 transition-all duration-500"
+          >
+            {activeFeature.optimizations.map((item, index) => (
+              <div key={index} className="mb-4 last:mb-0">
+                <h4 className="text-[13px] font-semibold text-gray-900 mb-2">
+                  {item.heading}
+                </h4>
+
+                <p className="text-[13px] text-gray-600 leading-6 whitespace-pre-line">
+                  {item.subheading}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
 
-        <div
-          key={featureIndex}
-          className="flex flex-col gap-4 bg-transparent md:bg-white border-0 md:border md:border-gray-100 shadow-none md:shadow-sm p-0 md:p-5 w-full max-w-[320px] mx-auto md:mx-0 text-center md:text-left transition-opacity duration-500 ease-in-out animate-[fadeIn_0.5s_ease-in-out]"
-        >
-          {activeFeature.optimizations.map((item, i) => (
-            <div key={i}>
-              <p className="text-sm font-semibold text-gray-900 mb-1">{item.heading}</p>
-              <p className="text-sm text-gray-600 leading-relaxed">{item.subheading}</p>
-            </div>
-          ))}
-        </div>
-      </div>
+        {/* Bottom Text */}
+        <div className="max-w-[640px] mx-auto md:mx-0 text-center md:text-left">
+          <h2 className="text-[28px] md:text-[38px] leading-tight font-normal text-[#111827] mb-5">
+            Key Optimizations
+          </h2>
 
-      {/* Key Optimizations copy block — static, unrelated to rotation */}
-      <div className="text-center md:text-left max-w-3xl md:max-w-2xl mx-auto md:mx-0">
-        <h2 className="text-2xl md:text-3xl font-normal text-gray-900 mb-3 text-center md:text-left">
-          Key Optimizations
-        </h2>
-        <p className="text-sm md:text-base text-gray-600 leading-relaxed text-center md:text-left">
-          By analyzing customer behavior across the shopping journey, we identified key
-          opportunities to reduce friction and increase purchase intent. The following enhancements
-          were strategically implemented across product and cart experiences to encourage larger
-          basket sizes, improve offer visibility, and create a smoother path to checkout.
-        </p>
+          <p className="text-[10px]  text-gray-600">
+            By analyzing customer behavior across the shopping journey,
+            we identified key opportunities to reduce friction and increase
+            purchase intent. The following enhancements were strategically
+            implemented across product and cart experiences to encourage
+            larger basket sizes, improve offer visibility, and create a
+            smoother path to checkout.
+          </p>
+        </div>
       </div>
     </section>
   );
