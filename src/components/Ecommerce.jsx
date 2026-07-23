@@ -69,12 +69,7 @@ export default function Ecommerce() {
             <span className="text-white text-sm whitespace-nowrap">
               {"Get In Touch"}
             </span>
-            <img
-              alt=""
-              src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/hyrhs0Ks0b/r0rjs34g_expires_30_days.png"
-              className="object-fill"
-              style={{ width: "18px", height: "18px" }}
-            />
+            <ArrowUpRight size={16} />
           </a>
         </div>
       </div>
