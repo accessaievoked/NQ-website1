@@ -106,8 +106,8 @@ export default function PromiseDifference() {
             lineHeight: 1.4,
             boxDecorationBreak: 'clone',
             WebkitBoxDecorationBreak: 'clone',
-          }}>We Promise</span>
-          <span className="ml-2">The Difference.</span>
+          }}>30 Days</span>
+          <span className="ml-3">Following the Pilot.</span>
         </h2>
 
         <div className="flex flex-col gap-4">

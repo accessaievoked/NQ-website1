@@ -66,10 +66,12 @@ export default function Ecommerce() {
             className="flex items-center bg-[#001930] text-left rounded-[100px] border-0"
             style={{ padding: "10px 22px", gap: "8px" }}
           >
-            <span className="text-white text-sm whitespace-nowrap">
+            <span className="text-white text-sm whitespace-nowrap gap-0.5 flex items-center ">
               {"Get In Touch"}
+               <ArrowUpRight size={16} />
             </span>
-            <ArrowUpRight size={16} />
+            
+           
           </a>
         </div>
       </div>
@@ -118,10 +120,11 @@ export default function Ecommerce() {
               rel="noopener noreferrer"
               className="flex items-center rounded-full bg-[#001931] px-7 py-3 text-[15px] text-white  hover:bg-[#001931] transition-all duration-300 md:mt-9 md:px-8 md:py-4 md:text-[15px] gap-1.5"
             >
-              <span className="text-white text-sm" >
+              <span className="text-white text-sm whitespace-nowrap gap-0.5 flex items-center ">
                 {"Get In Touch"}
+                 <ArrowUpRight size={16} />
               </span>
-                <ArrowUpRight size={16} />
+               
             </a>
           </div>
         </div>
