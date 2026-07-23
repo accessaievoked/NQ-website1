@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/NQ-website1/static/css/main.7301e636.css",
-    "main.js": "/NQ-website1/static/js/main.b9443bf0.js",
-    "static/js/453.f4d0d7a5.chunk.js": "/NQ-website1/static/js/453.f4d0d7a5.chunk.js",
+    "main.css": "/NQ-website1/static/css/main.7c40f485.css",
+    "main.js": "/NQ-website1/static/js/main.b692f74c.js",
+    "static/js/453.a04ae9d0.chunk.js": "/NQ-website1/static/js/453.a04ae9d0.chunk.js",
     "static/media/Claura.png": "/NQ-website1/static/media/Claura.d8913adb81cb6144a750.png",
     "static/media/mrja1.png": "/NQ-website1/static/media/mrja1.dca5c3099977583db163.png",
     "static/media/mrja.png": "/NQ-website1/static/media/mrja.079c5a40f4ebb5864e8b.png",
@@ -11,23 +11,31 @@
     "static/media/hov.png": "/NQ-website1/static/media/hov.f0e7cf124856f300d806.png",
     "static/media/threesixtycollection.png": "/NQ-website1/static/media/threesixtycollection.3610b6b352f2e520e11d.png",
     "static/media/covera.png": "/NQ-website1/static/media/covera.783d9d50270ff6610dc1.png",
+    "static/media/Banner.png": "/NQ-website1/static/media/Banner.84f80a1c82ab553e3af0.png",
     "static/media/CoveraCombo.png": "/NQ-website1/static/media/CoveraCombo.7fb78ed0baa45fee6265.png",
     "static/media/ThreeSixtyCombo.png": "/NQ-website1/static/media/ThreeSixtyCombo.e77887d76881f5d5b031.png",
+    "static/media/Performance.png": "/NQ-website1/static/media/Performance.280e0ee7bf1a81ea75a0.png",
     "static/media/threesixty.png": "/NQ-website1/static/media/threesixty.753fc37d82aae13dd62e.png",
     "static/media/HovCombo.png": "/NQ-website1/static/media/HovCombo.35fcccb7b7b383979859.png",
+    "static/media/Threesixty.png": "/NQ-website1/static/media/Threesixty.9c94044f1f3d8d4e5391.png",
     "static/media/Aboutusright.png": "/NQ-website1/static/media/Aboutusright.b8f14fbda2165dfee41f.png",
+    "static/media/Wireframe.png": "/NQ-website1/static/media/Wireframe.fe7f21dad51437cba485.png",
     "static/media/Clarity.png": "/NQ-website1/static/media/Clarity.20f43abc7556f64f2ac0.png",
     "static/media/Aboutus2.png": "/NQ-website1/static/media/Aboutus2.88ec2c18bd3a73709a4d.png",
+    "static/media/Covera.png": "/NQ-website1/static/media/Covera.d637c7a2d277e0dc7b5f.png",
     "static/media/platform.png": "/NQ-website1/static/media/platform.ad7de8adcd5e4bb03460.png",
     "static/media/Aboutus4.png": "/NQ-website1/static/media/Aboutus4.64f87f80dce5db1d9b0b.png",
     "static/media/B Testing.png": "/NQ-website1/static/media/B Testing.edd7c051f9ca5b19af7e.png",
     "static/media/Testing.png": "/NQ-website1/static/media/Testing.edd7c051f9ca5b19af7e.png",
     "static/media/Aboutus3.png": "/NQ-website1/static/media/Aboutus3.6690e5f69a75443a5e8f.png",
+    "static/media/Impact2.png": "/NQ-website1/static/media/Impact2.c2ecdd1ecd473dc236f6.png",
     "static/media/Design & Development.png": "/NQ-website1/static/media/Design & Development.c1b145840debf8f27b28.png",
     "static/media/Design.png": "/NQ-website1/static/media/Design.c1b145840debf8f27b28.png",
     "static/media/Aboutus1.png": "/NQ-website1/static/media/Aboutus1.bf770400355c9e4c3c3c.png",
     "static/media/Aboutus5.png": "/NQ-website1/static/media/Aboutus5.d061ebbebe0532450704.png",
+    "static/media/Impact3.png": "/NQ-website1/static/media/Impact3.c8f7e217b5a64e11d9b1.png",
     "static/media/SEO.png": "/NQ-website1/static/media/SEO.90fe36b2f607e7965615.png",
+    "static/media/Impact1.png": "/NQ-website1/static/media/Impact1.6656e2bedd4e975729ef.png",
     "static/media/Google Analysis.png": "/NQ-website1/static/media/Google Analysis.87ae9987eecc98bd77e8.png",
     "static/media/ClauraMobile.png": "/NQ-website1/static/media/ClauraMobile.ec20a32b2eb264deac2d.png",
     "static/media/Platform Migration.png": "/NQ-website1/static/media/Platform Migration.c3f848e05d5fe66b0022.png",
@@ -41,12 +49,12 @@
     "static/media/Ecommerce2.png": "/NQ-website1/static/media/Ecommerce2.e60079c28793b1b701c6.png",
     "static/media/sienna.png": "/NQ-website1/static/media/sienna.32ce5b82416cafd9acc5.png",
     "index.html": "/NQ-website1/index.html",
-    "main.7301e636.css.map": "/NQ-website1/static/css/main.7301e636.css.map",
-    "main.b9443bf0.js.map": "/NQ-website1/static/js/main.b9443bf0.js.map",
-    "453.f4d0d7a5.chunk.js.map": "/NQ-website1/static/js/453.f4d0d7a5.chunk.js.map"
+    "main.7c40f485.css.map": "/NQ-website1/static/css/main.7c40f485.css.map",
+    "main.b692f74c.js.map": "/NQ-website1/static/js/main.b692f74c.js.map",
+    "453.a04ae9d0.chunk.js.map": "/NQ-website1/static/js/453.a04ae9d0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7301e636.css",
-    "static/js/main.b9443bf0.js"
+    "static/css/main.7c40f485.css",
+    "static/js/main.b692f74c.js"
   ]
 }
