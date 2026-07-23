@@ -93,7 +93,7 @@ export default function Ecommerce() {
         <img alt=""
           src={Ecommerce1}
           className="absolute rounded-md object-cover"
-          style={{ left: "38%", top: "0px", width: "210px", height: "190px", zIndex: 0 }}
+          style={{ left: "38%", top: "0px", width: "230px", height: "330px", zIndex: 0 }}
         />
         <img alt=""
           src={Ecommerce2}

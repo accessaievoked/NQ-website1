@@ -7,6 +7,10 @@ import OurWork from "./pages/OurWork";
 import Blogs from "./pages/Blogs";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import ClauraCasestudy from "./pages/ClauraCasestudy";
+import MrjaCasestudy from "./pages/MrjaCasestudy";
+import MiriyamCasestudy from "./pages/MiriyamCasestudy";
+import MasculinoCasestudy from "./pages/MasculinoCasestudy";
 
 function App() {
   return (
@@ -19,6 +23,11 @@ function App() {
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/claura-casestudy" element={<ClauraCasestudy />} />
+        <Route path="/mrja-casestudy" element={<MrjaCasestudy />} />
+        <Route path="/miriyam-casestudy" element={<MiriyamCasestudy />} />
+        <Route path="/masculino-casestudy" element={<MasculinoCasestudy />} />
+        
       </Routes>
       <Footer/>
     </BrowserRouter>

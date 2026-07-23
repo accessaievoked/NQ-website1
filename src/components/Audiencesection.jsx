@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import ClauraDesktop from "../assets/images/home/Casestudy/Claura.png"
 import ClauraMobile from "../assets/images/home/Casestudy/ClauraMobile.png"
-
-
+import { useNavigate } from "react-router-dom";
+import { ArrowUpRight } from "lucide-react";
 
 const slides = [
   {
@@ -59,6 +59,7 @@ const AUTOPLAY_MS = 5000;
 
 export default function ConversionScienceSection() {
   const [activeIndex, setActiveIndex] = useState(0);
+    const navigate = useNavigate();
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -68,6 +69,10 @@ export default function ConversionScienceSection() {
   }, []);
 
   const active = slides[activeIndex];
+
+   const handleCaseStudyClick = () => {
+    navigate("/claura-casestudy"); // adjust path to match your route
+  };
 
   const Dots = ({ className = "", idPrefix, size = "md" }) => {
     const inactiveSize = size === "sm" ? "w-1.5 h-1.5" : "w-2 h-2";
@@ -109,14 +114,10 @@ export default function ConversionScienceSection() {
 
         <button
           className="flex items-center bg-white text-left py-3 px-7 gap-3 rounded-[100px] border-0"
-          onClick={() => alert("Pressed!")}
+           onClick={handleCaseStudyClick}
         >
           <span className="text-[#03235E] text-sm">{active.ctaLabel}</span>
-          <img
-            alt=""
-            src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/hyrhs0Ks0b/72inuo2e_expires_30_days.png"
-            className="w-5 h-5 object-fill"
-          />
+           <ArrowUpRight size={16} />
         </button>
 
         <div className="flex flex-col items-start w-full mt-2">
@@ -154,14 +155,10 @@ export default function ConversionScienceSection() {
             </p>
             <button
               className="flex items-center bg-white text-left py-4 px-8 gap-4 rounded-[100px] border-0"
-              onClick={() => alert("Pressed!")}
+              onClick={handleCaseStudyClick}
             >
               <span className="text-[#03235E] text-md">{active.ctaLabel}</span>
-              <img
-                alt=""
-                src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/hyrhs0Ks0b/72inuo2e_expires_30_days.png"
-                className="w-6 h-6 object-fill"
-              />
+               <ArrowUpRight size={16} />
             </button>
           </div>
         </div>
