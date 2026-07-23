@@ -95,7 +95,7 @@ export default function PromiseDifference() {
 
       {/* Mobile */}
       <div className="relative md:hidden px-6 py-10">
-        <h2 className="text-2xl font-normal text-gray-900 leading-tight mb-10 text-center whitespace-nowrap">
+        <h2 className="text-xl font-normal text-gray-900 leading-tight mb-10 text-center whitespace-nowrap">
           <span style={{
             display: 'inline',
             background: '#dbeafe',

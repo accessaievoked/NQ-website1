@@ -3,7 +3,7 @@ import claraWireframes from "../../../assets/images/Casestudy/Claura/Wireframe.p
 
 const AboutUs = () => {
     return (
-        <section className="w-full bg-white py-16 md:pt-24 md:pb-4 overflow-hidden">
+        <section className="w-full bg-white pt-16 pb-12 md:pt-24 md:pb-4 overflow-hidden">
             {/* Top heading - always centered */}
             <div className="text-center max-w-3xl mx-auto px-4 mb-16 md:mb-20">
                 <h2 className="performance-heading text-2xl sm:text-3xl md:text-5xl font-medium leading-snug text-gray-900">
