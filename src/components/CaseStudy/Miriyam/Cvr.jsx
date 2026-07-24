@@ -46,7 +46,7 @@ export default function PromiseDifference() {
             lineHeight: 1.4,
             boxDecorationBreak: 'clone',
             WebkitBoxDecorationBreak: 'clone',
-          }}>10 Days</span>
+          }}>30 Days</span>
           <span className="ml-3">Following the Pilot.</span>
         </h2>
 
@@ -96,7 +96,7 @@ export default function PromiseDifference() {
             lineHeight: 1.4,
             boxDecorationBreak: 'clone',
             WebkitBoxDecorationBreak: 'clone',
-            }}>10 Days</span>
+            }}>30 Days</span>
           <span className="ml-3">Following the Pilot.</span>
         </h2>
 

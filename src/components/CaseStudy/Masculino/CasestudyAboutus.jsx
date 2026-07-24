@@ -7,8 +7,7 @@ const AboutUs = () => {
             {/* Top heading - always centered */}
             <div className="text-center max-w-3xl mx-auto px-4 mb-16 md:mb-20">
                 <h2 className="performance-heading text-2xl sm:text-3xl md:text-5xl font-medium leading-snug text-gray-900">
-                  Designing for <span className="highlight">Designing for</span>
-                    <br className="hidden md:block" />Bigger Baskets
+                  Designing for <span className="highlight">Bigger Baskets</span>
                 </h2>
                 <p className="mt-4 text-sm md:text-base text-gray-600 max-w-lg mx-auto">
                   How a 15-day CRO pilot helped Mrja Collective expand its brand globally by making it accessible for the international audience.
@@ -20,10 +19,10 @@ const AboutUs = () => {
                 {/* Text block */}
                 <div className="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left shrink-0 order-2 md:order-none">
                     <h3 className="performance-heading text-xl md:text-3xl font-medium mb-4">
-                        About <span className="highlight">Mrja Collective</span>
+                        About <span className="highlight">Masculino Latino</span>
                     </h3>
                     <p className="text-sm md:text-base text-gray-600 max-w-sm md:max-w-md leading-relaxed">
-                     Mṛjā Collective is a curated destination for premium slow fashion, showcasing timeless prêt wear from independent Indian brands. By partnering with labels that prioritize quality craftsmanship, responsible production, and transparent sourcing, Mṛjā celebrates India's rich design heritage while promoting a more thoughtful way of dressing.
+                     Masculino is a premium men's innerwear brand offering Italian-inspired designs crafted for comfort, performance, and style. Its products use breathable, high-quality fabrics to deliver an elevated everyday wear experience while enhancing confidence.
                       </p>
                 </div>
 
