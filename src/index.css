@@ -21,3 +21,16 @@ img, video {
 * {
   box-sizing: border-box;
 }
+
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #fff;
+  border-radius: 0px;
+}
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #fff transparent;
+}
