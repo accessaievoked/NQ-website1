@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/NQ-website1/static/css/main.c32364f5.css",
-    "main.js": "/NQ-website1/static/js/main.c4c89af5.js",
+    "main.js": "/NQ-website1/static/js/main.b8378d98.js",
     "static/js/453.a04ae9d0.chunk.js": "/NQ-website1/static/js/453.a04ae9d0.chunk.js",
     "static/media/Claura.png": "/NQ-website1/static/media/Claura.d8913adb81cb6144a750.png",
     "static/media/Banner.png": "/NQ-website1/static/media/Banner.a1d161947ee83aa2772f.png",
@@ -81,11 +81,11 @@
     "static/media/Masculino Logo.png": "/NQ-website1/static/media/Masculino Logo.3b2ec82a1ab3563537c4.png",
     "index.html": "/NQ-website1/index.html",
     "main.c32364f5.css.map": "/NQ-website1/static/css/main.c32364f5.css.map",
-    "main.c4c89af5.js.map": "/NQ-website1/static/js/main.c4c89af5.js.map",
+    "main.b8378d98.js.map": "/NQ-website1/static/js/main.b8378d98.js.map",
     "453.a04ae9d0.chunk.js.map": "/NQ-website1/static/js/453.a04ae9d0.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c32364f5.css",
-    "static/js/main.c4c89af5.js"
+    "static/js/main.b8378d98.js"
   ]
 }
