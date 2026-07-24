@@ -76,7 +76,7 @@ export default (props) => {
 	}, []);
 
 	return (
-		<div className="flex flex-col items-start self-stretch mb-[60px] md:mb-[99px] mx-4 sm:mx-8 md:mx-20 overflow-x-hidden">
+		<div className="flex flex-col items-start self-stretch mb-[30px] md:mb-[99px] mx-4 sm:mx-8 md:mx-20 overflow-x-hidden">
 			<span
 				ref={headingRef}
 				className={`text-black text-[33px] sm:text-[48px] md:text-[60px] w-full md:w-[947px] mb-10 md:mb-10 leading-tight block transition-all duration-700 ease-out ${
