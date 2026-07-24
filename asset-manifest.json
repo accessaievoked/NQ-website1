@@ -1,8 +1,14 @@
 {
   "files": {
     "main.css": "/NQ-website1/static/css/main.34b59e45.css",
-    "main.js": "/NQ-website1/static/js/main.7df0d440.js",
+    "main.js": "/NQ-website1/static/js/main.eacc0999.js",
     "static/js/453.a04ae9d0.chunk.js": "/NQ-website1/static/js/453.a04ae9d0.chunk.js",
+    "static/media/Heatmaps & Session Recordings.png": "/NQ-website1/static/media/Heatmaps & Session Recordings.40652640a1fca4774944.png",
+    "static/media/Growth Opportunity Roadmap.png": "/NQ-website1/static/media/Growth Opportunity Roadmap.1791ae1d5f8f2290b0b5.png",
+    "static/media/Revenue Leak Analysis.png": "/NQ-website1/static/media/Revenue Leak Analysis.9777cd0a8234577154ff.png",
+    "static/media/Funnel Performance Review.png": "/NQ-website1/static/media/Funnel Performance Review.123c9a5abd647da24c14.png",
+    "static/media/Customer Journey Mapping.png": "/NQ-website1/static/media/Customer Journey Mapping.ae073baae02db0a715db.png",
+    "static/media/User Behavior Analysis.png": "/NQ-website1/static/media/User Behavior Analysis.ba5584b946f28ee84ed8.png",
     "static/media/Landing Page.png": "/NQ-website1/static/media/Landing Page.2aa2644626cd8ac4a655.png",
     "static/media/mrja1.png": "/NQ-website1/static/media/mrja1.20ec3864f2d82c2c8cd8.png",
     "static/media/claura.png": "/NQ-website1/static/media/claura.731de2d24c7f39da888e.png",
@@ -86,11 +92,11 @@
     "static/media/CRO Optimization.png": "/NQ-website1/static/media/CRO Optimization.2ba35234abd43052f01f.png",
     "index.html": "/NQ-website1/index.html",
     "main.34b59e45.css.map": "/NQ-website1/static/css/main.34b59e45.css.map",
-    "main.7df0d440.js.map": "/NQ-website1/static/js/main.7df0d440.js.map",
+    "main.eacc0999.js.map": "/NQ-website1/static/js/main.eacc0999.js.map",
     "453.a04ae9d0.chunk.js.map": "/NQ-website1/static/js/453.a04ae9d0.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.34b59e45.css",
-    "static/js/main.7df0d440.js"
+    "static/js/main.eacc0999.js"
   ]
 }
