@@ -1,5 +1,5 @@
 import React from "react";
-import claraWireframes from "../../../assets/images/Casestudy/Claura/Wireframe.png"; // update path
+import claraWireframes from "../../../assets/images/Casestudy/Mrja/Wirframe.png"; // update path
 
 const AboutUs = () => {
     return (
@@ -11,8 +11,8 @@ const AboutUs = () => {
                     <br className="hidden md:block" />Enablement Pilot
                 </h2>
                 <p className="mt-4 text-sm md:text-base text-gray-600 max-w-lg mx-auto">
-                   How a 15-day CRO pilot helped Masculino Latino increase their average order value along with site speed.
-                </p>
+                  How a 15-day CRO pilot helped Mrja Collective expand its brand globally by making it accessible for the international audience.
+                    </p>
             </div>
 
             {/* About row: text left / image right on desktop, stacked+centered on mobile */}
@@ -20,11 +20,11 @@ const AboutUs = () => {
                 {/* Text block */}
                 <div className="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left shrink-0 order-2 md:order-none">
                     <h3 className="performance-heading text-xl md:text-3xl font-medium mb-4">
-                        About <span className="highlight">Masculino Latino</span>
+                        About <span className="highlight">Mrja Collective</span>
                     </h3>
                     <p className="text-sm md:text-base text-gray-600 max-w-sm md:max-w-md leading-relaxed">
-                      Masculino is a premium men's innerwear brand offering Italian-inspired designs crafted for comfort, performance, and style. Its products use breathable, high-quality fabrics to deliver an elevated everyday wear experience while enhancing confidence.
-                    </p>
+                    Mṛjā Collective is a curated destination for premium slow fashion, showcasing timeless prêt wear from independent Indian brands. By partnering with labels that prioritize quality craftsmanship, responsible production, and transparent sourcing, Mṛjā celebrates India's rich design heritage while promoting a more thoughtful way of dressing.                  
+                      </p>
                 </div>
 
                 {/* Image block - bleeds off the right edge on desktop, contained+centered on mobile */}

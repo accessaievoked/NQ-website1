@@ -1,5 +1,5 @@
 import React from "react";
-import claraWireframes from "../../../assets/images/Casestudy/Mrja/Wirframe.png"; // update path
+import claraWireframes from "../../../assets/images/Casestudy/Masculino/Wireframe.png"; // update path
 
 const AboutUs = () => {
     return (
