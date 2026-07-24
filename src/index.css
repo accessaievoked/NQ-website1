@@ -7,3 +7,17 @@
 html, body {
   font-family: 'Public Sans', sans-serif;
 }
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+* {
+  box-sizing: border-box;
+}

@@ -1,15 +1,20 @@
 import React, { useState, useEffect, useRef } from "react";
-import SEO from '../assets/images/Services/Seo/SEO.png'
-
+import SEO from '../assets/images/Services/Seo/Technical SEO Audits.png';
+import Keyword from '../assets/images/Services/Seo/Keyword Research.png';
+// import OnPage from '../assets/images/Services/Seo/On-Page Optimization.png';
+import Collection from '../assets/images/Services/Seo/Collection & Product Page SEO.png';
+import Content from '../assets/images/Services/Seo/Content Strategy.png';
+import Speed from '../assets/images/Services/Seo/Site Speed Optimization.png';
+import Reporting from '../assets/images/Services/Seo/SEO Reporting & Growth Tracking.png';
 
 const items = [
 	{ id: "01", label: "01 Technical SEO Audits", image: SEO },
-	{ id: "02", label: "02 Keyword Research", image: SEO },
-	{ id: "03", label: "03 On-Page Optimization", image: SEO },
-	{ id: "04", label: "04 Collection & Product Page SEO", image: SEO },
-	{ id: "05", label: "05 Content Strategy", image:  SEO },
-	{ id: "06", label: "06 Site Speed Optimization", image: SEO },
-	{ id: "07", label: "07 SEO Reporting & Growth Tracking", image: SEO },
+	{ id: "02", label: "02 Keyword Research", image: Keyword },
+	{ id: "03", label: "03 On-Page Optimization", image: Keyword },
+	{ id: "04", label: "04 Collection & Product Page SEO", image: Collection },
+	{ id: "05", label: "05 Content Strategy", image: Content },
+	{ id: "06", label: "06 Site Speed Optimization", image: Speed },
+	{ id: "07", label: "07 SEO Reporting & Growth Tracking", image: Reporting },
 ];
 
 

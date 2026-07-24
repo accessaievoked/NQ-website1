@@ -42,7 +42,12 @@ export default (props) => {
 	}, []);
 
 	return (
-		<div className="flex flex-col items-start self-stretch mb-[60px] md:mb-[99px] mx-4 sm:mx-8 md:mx-20">
+		// FIX: overflow-x-hidden added here. The negative-inset gradient wash spans
+		// below (-inset-x-8 / -inset-x-16) bleed past their parent's edges to render
+		// the blur glow. Without a clipping boundary, that bleed pushes the actual
+		// page width past 100vw on mobile, which is what causes the horizontal
+		// scrollbar. This clips it at the component boundary instead.
+		<div className="flex flex-col items-start self-stretch mb-[60px] md:mb-[99px] mx-4 sm:mx-8 md:mx-20 overflow-x-hidden">
 			<span className="text-black text-[33px] sm:text-[48px] md:text-[60px] w-full md:w-[947px] mb-10 md:mb-10 leading-tight block">
 				<span
 					className="relative inline-block"

@@ -1,45 +1,51 @@
 import React from "react";
-import Threesixty from "../assets/images/OurWork/Threesixty.png";
-import Covera from "../assets/images/OurWork/Covera.png";
-import Threesixtylogo from "../assets/images/OurWork/ThreeSixty Logo.png";
-import Coveralogo from "../assets/images/OurWork/Covera Logo.png";
+import { Link } from "react-router-dom";
+import Mrja from "../assets/images/OurWork/Mrja.jpeg";
+import Miriyam from "../assets/images/OurWork/Miriyam.jpeg";
+import Masculino from "../assets/images/OurWork/Masculino.jpeg";
+import Claura from "../assets/images/OurWork/Claura.jpeg";
+import Clauralogo from "../assets/images/OurWork/ClauraLogo.png";
+import Masculinologo from "../assets/images/OurWork/Masculino Logo.png";
+import Miriyamlogo from "../assets/images/OurWork/Miriyam Logo.png";
+import Mrjalogo from "../assets/images/OurWork/mrja Logo.png";
 
-// Replace clientLogo and clientName with each client's real details.
+
+
 const projects = [
   {
     clientName: "Claura",
-    clientLogo: Threesixtylogo,
+    clientLogo: Clauralogo,
     category: "Brand Strategy",
     title: "Elevating Brand Perception Through Luxury-Focused Ecommerce Design",
-    href: "../pages/ClauraCasestudy.jsx",
-    image: Threesixty,
+    href: "/claura-casestudy",
+    image: Claura,
     objectPosition: "60% center",
   },
   {
     clientName: "Masculino",
-    clientLogo: Coveralogo,
+    clientLogo: Masculinologo,
     category: "Design",
     title: "Crafting a High-Converting Experience for the Modern E-Commerce Shopper",
-    href: "../pages/MasculinoCasestudy.jsx",
-    image: Covera,
+    href: "/masculino-casestudy",
+    image: Masculino,
     objectPosition: "center",
   },
   {
     clientName: "Miriyam",
-    clientLogo: Coveralogo,
+    clientLogo: Miriyamlogo,
     category: "Shopify Store & Development",
     title: "Creating a High-Converting Experience for the Modern E-Commerce Shopper",
-    href: "../pages/MiriyamCasestudy.jsx",
-    image: Covera,
+    href: "/miriyam-casestudy",
+    image: Miriyam,
     objectPosition: "58% center",
   },
   {
     clientName: "Mrja",
-    clientLogo: Threesixtylogo,
+    clientLogo: Mrjalogo,
     category: "Shopify Store & Development",
     title: "Elevating Brand Perception Through Luxury-Focused Ecommerce Design",
-    href: "../pages/MrjaCasestudy.jsx",
-    image: Threesixty,
+    href: "/mrja-casestudy",
+    image: Mrja,
     objectPosition: "center",
   },
 ];
@@ -61,7 +67,7 @@ function ProjectCard({ project, index }) {
 
   return (
     <article className={`min-w-0 ${layout}`}>
-      <a href={project.href} className="block text-inherit no-underline group" aria-label={`View ${project.title}`}>
+      <Link to={project.href} className="block text-inherit no-underline group" aria-label={`View ${project.title}`}>
         <div className={`relative overflow-hidden bg-gradient-to-br from-zinc-200 to-zinc-500 ${imageRatio}`}>
           <img
             src={project.image}
@@ -81,7 +87,7 @@ function ProjectCard({ project, index }) {
         <h2 className="mt-[-6px] md:text-[clamp(10px,2.08vw,22px)] font-normal leading-[1.04] tracking-[-.065em] max-[580px]:mt-1 text-[8px]">
           {project.title}
         </h2>
-      </a>
+      </Link>
     </article>
   );
 }
@@ -100,4 +106,3 @@ export default function Ourworktop() {
     </main>
   );
 }
-

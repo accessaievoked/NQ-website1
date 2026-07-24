@@ -22,7 +22,7 @@ const features = [
       {
         heading: "Opportunity :",
         subheading:
-          "Customers lost visibility of promotional incentives after entering the cart.",
+          "Customers lost visibility of promotional incentives after entering the cart",
       },
       {
         heading: "Solution :",
@@ -31,12 +31,12 @@ const features = [
       },
       {
         heading: "Impact :",
-        subheading: "↑ Basket Size\n↑ Offer Redemption",
+        subheading: "↑ Basket Size \n↑ Offer Redemption",
       },
     ],
   },
   {
-    calloutLabel: "Sticky Add to Cart",
+    calloutLabel: "PDP Progress Bar",
     frontImage: feature2Front,
     decoyLeftImage: feature2DecoyLeft,
     decoyRightImage: feature2DecoyRight,
@@ -44,21 +44,21 @@ const features = [
       {
         heading: "Opportunity :",
         subheading:
-          "Customers needed easier access to purchasing while browsing the PDP.",
+          "Customers lacked visibility of promotional incentives on the PDP.",
       },
       {
         heading: "Solution :",
         subheading:
-          "Introduced a persistent sticky Add to Cart section on mobile devices.",
+          "Added a visual reward tracker on the PDP to encourage higher purchase quantities.",
       },
       {
         heading: "Impact :",
-        subheading: "↑ Add to Cart\n↑ Checkout Starts",
+        subheading: "↑ Average Basket Size\n↑ Offer Redemption\n↑ Purchase Intent",
       },
     ],
   },
   {
-    calloutLabel: "Trust Badges",
+    calloutLabel: "Cart Cross - Sell",
     frontImage: feature3Front,
     decoyLeftImage: feature3DecoyLeft,
     decoyRightImage: feature3DecoyRight,
@@ -66,16 +66,16 @@ const features = [
       {
         heading: "Opportunity :",
         subheading:
-          "Users lacked confidence before completing their purchase.",
+          "Customers had limited product discovery opportunities within the cart.",
       },
       {
         heading: "Solution :",
         subheading:
-          "Added payment security, COD and shipping assurance badges throughout the buying journey.",
+          "Added a cart cross-sell section with relevant product recommendations.",
       },
       {
         heading: "Impact :",
-        subheading: "↑ Trust\n↑ Conversion Rate",
+        subheading: "↑ Average Order Value (AOV)\n↑ Cross-Sell Conversion",
       },
     ],
   },
@@ -176,18 +176,13 @@ export default function KeyOptimizations() {
         </div>
 
         {/* Bottom Text */}
-        <div className="max-w-[640px] mx-auto md:mx-0 text-center md:text-left">
-          <h2 className="text-[28px] md:text-[38px] leading-tight font-normal text-[#111827] mb-5">
+        <div className="max-w-[540px] mx-auto md:mx-12 text-center md:text-left">
+          <h2 className="text-[28px] md:text-[38px] leading-tight font-normal text-[#111827] mb-5 mt-12">
             Key Optimizations
           </h2>
 
-          <p className="text-[10px]  text-gray-600">
-            By analyzing customer behavior across the shopping journey,
-            we identified key opportunities to reduce friction and increase
-            purchase intent. The following enhancements were strategically
-            implemented across product and cart experiences to encourage
-            larger basket sizes, improve offer visibility, and create a
-            smoother path to checkout.
+          <p className="text-[10px] md:text-[15px]  text-gray-600">
+            By analyzing customer behavior across the shopping journey, we identified key opportunities to reduce friction and increase purchase intent. The following enhancements were strategically implemented across product and cart experiences to encourage larger basket sizes, improve offer visibility, and create a smoother path to checkout.
           </p>
         </div>
       </div>

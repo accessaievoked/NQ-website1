@@ -1,15 +1,21 @@
 import React, { useState, useEffect, useRef } from "react";
-import Design from '../assets/images/Services/Design and development/Design.png'
+import Design from '../assets/images/Services/Design and development/UXUI Design.png'
+import Wireframe from '../assets/images/Services/Design and development/cro focussed design.png'
+import Shopify from '../assets/images/Services/Design and development/theme customization.png'
+import interaction from '../assets/images/Services/Design and development/interaction design.png'
+import development from '../assets/images/Services/Design and development/development.png'
+import performance from '../assets/images/Services/Design and development/performance optimization.png'
+import ongoing from '../assets/images/Services/Design and development/ongoing support.png'
 
 
 const items = [
 	{ id: "01", label: "01 UX/UI Design", image: Design },
-	{ id: "02", label: "02 Conversion-Focused Wireframes", image: Design },
-	{ id: "03", label: "03 Custom Shopify Development", image: Design },
-	{ id: "04", label: "04 Interaction Design", image: Design },
-	{ id: "05", label: "05 Theme Customization", image:  Design },
-	{ id: "06", label: "06 Performance Optimization", image: Design },
-	{ id: "07", label: "07 Ongoing Design & Development Support", image: Design },
+	{ id: "02", label: "02 Conversion-Focused Wireframes", image: Wireframe },
+	{ id: "03", label: "03 Custom Shopify Development", image: development },
+	{ id: "04", label: "04 Interaction Design", image: interaction },
+	{ id: "05", label: "05 Theme Customization", image:  Shopify },
+	{ id: "06", label: "06 Performance Optimization", image: performance },
+	{ id: "07", label: "07 Ongoing Design & Development Support", image: ongoing },
 ];
 
 

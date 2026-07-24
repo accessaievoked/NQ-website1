@@ -1,14 +1,19 @@
 import React, { useState, useEffect, useRef } from "react";
-import Platform from '../assets/images/Services/Platform/Platform.png'
+import Platform from '../assets/images/Services/Platform/Store Migration Strategy.png'
+import Product from '../assets/images/Services/Platform/Product & Catalog Migration.png'
+import Development from '../assets/images/Services/Platform/Custom Shopify Development.png'
+import History from '../assets/images/Services/Platform/Order History Transfer.png'
+import Redirect from '../assets/images/Services/Platform/Redirect & URL Mapping.png'
+import SEO from '../assets/images/Services/Platform/SEO Preservation.png'
 
 
 const items = [
 	{ id: "01", label: "01 Store Migration Strategy", image: Platform },
-	{ id: "02", label: "02 Product & Catalog Migration", image: Platform },
-	{ id: "03", label: "03 Custom Shopify Development", image: Platform },
-	{ id: "04", label: "04 Order History Transfer", image: Platform },
-	{ id: "05", label: "05 Redirect & URL Mapping", image:  Platform },
-	{ id: "06", label: "06 SEO Preservation", image: Platform },
+	{ id: "02", label: "02 Product & Catalog Migration", image: Product },
+	{ id: "03", label: "03 Custom Shopify Development", image: Development },
+	{ id: "04", label: "04 Order History Transfer", image: History },
+	{ id: "05", label: "05 Redirect & URL Mapping", image:  Redirect },
+	{ id: "06", label: "06 SEO Preservation", image: SEO },
 	{ id: "07", label: "07 Launch & Quality Assurance", image: Platform },
 ];
 

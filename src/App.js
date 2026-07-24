@@ -11,10 +11,11 @@ import ClauraCasestudy from "./pages/ClauraCasestudy";
 import MrjaCasestudy from "./pages/MrjaCasestudy";
 import MiriyamCasestudy from "./pages/MiriyamCasestudy";
 import MasculinoCasestudy from "./pages/MasculinoCasestudy";
-
+import ScrollToTop from "./components/ScrollToTop";
 function App() {
   return (
     <BrowserRouter basename="/NQ-website1">
+        <ScrollToTop />
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />

@@ -1,15 +1,20 @@
 import React, { useState, useEffect, useRef } from "react";
-import Testing from '../assets/images/Services/Ab Testing/Testing.png'
-
+import Testing from '../assets/images/Services/Ab Testing/Testing.png';
+import Landing from '../assets/images/Services/Ab Testing/Landing Page.png';
+import Product from '../assets/images/Services/Ab Testing/Product Page Optimization.png';
+import Checkout from '../assets/images/Services/Ab Testing/Checkout Flow Testing.png';
+import Copy from '../assets/images/Services/Ab Testing/Copy Testing.png';
+import Reporting from '../assets/images/Services/Ab Testing/Experiment Analysis & Reporting.png';
+import Hypothesis from '../assets/images/Services/Ab Testing/Hypothesis Development.png';	
 
 const items = [
 	{ id: "01", label: "01 A/B Test Strategy", image: Testing },
-	{ id: "02", label: "02 Hypothesis Development", image: Testing },
-	{ id: "03", label: "03 Landing Page Testing", image: Testing },
-	{ id: "04", label: "04 Product Page Optimization", image: Testing },
-	{ id: "05", label: "05 Checkout Flow Testing", image:  Testing },
-	{ id: "06", label: "06 Copy & Messaging Tests", image: Testing },
-	{ id: "07", label: "07 Experiment Analysis & Reporting", image: Testing },
+	{ id: "02", label: "02 Hypothesis Development", image: Hypothesis },
+	{ id: "03", label: "03 Landing Page Testing", image: Landing },
+	{ id: "04", label: "04 Product Page Optimization", image: Product },
+	{ id: "05", label: "05 Checkout Flow Testing", image: Checkout },
+	{ id: "06", label: "06 Copy & Messaging Tests", image: Copy },
+	{ id: "07", label: "07 Experiment Analysis & Reporting", image: Reporting },
 ];
 
 
