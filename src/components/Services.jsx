@@ -56,7 +56,7 @@ export default function ServicesSection() {
       ref={sectionRef}
       className="px-6 py-10 md:px-20 md:py-10 md:pb-20"
     >
-      <h2 className="text-center text-xl md:text-2xl lg:text-4xl text-gray-900 leading-tight max-w-[940px] mx-auto mb-[clamp(40px,6vw,72px)] tracking-tight">
+      <h2 className="text-center text-xl md:text-2xl lg:text-4xl text-gray-900 leading-tight max-w-[940px] mx-auto md:mb-[clamp(40px,6vw,72px)] tracking-tight mb-0">
         We partner with ecommerce brands to build{' '}
         <span className="text-[#00A5FF]">
           high-performing Shopify experiences
