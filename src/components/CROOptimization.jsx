@@ -1,14 +1,20 @@
 import React, { useState, useEffect, useRef } from "react";
-import Audit from '../assets/images/Services/Cro/Audit.png'
+import Audit from '../assets/images/Services/Cro/Audit.png';
+import Revenue from '../assets/images/Services/Cro/Revenue Leak Analysis.png';
+import  Customer from '../assets/images/Services/Cro/Customer Journey Mapping.png';
+import Funnel from '../assets/images/Services/Cro/Funnel Performance Review.png';
+import User from '../assets/images/Services/Cro/User Behavior Analysis.png';
+import Heatmaps from '../assets/images/Services/Cro/Heatmaps & Session Recordings.png';
+import Growth from '../assets/images/Services/Cro/Growth Opportunity Roadmap.png';
 
 const items = [
 	{ id: "01", label: "01 Conversion Audit", image: Audit },
-	{ id: "02", label: "02 Revenue Leak Analysis", image: Audit },
-	{ id: "03", label: "03 Customer Journey Mapping", image: Audit },
-	{ id: "04", label: "04 Funnel Performance Review", image: Audit },
-	{ id: "05", label: "05 User Behavior Analysis", image: Audit },
-	{ id: "06", label: "06 Heatmaps & Session Recordings", image: Audit },
-	{ id: "07", label: "07 Growth Opportunity Roadmap", image: Audit },
+	{ id: "02", label: "02 Revenue Leak Analysis", image: Revenue},
+	{ id: "03", label: "03 Customer Journey Mapping", image: Customer },
+	{ id: "04", label: "04 Funnel Performance Review", image: Funnel },
+	{ id: "05", label: "05 User Behavior Analysis", image: User },
+	{ id: "06", label: "06 Heatmaps & Session Recordings", image: Heatmaps },
+	{ id: "07", label: "07 Growth Opportunity Roadmap", image: Growth },
 ];
 
 // Small helper: reveal a ref's contents once it scrolls into view.
@@ -37,6 +43,20 @@ function useInView(options = {}) {
 
 	return [ref, inView];
 }
+
+// Shared rendering fix so images stay crisp on retina/high-DPI screens
+// and don't get soft edges during the opacity crossfade.
+const CRISP_IMG_STYLE = {
+	imageRendering: "-webkit-optimize-contrast",
+	backfaceVisibility: "hidden",
+	WebkitBackfaceVisibility: "hidden",
+	transform: "translateZ(0)",
+};
+
+const CRISP_WRAPPER_STYLE = {
+	transform: "translateZ(0)",
+	backfaceVisibility: "hidden",
+};
 
 export default (props) => {
 	const [activeIndex, setActiveIndex] = useState(0);
@@ -113,9 +133,10 @@ export default (props) => {
 						{"Uncover friction, identify hidden revenue leaks, and prioritize the opportunities that drive measurable growth."}
 					</span>
 					<div
-						className={`relative w-[400px] h-[281px] overflow-hidden bg-[#D9D9D9] transition-all duration-700 ease-out delay-150 ${
+						className={`relative w-[400px] h-[281px] overflow-hidden  transition-all duration-700 ease-out delay-150 ${
 							desktopBlockInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
 						}`}
+						style={CRISP_WRAPPER_STYLE}
 					>
 						{items.map((item, idx) => (
 							<img
@@ -123,9 +144,11 @@ export default (props) => {
 								src={item.image}
 								alt={item.label}
 								loading="lazy"
-								className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
+								decoding="async"
+								className={`absolute inset-0 w-full h-full object-contain transition-opacity duration-500 ${
 									idx === activeIndex ? "opacity-100" : "opacity-0"
 								}`}
+								style={CRISP_IMG_STYLE}
 							/>
 						))}
 					</div>
@@ -184,6 +207,7 @@ export default (props) => {
 					className={`relative w-full aspect-[424/300] overflow-hidden bg-[#D9D9D9] mb-8 transition-all duration-700 ease-out delay-150 ${
 						mobileBlockInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
 					}`}
+					style={CRISP_WRAPPER_STYLE}
 				>
 					{items.map((item, idx) => (
 						<img
@@ -191,9 +215,11 @@ export default (props) => {
 							src={item.image}
 							alt={item.label}
 							loading="lazy"
-							className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ${
+							decoding="async"
+							className={`absolute inset-0 w-full h-full object-contain transition-opacity duration-700 ${
 								idx === mobileIndex ? "opacity-100" : "opacity-0"
 							}`}
+							style={CRISP_IMG_STYLE}
 						/>
 					))}
 				</div>

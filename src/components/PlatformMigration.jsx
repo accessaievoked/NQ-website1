@@ -45,6 +45,20 @@ function useInView(options = {}) {
 	return [ref, inView];
 }
 
+// Shared rendering fix so images stay crisp on retina/high-DPI screens
+// and don't get soft edges during the opacity crossfade.
+const CRISP_IMG_STYLE = {
+	imageRendering: "-webkit-optimize-contrast",
+	backfaceVisibility: "hidden",
+	WebkitBackfaceVisibility: "hidden",
+	transform: "translateZ(0)",
+};
+
+const CRISP_WRAPPER_STYLE = {
+	transform: "translateZ(0)",
+	backfaceVisibility: "hidden",
+};
+
 export default (props) => {
 	const [activeIndex, setActiveIndex] = useState(0);
 	const [mobileIndex, setMobileIndex] = useState(0);
@@ -120,9 +134,10 @@ export default (props) => {
 						{"Seamless migrations that protect your data, preserve SEO value, and set the foundation for future growth."}
 					</span>
 					<div
-						className={`relative w-[400px] h-[281px] overflow-hidden bg-[#D9D9D9] transition-all duration-700 ease-out delay-150 ${
+						className={`relative w-[400px] h-[281px] overflow-hidden  transition-all duration-700 ease-out delay-150 ${
 							desktopBlockInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
 						}`}
+						style={CRISP_WRAPPER_STYLE}
 					>
 						{items.map((item, idx) => (
 							<img
@@ -130,9 +145,11 @@ export default (props) => {
 								src={item.image}
 								alt={item.label}
 								loading="lazy"
-								className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
+								decoding="async"
+								className={`absolute inset-0 w-full h-full object-contain transition-opacity duration-500 ${
 									idx === activeIndex ? "opacity-100" : "opacity-0"
 								}`}
+								style={CRISP_IMG_STYLE}
 							/>
 						))}
 					</div>
@@ -191,6 +208,7 @@ export default (props) => {
 					className={`relative w-full aspect-[424/300] overflow-hidden bg-[#D9D9D9] mb-8 transition-all duration-700 ease-out delay-150 ${
 						mobileBlockInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
 					}`}
+					style={CRISP_WRAPPER_STYLE}
 				>
 					{items.map((item, idx) => (
 						<img
@@ -198,9 +216,11 @@ export default (props) => {
 							src={item.image}
 							alt={item.label}
 							loading="lazy"
-							className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ${
+							decoding="async"
+							className={`absolute inset-0 w-full h-full object-contain transition-opacity duration-700 ${
 								idx === mobileIndex ? "opacity-100" : "opacity-0"
 							}`}
+							style={CRISP_IMG_STYLE}
 						/>
 					))}
 				</div>
@@ -246,3 +266,4 @@ export default (props) => {
 		</div>
 	)
 }
+// 
