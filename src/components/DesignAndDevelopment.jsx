@@ -19,13 +19,45 @@ const items = [
 ];
 
 
+// Small helper: reveal a ref's contents once it scrolls into view.
+// Fires once (unobserves after first intersection) so it doesn't replay on scroll-up.
+function useInView(options = {}) {
+	const ref = useRef(null);
+	const [inView, setInView] = useState(false);
 
+	useEffect(() => {
+		const node = ref.current;
+		if (!node) return;
+
+		const observer = new IntersectionObserver(
+			([entry]) => {
+				if (entry.isIntersecting) {
+					setInView(true);
+					observer.unobserve(node);
+				}
+			},
+			{ threshold: 0.2, rootMargin: "0px 0px -10% 0px", ...options }
+		);
+
+		observer.observe(node);
+		return () => observer.disconnect();
+	}, []);
+
+	return [ref, inView];
+}
 
 export default (props) => {
 	const [activeIndex, setActiveIndex] = useState(0);
 	const [mobileIndex, setMobileIndex] = useState(0);
 	const pausedRef = useRef(false);
 	const resumeTimeoutRef = useRef(null);
+
+	// scroll-reveal triggers, in the order they should appear:
+	// 1) heading  2) subheading  3) image + list block (together)
+	const [headingRef, headingInView] = useInView();
+	const [subRef, subInView] = useInView();
+	const [desktopBlockRef, desktopBlockInView] = useInView();
+	const [mobileBlockRef, mobileBlockInView] = useInView();
 
 	useEffect(() => {
 		const interval = setInterval(() => {
@@ -52,8 +84,13 @@ export default (props) => {
 	}, []);
 
 	return (
-		<div className="flex flex-col items-start self-stretch mb-[60px] md:mb-[99px] mx-4 sm:mx-8 md:mx-20">
-			<span className="text-black text-[33px] sm:text-[48px] md:text-[60px] w-full md:w-[947px] mb-10 md:mb-10 leading-tight block">
+		<div className="flex flex-col items-start self-stretch mb-[60px] md:mb-[99px] mx-4 sm:mx-8 md:mx-20 overflow-x-hidden">
+			<span
+				ref={headingRef}
+				className={`text-black text-[33px] sm:text-[48px] md:text-[60px] w-full md:w-[947px] mb-10 md:mb-10 leading-tight block transition-all duration-700 ease-out ${
+					headingInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+				}`}
+			>
 				<span
 					className="relative inline-block"
 					style={{
@@ -69,21 +106,30 @@ export default (props) => {
 				</span>
 				<br className="hidden md:block" />
 				{" & Development"}
-		
 			</span>
 
 			{/* ---------- DESKTOP LAYOUT ---------- */}
-			<div className="hidden md:flex justify-between items-center self-stretch">
+			<div ref={desktopBlockRef} className="hidden md:flex justify-between items-center self-stretch">
 				<div className="flex flex-col shrink-0 items-center">
-					<span className="text-black text-lg w-[471px] mb-[43px]" >
+					<span
+						ref={subRef}
+						className={`text-black text-lg w-[471px] mb-[43px] transition-all duration-700 ease-out ${
+							subInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+						}`}
+					>
 						{"High-performing ecommerce experiences designed and built to convert, scale, and grow with your brand."}
 					</span>
-					<div className="relative w-[400px] h-[281px] overflow-hidden bg-[#D9D9D9]">
+					<div
+						className={`relative w-[400px] h-[281px] overflow-hidden bg-[#D9D9D9] transition-all duration-700 ease-out delay-150 ${
+							desktopBlockInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+						}`}
+					>
 						{items.map((item, idx) => (
 							<img
 								key={item.id}
 								src={item.image}
 								alt={item.label}
+								loading="lazy"
 								className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
 									idx === activeIndex ? "opacity-100" : "opacity-0"
 								}`}
@@ -91,7 +137,11 @@ export default (props) => {
 						))}
 					</div>
 				</div>
-				<div className="flex flex-col shrink-0 items-start">
+				<div
+					className={`flex flex-col shrink-0 items-start transition-all duration-700 ease-out delay-150 ${
+						desktopBlockInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+					}`}
+				>
 					{items.map((item, idx) => (
 						<React.Fragment key={item.id}>
 							<span
@@ -110,8 +160,10 @@ export default (props) => {
 									}}
 								/>
 								<span
-									className={`relative text-lg transition-colors duration-300 ${
-										idx === activeIndex ? "text-black font-medium" : "text-black/70"
+									className={`relative inline-block text-lg transition-all duration-300 ease-out ${
+										idx === activeIndex
+											? "text-black font-medium translate-x-[6px]"
+											: "text-black/70 translate-x-0"
 									}`}
 								>
 									{item.label}
@@ -125,18 +177,27 @@ export default (props) => {
 			</div>
 
 			{/* ---------- MOBILE LAYOUT ---------- */}
-			{/* Order: heading (above) -> subheading -> image (tap-synced) -> numbered list (tappable, gradient highlight) */}
-			<div className="flex md:hidden flex-col items-start self-stretch">
-				<span className="text-black text-lg mb-[40px]" >
-					{"Uncover friction, identify hidden revenue leaks, and prioritize the opportunities that drive measurable growth."}
+			{/* Order: heading (above) -> subheading -> image (tap-synced) -> numbered list (tappable, gradient + shift + underline) */}
+			<div ref={mobileBlockRef} className="flex md:hidden flex-col items-start self-stretch">
+				<span
+					className={`text-black text-lg mb-[40px] transition-all duration-700 ease-out ${
+						mobileBlockInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+					}`}
+				>
+					{"High-performing ecommerce experiences designed and built to convert, scale, and grow with your brand."}
 				</span>
 
-				<div className="relative w-full aspect-[424/300] overflow-hidden bg-[#D9D9D9] mb-8">
+				<div
+					className={`relative w-full aspect-[424/300] overflow-hidden bg-[#D9D9D9] mb-8 transition-all duration-700 ease-out delay-150 ${
+						mobileBlockInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+					}`}
+				>
 					{items.map((item, idx) => (
 						<img
 							key={item.id}
 							src={item.image}
 							alt={item.label}
+							loading="lazy"
 							className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ${
 								idx === mobileIndex ? "opacity-100" : "opacity-0"
 							}`}
@@ -144,7 +205,11 @@ export default (props) => {
 					))}
 				</div>
 
-				<div className="flex flex-col items-start self-stretch">
+				<div
+					className={`flex flex-col items-start self-stretch transition-all duration-700 ease-out delay-150 ${
+						mobileBlockInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+					}`}
+				>
 					{items.map((item, idx) => (
 						<React.Fragment key={item.id}>
 							<span
@@ -163,8 +228,10 @@ export default (props) => {
 									}}
 								/>
 								<span
-									className={`relative text-lg transition-colors duration-300 ${
-										idx === mobileIndex ? "text-black font-medium" : "text-black/70"
+									className={`relative inline-block text-lg transition-all duration-300 ease-out ${
+										idx === mobileIndex
+											? "text-black font-medium translate-x-[6px]"
+											: "text-black/70 translate-x-0"
 									}`}
 								>
 									{item.label}

@@ -40,6 +40,7 @@ export default function Building() {
               <img
                 src={project.image}
                 alt="Laptop displaying the Three Sixty Leather store"
+                loading="lazy"
                 className="absolute left-[19%] top-[12%] h-[80%] w-[68%]  object-contain]"
               />
             </div>
@@ -53,6 +54,7 @@ export default function Building() {
               <img
                 src={project.clientLogo}
                 alt=""
+                loading="lazy"
                 className="h-[16px] w-[16px] object-contain md:h-[18px] md:w-[18px]"
               />
               <span className="text-[13px] font-medium md:text-[14px]">{project.clientName}</span>

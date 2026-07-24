@@ -8,11 +8,34 @@ import bottom2 from "../assets/images/home/Herosection/Desktop/threesixty.png";
 import bottom3 from "../assets/images/home/Herosection/Desktop/mrja1.png";
 import bottom4 from "../assets/images/home/Herosection/Desktop/threesixtycollection.png";
 
+// Smaller, mobile-sized versions — served instead of the Desktop assets
+// below the md breakpoint so phones don't download full desktop images
+// for what renders as a ~150x130px blurred decorative thumbnail.
+import top1Mobile from "../assets/images/home/Herosection/Mobile/claura.png";
+import top2Mobile from "../assets/images/home/Herosection/Mobile/Covera.png";
+import top3Mobile from "../assets/images/home/Herosection/Mobile/Hov.png";
+import top4Mobile from "../assets/images/home/Herosection/Mobile/mrja.png";
+
+import bottom1Mobile from "../assets/images/home/Herosection/Mobile/que.png";
+import bottom2Mobile from "../assets/images/home/Herosection/Mobile/threesixty.png";
+import bottom3Mobile from "../assets/images/home/Herosection/Mobile/mrja1.png";
+import bottom4Mobile from "../assets/images/home/Herosection/Mobile/threesixtycollection.png";
+
 import LogoTicker from "./LogoTicker";
 import { ArrowUpRight } from "lucide-react";
 
-const topImages = [top1, top2, top3, top4];
-const bottomImages = [bottom1, bottom2, bottom3, bottom4];
+const topImages = [
+  { desktop: top1, mobile: top1Mobile },
+  { desktop: top2, mobile: top2Mobile },
+  { desktop: top3, mobile: top3Mobile },
+  { desktop: top4, mobile: top4Mobile },
+];
+const bottomImages = [
+  { desktop: bottom1, mobile: bottom1Mobile },
+  { desktop: bottom2, mobile: bottom2Mobile },
+  { desktop: bottom3, mobile: bottom3Mobile },
+  { desktop: bottom4, mobile: bottom4Mobile },
+];
 
 function FloatingSite({ src, className = "", fadeBottom = false }) {
   // For bottom-row cards only: mask the lower portion down to transparent
@@ -20,6 +43,7 @@ function FloatingSite({ src, className = "", fadeBottom = false }) {
   const bottomMask = fadeBottom
     ? "linear-gradient(to bottom, black 0%, black 55%, transparent 100%)"
     : undefined;
+  const { desktop, mobile } = src;
 
   return (
     <div
@@ -30,11 +54,16 @@ function FloatingSite({ src, className = "", fadeBottom = false }) {
           : undefined
       }
     >
-      <img
-        src={src}
-        alt=""
-        className="h-full w-full object-cover opacity-[0.2] blur-[1px] saturate-[0.5]"
-      />
+      {/* <picture> lets the browser fetch only the variant that matches the
+          viewport — phones never download the full Desktop-resolution PNG. */}
+      <picture>
+        <source media="(max-width: 767px)" srcSet={mobile} />
+        <img
+          src={desktop}
+          alt=""
+          className="h-full w-full object-cover opacity-[0.2] blur-[1px] saturate-[0.5]"
+        />
+      </picture>
 
       <div className="pointer-events-none absolute inset-0 bg-white/35" />
 

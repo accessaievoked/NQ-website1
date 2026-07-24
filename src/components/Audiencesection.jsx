@@ -124,6 +124,7 @@ export default function ConversionScienceSection() {
           <img
             alt=""
             src={active.mobileImage}
+            loading="lazy"
             className="w-full h-auto object-contain"
           />
         </div>
@@ -169,6 +170,7 @@ export default function ConversionScienceSection() {
             <img
               alt=""
               src={active.desktopImage}
+              loading="lazy"
               className="w-full h-auto object-contain"
             />
           </div>

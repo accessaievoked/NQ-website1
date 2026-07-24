@@ -91,6 +91,7 @@ function CartStack({ feature, onNext }) {
           <img
             src={feature.decoyLeftImage}
             alt=""
+            loading="lazy"
             className="w-full object-contain rounded-sm shadow-md"
           />
         </div>
@@ -100,6 +101,7 @@ function CartStack({ feature, onNext }) {
           <img
             src={feature.decoyRightImage}
             alt=""
+            loading="lazy"
             className="w-full object-contain rounded-sm shadow-md"
           />
         </div>
@@ -109,6 +111,7 @@ function CartStack({ feature, onNext }) {
           <img
             src={feature.frontImage}
             alt={feature.calloutLabel}
+            loading="lazy"
             className="w-full h-auto object-contain"
           />
         </div>

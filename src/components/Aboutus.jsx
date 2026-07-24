@@ -44,6 +44,7 @@ export default function Aboutus (){
       <img
         alt=""
         src={AboutRightImage}
+        loading="lazy"
         className="w-full max-w-sm h-auto object-cover rounded-xl"
       />
     </div>
@@ -53,6 +54,7 @@ export default function Aboutus (){
       <img
         alt=""
         src={AboutRightImage}
+        loading="lazy"
         className="w-[420px] h-[500px] object-cover rounded-md"
       />
     </div>

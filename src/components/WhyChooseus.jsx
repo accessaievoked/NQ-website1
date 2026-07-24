@@ -152,6 +152,7 @@ export default function WhyChooseUs() {
                 alt={current.heading}
                 width={1200}
                 height={1500}
+                loading="lazy"
                 className="w-full h-auto rounded-xl shadow-md object-cover"
               />
             </div>

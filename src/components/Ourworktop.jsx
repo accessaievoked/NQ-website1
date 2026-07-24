@@ -73,13 +73,14 @@ function ProjectCard({ project, index }) {
             src={project.image}
             alt={project.title}
             style={{ objectPosition: project.objectPosition }}
+            loading="lazy"
             className="h-full w-full object-cover saturate-[.62] contrast-[1.04] transition-transform duration-500 group-hover:scale-[1.035]"
           />
           <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-black/15" />
         </div>
 
         <div className="mt-[7px] flex items-center gap-2  pb-[5px] text-[clamp(6px,.67vw,9px)] leading-none tracking-[-.03em] text-zinc-600 max-[580px]:mt-[5px] max-[580px]:gap-[5px] max-[580px]:pb-1 max-[580px]:text-[6px]">
-          <img src={project.clientLogo} alt="" className="size-[clamp(11px,6vw,55px)] object-contain max-[580px]:size-[9px]" />
+          <img src={project.clientLogo} alt="" loading="lazy" className="size-[clamp(11px,6vw,55px)] object-contain max-[580px]:size-[9px]" />
           <span className="whitespace-nowrap text-zinc-900 md:text-[18px] text-[8px]">{project.clientName}</span>
           <span className="ml-auto text-right md:text-[15px] text-[5px]">[{project.category}]</span>
         </div>

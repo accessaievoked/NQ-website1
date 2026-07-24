@@ -32,6 +32,7 @@ const AboutUs = () => {
                     <img
                         src={claraWireframes}
                         alt="Claura PDP and checkout wireframes"
+                        loading="lazy"
                         className="w-full max-w-md md:max-w-none md:w-[105%] lg:w-[105%] h-auto object-contain"
                     />
                 </div>

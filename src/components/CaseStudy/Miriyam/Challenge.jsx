@@ -23,7 +23,7 @@ const challenges = [
 
 const Challenge = () => {
     return (
-        <section className="w-full  py-16 md:py-24 px-4 md:px-5 lg:px-5">
+        <section className="w-full  pb-16 md:py-24 px-4 md:px-5 lg:px-5">
             <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-10 md:gap-72">
                 {/* Points list - left on desktop, bottom on mobile */}
                 <div className="w-full md:w-1/2 flex flex-col gap-6 order-2 md:order-none">
@@ -46,7 +46,7 @@ const Challenge = () => {
                         What Was the Challenge?
                     </h2>
                     <p className="text-sm md:text-base text-gray-600 leading-relaxed">
-                      While Miriyam.Store offered a curated collection of premium sarees, there were opportunities to strengthen the product experience and build greater customer confidence. To address these gaps, we conducted a 10-day CRO pilot from 30th June to 10th July, 2026, implementing targeted UX and conversion-focused improvements to create a more engaging and trustworthy shopping journey.
+                      While Miriyam Store offered a curated collection of premium sarees, there were opportunities to strengthen the product experience and build greater customer confidence. To address these gaps, we conducted a 10-day CRO pilot from 30th June to 10th July, 2026, implementing targeted UX and conversion-focused improvements to create a more engaging and trustworthy shopping journey.
                       </p>
                 </div>
             </div>

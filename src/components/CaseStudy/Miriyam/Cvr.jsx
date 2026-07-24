@@ -129,8 +129,7 @@ export default function PromiseDifference() {
             Illustrative Example (Not Actual Client Data)
           </p>
           <p className="text-xs leading-relaxed text-gray-700">
-            If a brand generated ₹10 lakh in monthly sales, a 2X ROI and 30% increase in conversions
-            could increase sales to approximately ₹20 lakh, assuming the same traffic.
+            If Miriyam Store generated ₹10 lakh in monthly sales, a 30% increase in Conversion Rate and a 69% increase in orders could increase monthly sales to approximately ₹12.8 lakh, assuming the same traffic and customer acquisition levels.
           </p>
         </div>
       </div>

@@ -160,6 +160,7 @@ export default function Perform() {
           <img
             src={slides[current].src}
             alt={slides[current].alt}
+            loading="lazy"
             className={fading ? "fading" : ""}
           />
         </div>

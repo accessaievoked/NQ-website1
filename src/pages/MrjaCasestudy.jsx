@@ -6,7 +6,7 @@ import CasestudyAboutUs from "../components/CaseStudy/Mrja/CasestudyAboutus";
 import Challenge from "../components/CaseStudy/Mrja/Challenge";
 import Impact from "../components/CaseStudy/Mrja/Impact";
 import RevealOnScroll from "../components/RevealOnScroll";
-
+import Email from "../components/CaseStudy/Mrja/Email";
 
 const MrjaCasestudy = (props) => {
     return (
@@ -17,6 +17,7 @@ const MrjaCasestudy = (props) => {
                 <RevealOnScroll> <Challenge/> </RevealOnScroll>
                 <RevealOnScroll> <Cvr/> </RevealOnScroll>
                 <RevealOnScroll> <Impact/> </RevealOnScroll>
+                 <RevealOnScroll> <Email/> </RevealOnScroll>
                 <RevealOnScroll> <Ecommerce/> </RevealOnScroll>
             </div>
         </div>

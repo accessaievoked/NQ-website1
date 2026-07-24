@@ -129,8 +129,7 @@ export default function PromiseDifference() {
             Illustrative Example (Not Actual Client Data)
           </p>
           <p className="text-xs leading-relaxed text-gray-700">
-            If a brand generated ₹10 lakh in monthly sales, a 2X ROI and 30% increase in conversions
-            could increase sales to approximately ₹20 lakh, assuming the same traffic.
+           If Masculino's average order value (AOV) was ₹5,000, a 12% increase would raise it to ₹5,600, an additional ₹600 per order, without increasing traffic.
           </p>
         </div>
       </div>

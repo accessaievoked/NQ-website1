@@ -16,11 +16,13 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-  "start": "react-scripts start",
-  "build": "react-scripts build",
-  "predeploy": "npm run build",
-  "deploy": "gh-pages -d build"
-},
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "optimize-images": "node scripts/optimize-images.js",
+    "optimize-images:apply": "node scripts/optimize-images.js --apply"
+  },
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -43,6 +45,7 @@
     "autoprefixer": "^10.5.0",
     "gh-pages": "^6.3.0",
     "postcss": "^8.5.15",
+    "sharp": "^0.33.5",
     "tailwindcss": "^3.4.19"
   }
 }

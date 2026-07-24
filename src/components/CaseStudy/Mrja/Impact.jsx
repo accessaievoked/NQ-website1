@@ -75,7 +75,7 @@ function CartStack({ feature, onNext }) {
   return (
     <div className="flex items-center justify-center w-full md:pl-14">
       {/* Stacked image group */}
-      <div className="relative w-[230px] sm:w-[300px] md:w-[500px]">
+      <div className="relative w-[300px] sm:w-[300px] md:w-[800px]">
        
         {/* <div className="block absolute -left-6 sm:-left-8 md:-left-10 top-1/2 -translate-y-1/2 w-[140px] sm:w-[190px] md:w-[300px] opacity-40 blur-[0.5px] z-0">
           <img
@@ -97,6 +97,7 @@ function CartStack({ feature, onNext }) {
           <img
             src={feature.frontImage}
             alt={feature.calloutLabel}
+            loading="lazy"
             className="w-full h-auto object-contain"
           />
         </div>
@@ -165,7 +166,7 @@ export default function KeyOptimizations() {
 
         {/* Bottom Text */}
         <div className="max-w-[540px] mx-auto md:mx-12 text-center md:text-left">
-          <h2 className="text-[28px] md:text-[38px] leading-tight font-normal text-[#111827] mb-5 mt-12">
+          <h2 className="text-[20px] md:text-[38px] leading-tight font-normal text-[#111827] mb-5 mt-12">
             Location Based Currency Conversion
           </h2>
 

@@ -16,24 +16,28 @@ export default function Ecommerce() {
           <img
             alt=""
             src={Ecommerce3}
+            loading="lazy"
             className="absolute object-cover rounded-md"
             style={{ left: "-7%", top: "59px", width: "31%", height: "153px", zIndex: 0 }}
           />
           <img
             alt=""
             src={Ecommerce1}
+            loading="lazy"
             className="absolute object-cover rounded-md"
             style={{ left: "35.4%", top: "0px", width: "27%", height: "128px", zIndex: 0 }}
           />
           <img
             alt=""
             src={Ecommerce4}
+            loading="lazy"
             className="absolute object-cover rounded-md"
             style={{ left: "70.6%", top: "241px", width: "27%", height: "128px", zIndex: 0 }}
           />
           <img
             alt=""
             src={Ecommerce2}
+            loading="lazy"
             className="absolute object-cover rounded-md"
             style={{ left: "84.5%", top: "10px", width: "20%", height: "147px", zIndex: 0 }}
           />
@@ -84,21 +88,25 @@ export default function Ecommerce() {
         {/* Decorative image cluster — purely positional, no longer carries any text */}
         <img alt=""
           src={Ecommerce3}
+          loading="lazy"
           className="absolute rounded-md object-cover"
           style={{ left: "0%", top: "20%", width: "255px", height: "375px", zIndex: 0 }}
         />
         <img alt=""
           src={Ecommerce1}
+          loading="lazy"
           className="absolute rounded-md object-cover"
           style={{ left: "38%", top: "0px", width: "230px", height: "330px", zIndex: 0 }}
         />
         <img alt=""
           src={Ecommerce2}
+          loading="lazy"
           className="absolute rounded-md object-cover"
           style={{ left: "81%", top: "4%", width: "242px", height: "391px", zIndex: 0 }}
         />
         <img alt=""
           src={Ecommerce4}
+          loading="lazy"
           className="absolute rounded-md object-cover"
           style={{ left: "61%", top: "56%", width: "210px", height: "294px", zIndex: 0 }}
         />

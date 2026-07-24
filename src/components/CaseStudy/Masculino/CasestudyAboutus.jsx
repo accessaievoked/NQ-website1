@@ -10,8 +10,8 @@ const AboutUs = () => {
                   Designing for <span className="highlight">Bigger Baskets</span>
                 </h2>
                 <p className="mt-4 text-sm md:text-base text-gray-600 max-w-lg mx-auto">
-                  How a 15-day CRO pilot helped Mrja Collective expand its brand globally by making it accessible for the international audience.
-                </p>
+                 How a 15-day CRO pilot helped Masculino Latino increase their average order value along with site speed.
+                 </p>
             </div>
 
             {/* About row: text left / image right on desktop, stacked+centered on mobile */}
@@ -31,6 +31,7 @@ const AboutUs = () => {
                     <img
                         src={claraWireframes}
                         alt="Claura PDP and checkout wireframes"
+                        loading="lazy"
                         className="w-full max-w-md md:max-w-none md:w-[105%] lg:w-[105%] h-auto object-contain"
                     />
                 </div>
