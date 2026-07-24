@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/NQ-website1/static/css/main.88de4b5b.css",
-    "main.js": "/NQ-website1/static/js/main.396978b2.js",
+    "main.css": "/NQ-website1/static/css/main.3f934487.css",
+    "main.js": "/NQ-website1/static/js/main.85ae1596.js",
     "static/js/453.a04ae9d0.chunk.js": "/NQ-website1/static/js/453.a04ae9d0.chunk.js",
     "static/media/Landing Page.png": "/NQ-website1/static/media/Landing Page.2aa2644626cd8ac4a655.png",
     "static/media/mrja1.png": "/NQ-website1/static/media/mrja1.20ec3864f2d82c2c8cd8.png",
@@ -85,12 +85,12 @@
     "static/media/Audit.png": "/NQ-website1/static/media/Audit.2ba35234abd43052f01f.png",
     "static/media/CRO Optimization.png": "/NQ-website1/static/media/CRO Optimization.2ba35234abd43052f01f.png",
     "index.html": "/NQ-website1/index.html",
-    "main.88de4b5b.css.map": "/NQ-website1/static/css/main.88de4b5b.css.map",
-    "main.396978b2.js.map": "/NQ-website1/static/js/main.396978b2.js.map",
+    "main.3f934487.css.map": "/NQ-website1/static/css/main.3f934487.css.map",
+    "main.85ae1596.js.map": "/NQ-website1/static/js/main.85ae1596.js.map",
     "453.a04ae9d0.chunk.js.map": "/NQ-website1/static/js/453.a04ae9d0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.88de4b5b.css",
-    "static/js/main.396978b2.js"
+    "static/css/main.3f934487.css",
+    "static/js/main.85ae1596.js"
   ]
 }
