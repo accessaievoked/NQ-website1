@@ -14,7 +14,7 @@ import MasculinoCasestudy from "./pages/MasculinoCasestudy";
 import ScrollToTop from "./components/ScrollToTop";
 function App() {
   return (
-    <BrowserRouter basename="/NQ-website1">
+    <BrowserRouter basename="/">
         <ScrollToTop />
       <Navbar />
       <Routes>
