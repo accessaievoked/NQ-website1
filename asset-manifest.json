@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/NQ-website1/static/css/main.34b59e45.css",
-    "main.js": "/NQ-website1/static/js/main.eacc0999.js",
+    "main.js": "/NQ-website1/static/js/main.3d3f546a.js",
     "static/js/453.a04ae9d0.chunk.js": "/NQ-website1/static/js/453.a04ae9d0.chunk.js",
     "static/media/Heatmaps & Session Recordings.png": "/NQ-website1/static/media/Heatmaps & Session Recordings.40652640a1fca4774944.png",
     "static/media/Growth Opportunity Roadmap.png": "/NQ-website1/static/media/Growth Opportunity Roadmap.1791ae1d5f8f2290b0b5.png",
@@ -92,11 +92,11 @@
     "static/media/CRO Optimization.png": "/NQ-website1/static/media/CRO Optimization.2ba35234abd43052f01f.png",
     "index.html": "/NQ-website1/index.html",
     "main.34b59e45.css.map": "/NQ-website1/static/css/main.34b59e45.css.map",
-    "main.eacc0999.js.map": "/NQ-website1/static/js/main.eacc0999.js.map",
+    "main.3d3f546a.js.map": "/NQ-website1/static/js/main.3d3f546a.js.map",
     "453.a04ae9d0.chunk.js.map": "/NQ-website1/static/js/453.a04ae9d0.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.34b59e45.css",
-    "static/js/main.eacc0999.js"
+    "static/js/main.3d3f546a.js"
   ]
 }
