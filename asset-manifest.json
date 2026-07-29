@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/NQ-website1/static/css/main.34b59e45.css",
-    "main.js": "/NQ-website1/static/js/main.3d3f546a.js",
+    "main.css": "/NQ-website1/static/css/main.7a47dfb9.css",
+    "main.js": "/NQ-website1/static/js/main.2a88f480.js",
     "static/js/453.a04ae9d0.chunk.js": "/NQ-website1/static/js/453.a04ae9d0.chunk.js",
     "static/media/Heatmaps & Session Recordings.png": "/NQ-website1/static/media/Heatmaps & Session Recordings.40652640a1fca4774944.png",
     "static/media/Growth Opportunity Roadmap.png": "/NQ-website1/static/media/Growth Opportunity Roadmap.1791ae1d5f8f2290b0b5.png",
@@ -35,7 +35,6 @@
     "static/media/Keyword Research.png": "/NQ-website1/static/media/Keyword Research.cfc82586e5cddfa08d27.png",
     "static/media/Order History Transfer.png": "/NQ-website1/static/media/Order History Transfer.a468899e70295d863682.png",
     "static/media/Product & Catalog Migration.png": "/NQ-website1/static/media/Product & Catalog Migration.0a647b7fc5e68a827a7c.png",
-    "static/media/ServicesBanner.png": "/NQ-website1/static/media/ServicesBanner.d6c87f5d88de2849c1cc.png",
     "static/media/hov.png": "/NQ-website1/static/media/hov.d6c87f5d88de2849c1cc.png",
     "static/media/ongoing support.png": "/NQ-website1/static/media/ongoing support.355d5312a04a2a342ac1.png",
     "static/media/Hypothesis Development.png": "/NQ-website1/static/media/Hypothesis Development.eaa259e31469059743ff.png",
@@ -91,12 +90,12 @@
     "static/media/Audit.png": "/NQ-website1/static/media/Audit.2ba35234abd43052f01f.png",
     "static/media/CRO Optimization.png": "/NQ-website1/static/media/CRO Optimization.2ba35234abd43052f01f.png",
     "index.html": "/NQ-website1/index.html",
-    "main.34b59e45.css.map": "/NQ-website1/static/css/main.34b59e45.css.map",
-    "main.3d3f546a.js.map": "/NQ-website1/static/js/main.3d3f546a.js.map",
+    "main.7a47dfb9.css.map": "/NQ-website1/static/css/main.7a47dfb9.css.map",
+    "main.2a88f480.js.map": "/NQ-website1/static/js/main.2a88f480.js.map",
     "453.a04ae9d0.chunk.js.map": "/NQ-website1/static/js/453.a04ae9d0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.34b59e45.css",
-    "static/js/main.3d3f546a.js"
+    "static/css/main.7a47dfb9.css",
+    "static/js/main.2a88f480.js"
   ]
 }
