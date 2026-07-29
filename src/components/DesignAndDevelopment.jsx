@@ -206,7 +206,7 @@ export default (props) => {
 				</span>
 
 				<div
-					className={`relative w-full aspect-[424/300] overflow-hidden bg-[#D9D9D9] mb-8 transition-all duration-700 ease-out delay-150 ${
+					className={`relative w-full aspect-[424/300] overflow-hidden  mb-8 transition-all duration-700 ease-out delay-150 ${
 						mobileBlockInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
 					}`}
 					style={CRISP_WRAPPER_STYLE}

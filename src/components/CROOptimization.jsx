@@ -96,7 +96,7 @@ export default (props) => {
 	}, []);
 
 	return (
-		<div className="flex flex-col items-start self-stretch mb-[30px] md:mb-[99px] mx-4 sm:mx-8 md:mx-20 overflow-x-hidden">
+		<div className="flex flex-col items-start self-stretch mb-[30px] md:mb-[99px] mx-4 sm:mx-8 md:mx-20 overflow-x-hidden md:mt-24">
 			<span
 				ref={headingRef}
 				className={`text-black text-[33px] sm:text-[48px] md:text-[60px] w-full md:w-[947px] mb-10 md:mb-10 leading-tight block transition-all duration-700 ease-out ${
@@ -204,7 +204,7 @@ export default (props) => {
 				</span>
 
 				<div
-					className={`relative w-full aspect-[424/300] overflow-hidden bg-[#D9D9D9] mb-8 transition-all duration-700 ease-out delay-150 ${
+					className={`relative w-full aspect-[424/300] overflow-hidden mb-8 transition-all duration-700 ease-out delay-150 ${
 						mobileBlockInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
 					}`}
 					style={CRISP_WRAPPER_STYLE}
