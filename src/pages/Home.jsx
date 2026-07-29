@@ -1,5 +1,5 @@
 import React from "react";
-import Testimonals from "../components/TestimonialsScroll";
+// import Testimonals from "../components/TestimonialsScroll";
 import Ecommerce from "../components/Ecommerce";
 import Perform from "../components/Perform";
 import PromiseDifference from "../components/Promisedifference";
@@ -25,7 +25,7 @@ const Home = (props) => {
 				</div>
 				</RevealOnScroll>
 				<RevealOnScroll><Ecommerce/></RevealOnScroll>
-				<RevealOnScroll><Testimonals/></RevealOnScroll>
+				{/* <RevealOnScroll><Testimonals/></RevealOnScroll> */}
 			</div>
 		</div>
 	)

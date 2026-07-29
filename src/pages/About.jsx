@@ -1,7 +1,7 @@
 import React from "react";
 import Aboutushero from "../components/Aboutushero"
 import Aboutus from "../components/Aboutus";
-import Testimonals from "../components/TestimonialsScroll";
+// import Testimonals from "../components/TestimonialsScroll";
 import Ecommerce from "../components/Ecommerce";
 import RevealOnScroll from "../components/RevealOnScroll";
 
@@ -14,7 +14,7 @@ const About = (props) => {
 		       <Aboutus/>
 		     </RevealOnScroll>
 				<RevealOnScroll> <Ecommerce/></RevealOnScroll>
-				<RevealOnScroll> <Testimonals/></RevealOnScroll>
+				{/* <RevealOnScroll> <Testimonals/></RevealOnScroll> */}
          </div>
          </div>
 	)
