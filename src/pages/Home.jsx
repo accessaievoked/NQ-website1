@@ -13,18 +13,19 @@ const Home = (props) => {
 	return (
 		<div className="flex flex-col">
 			<div className="flex flex-col items-start self-stretch">
-				<Herosection/>
+				<Herosection />
 				{/* <RevealOnScroll><LogoTicker/></RevealOnScroll> */}
-				<RevealOnScroll><Perform/></RevealOnScroll>
-				<RevealOnScroll><Services/></RevealOnScroll>
-				<RevealOnScroll><Audiencesection/></RevealOnScroll>
+				<RevealOnScroll><Perform /></RevealOnScroll>
+				<RevealOnScroll><Services /></RevealOnScroll>
+				<RevealOnScroll><Audiencesection /></RevealOnScroll>
 				<RevealOnScroll>
-				<div className= "">
-				<WhyChooseus/>
-				<PromiseDifference/>
-				</div>
+					<div className="">
+						<WhyChooseus />
+						<PromiseDifference />
+						<div className="h-[200px]" />
+					</div>
 				</RevealOnScroll>
-				<RevealOnScroll><Ecommerce/></RevealOnScroll>
+				<RevealOnScroll><Ecommerce /></RevealOnScroll>
 				{/* <RevealOnScroll><Testimonals/></RevealOnScroll> */}
 			</div>
 		</div>

@@ -24,13 +24,13 @@ const challenges = [
 const Challenge = () => {
     return (
         <section className="w-full  py-6 md:py-24 px-4 md:px-5 lg:px-5">
-            <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-10 md:gap-72">
+            <div className="w-full max-w-6xl mx-auto flex flex-col md:flex-row gap-10 md:gap-72 min-[1400px]:max-w-[90vw] min-[1400px]:gap-[12vw]">
                 {/* Points list - left on desktop, bottom on mobile */}
                 <div className="w-full md:w-1/2 flex flex-col gap-6 order-2 md:order-none">
                     {challenges.map((item, idx) => (
                         <div key={idx} className="flex items-start gap-4">
                             <span className="flex items-center justify-center w-8 h-8 rounded-full bg-blue-100 text-[#03235E] text-lg shrink-0">
-                                   <ArrowRight className="w-4 h-4" />
+                                <ArrowRight className="w-4 h-4" />
                             </span>
                             <p className="text-sm md:text-base text-gray-500 leading-relaxed">
                                 <span className="font-semibold text-gray-900">{item.bold}</span>{" "}

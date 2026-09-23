@@ -6,55 +6,100 @@ import { ArrowUpRight } from "lucide-react";
 
 export default function Ecommerce() {
   return (
-    <div className="relative w-full overflow-hidden">
+    <div className="relative w-full min-h-[55vh] overflow-hidden">
 
       {/* ===== MOBILE/TABLET BLOCK (visible below 1024px) ===== */}
       <div className="w-full max-w-[595px] mx-auto block lg:hidden px-4 pt-8 pb-10">
 
-        {/* Image cluster — same relative left/top layout as desktop, scaled ~30% */}
+        {/* Image cluster */}
         <div className="relative w-full" style={{ height: "245px" }}>
+
           <img
             alt=""
             src={Ecommerce3}
             loading="lazy"
             className="absolute object-cover rounded-md"
-            style={{ left: "-7%", top: "59px", width: "31%", height: "153px", zIndex: 0 }}
+            style={{
+              left: "-1%",
+              top: "59px",
+              width: "31%",
+              minHeight: "153px",
+              maxHeight: "253px",
+              zIndex: 0,
+            }}
           />
+
           <img
             alt=""
             src={Ecommerce1}
             loading="lazy"
-            className="absolute object-cover rounded-md"
-            style={{ left: "35.4%", top: "0px", width: "27%", height: "128px", zIndex: 0 }}
+            className="absolute object-contain rounded-md"
+            style={{
+              left: "35.4%",
+              top: "0px",
+              width: "27%",
+              minHeight: "147px",
+              maxHeight: "180px",
+              zIndex: 0,
+            }}
           />
+
           <img
             alt=""
             src={Ecommerce4}
             loading="lazy"
-            className="absolute object-cover rounded-md"
-            style={{ left: "70.6%", top: "241px", width: "27%", height: "128px", zIndex: 0 }}
+            className="absolute object-contain rounded-md"
+            style={{
+              left: "67.6%",
+              top: "241px",
+              width: "27%",
+              minHeight: "147px",
+              maxHeight: "180px",
+              zIndex: 0,
+            }}
           />
+
           <img
             alt=""
             src={Ecommerce2}
             loading="lazy"
             className="absolute object-cover rounded-md"
-            style={{ left: "84.5%", top: "10px", width: "20%", height: "147px", zIndex: 0 }}
+            style={{
+              left: "80.5%",
+              top: "10px",
+              width: "20%",
+              minHeight: "147px",
+              maxHeight: "200px",
+              zIndex: 0,
+            }}
           />
+
         </div>
 
-        {/* Heading — pulled up further so it sits through the vertical middle of the cluster */}
+        {/* Heading */}
         <h1
           className="relative text-black font-medium text-center"
-          style={{ fontSize: "25px", lineHeight: 1.2, marginTop: "-165px", zIndex: 10, padding: "0" }}
+          style={{
+            fontSize: "25px",
+            lineHeight: 1.2,
+            marginTop: "-165px",
+            zIndex: 10,
+            padding: "0",
+          }}
         >
           {"Let's Talk Ecommerce, Innovation That Moves the Needle"}
         </h1>
 
-        {/* Paragraph — sits close under heading, overlapping bottom of side images */}
+        {/* Paragraph */}
         <p
           className="relative text-black text-center"
-          style={{ fontSize: "12px", lineHeight: 1.45, marginTop: "6px", zIndex: 10, padding: "0 4px" }}
+          style={{
+            fontSize: "12px",
+            lineHeight: 1.45,
+            marginTop: "6px",
+            zIndex: 10,
+            padding: "0 4px",
+          }}
         >
           {
             "Every successful ecommerce brand starts with a great customer experience. We're more than just an ecommerce agency, we're your growth partner. From launching new stores to optimizing established ones, we work alongside ambitious brands to create seamless shopping experiences that convert, scale, and drive long-term growth. If you're looking for a team that genuinely cares about your success, we'd love to hear about your project."
@@ -62,7 +107,10 @@ export default function Ecommerce() {
         </p>
 
         {/* Button */}
-        <div className="flex justify-center relative" style={{ marginTop: "6px", zIndex: 10 }}>
+        <div
+          className="flex justify-center relative"
+          style={{ marginTop: "6px", zIndex: 10 }}
+        >
           <a
             href="https://calendly.com/skillsparkmedia-emp/skillspark-media-discovery-call"
             target="_blank"
@@ -70,55 +118,91 @@ export default function Ecommerce() {
             className="flex items-center bg-[#001930] text-left rounded-[100px] border-0"
             style={{ padding: "10px 22px", gap: "8px" }}
           >
-            <span className="text-white text-sm whitespace-nowrap gap-0.5 flex items-center ">
+            <span className="text-white text-sm whitespace-nowrap gap-0.5 flex items-center">
               {"Get In Touch"}
-               <ArrowUpRight size={16} />
+              <ArrowUpRight size={16} />
             </span>
-            
-           
           </a>
         </div>
       </div>
 
       {/* ===== DESKTOP BLOCK (visible at 1024px and up) ===== */}
       <div
-        className="relative mx-auto hidden max-w-[1242px] lg:block md:my-20"
+        className="relative mx-auto hidden max-w-[1242px] lg:block min-[1400px]:max-w-[92vw]"
         style={{ height: "620px" }}
       >
-        {/* Decorative image cluster — purely positional, no longer carries any text */}
-        <img alt=""
+
+        {/* Image 1 */}
+        <img
+          alt=""
           src={Ecommerce3}
           loading="lazy"
-          className="absolute rounded-md object-cover"
-          style={{ left: "0%", top: "20%", width: "255px", height: "375px", zIndex: 0 }}
-        />
-        <img alt=""
-          src={Ecommerce1}
-          loading="lazy"
-          className="absolute rounded-md object-cover"
-          style={{ left: "38%", top: "0px", width: "230px", height: "330px", zIndex: 0 }}
-        />
-        <img alt=""
-          src={Ecommerce2}
-          loading="lazy"
-          className="absolute rounded-md object-cover"
-          style={{ left: "81%", top: "4%", width: "242px", height: "391px", zIndex: 0 }}
-        />
-        <img alt=""
-          src={Ecommerce4}
-          loading="lazy"
-          className="absolute rounded-md object-cover"
-          style={{ left: "61%", top: "56%", width: "210px", height: "294px", zIndex: 0 }}
+          className="absolute rounded-md object-contain"
+          style={{
+            left: "5%",
+            top: "20%",
+            width: "21%",
+            height: "60%",
+            zIndex: 0,
+          }}
         />
 
-        {/* Text column — heading, paragraph, button in one normal, centered stack */}
+        {/* Image 2 */}
+        <img
+          alt=""
+          src={Ecommerce1}
+          loading="lazy"
+          className="absolute rounded-md object-contain"
+          style={{
+            left: "38%",
+            top: "0px",
+            width: "19%",
+            height: "53%",
+            zIndex: 0,
+          }}
+        />
+
+        {/* Image 3 */}
+        <img
+          alt=""
+          src={Ecommerce2}
+          loading="lazy"
+          className="absolute rounded-md object-contain"
+          style={{
+            left: "79%",
+            top: "4%",
+            width: "20%",
+            height: "64%",
+            zIndex: 0,
+          }}
+        />
+
+        {/* Image 4 */}
+        <img
+          alt=""
+          src={Ecommerce4}
+          loading="lazy"
+          className="absolute rounded-md object-contain"
+          style={{
+            left: "58%",
+            top: "56%",
+            width: "18%",
+            height: "44%",
+            zIndex: 0,
+          }}
+        />
+
+        {/* Text column */}
         <div className="absolute left-1/2 top-1/2 z-10 w-full max-w-[900px] -translate-x-1/2 -translate-y-1/2 text-center">
+
           <h1 className="text-black text-[52px] leading-[1.15]">
             {"Let's Talk Ecommerce,\nInnovation That Moves the Needle"}
           </h1>
 
           <p className="text-black text-ml mx-auto mt-6 max-w-[760px]">
-            {"Every successful ecommerce brand starts with a great customer experience. We're more than just an ecommerce agency, we're your growth partner. From launching new stores to optimizing established ones, we work alongside ambitious brands to create seamless shopping experiences that convert, scale, and drive long-term growth.\nIf you're looking for a team that genuinely cares about your success, we'd love to hear about your project."}
+            {
+              "Every successful ecommerce brand starts with a great customer experience. We're more than just an ecommerce agency, we're your growth partner. From launching new stores to optimizing established ones, we work alongside ambitious brands to create seamless shopping experiences that convert, scale, and drive long-term growth.\nIf you're looking for a team that genuinely cares about your success, we'd love to hear about your project."
+            }
           </p>
 
           <div className="mt-6 flex justify-center">
@@ -126,15 +210,15 @@ export default function Ecommerce() {
               href="https://calendly.com/skillsparkmedia-emp/skillspark-media-discovery-call"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center rounded-full bg-[#001931] px-7 py-3 text-[15px] text-white  hover:bg-[#001931] transition-all duration-300 md:mt-9 md:px-8 md:py-4 md:text-[15px] gap-1.5"
+              className="flex items-center rounded-full bg-[#001931] px-7 py-3 text-[15px] text-white hover:bg-[#001931] transition-all duration-300 md:mt-9 md:px-8 md:py-4 md:text-[15px] gap-1.5"
             >
-              <span className="text-white text-sm whitespace-nowrap gap-0.5 flex items-center ">
+              <span className="text-white text-sm whitespace-nowrap gap-0.5 flex items-center">
                 {"Get In Touch"}
-                 <ArrowUpRight size={16} />
+                <ArrowUpRight size={16} />
               </span>
-               
             </a>
           </div>
+
         </div>
       </div>
     </div>

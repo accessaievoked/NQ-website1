@@ -20,9 +20,8 @@ const RevealOnScroll = ({ children, className = "", delay = 0 }) => {
   return (
     <div
       ref={ref}
-      className={`w-full self-stretch transition-all duration-700 will-change-transform ${
-        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-      } ${className}`}
+      className={`w-full self-stretch transition-all duration-700 will-change-transform ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+        } ${className}`}
       style={{
         transitionDelay: `${delay}ms`,
         transitionTimingFunction: isVisible

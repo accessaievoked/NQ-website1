@@ -132,8 +132,9 @@ export default function Perform() {
           }
 
           .performance-image-wrap {
-            width: min(100vw, 1260px);
-            height: min(78vh, 720px);
+            width: min(92vw, 1800px);
+            height: calc(min(92vw, 1800px) * 0.57);
+            max-height: 77vh;
           }
 
           .performance-image-wrap img {

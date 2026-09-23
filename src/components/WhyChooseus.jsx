@@ -1,9 +1,9 @@
 import { useState, useEffect, useRef } from "react";
 
 
-import img1 from "../assets/images/home/WhyChooseus/Google Analysis.png";  
-import img2 from "../assets/images/home/WhyChooseus/Clarity.png"; 
-import img3 from "../assets/images/home/WhyChooseus/platform.png"; 
+import img1 from "../assets/images/home/WhyChooseus/Google Analysis.png";
+import img2 from "../assets/images/home/WhyChooseus/Clarity.png";
+import img3 from "../assets/images/home/WhyChooseus/platform.png";
 
 
 const slides = [
@@ -28,12 +28,12 @@ const slides = [
 ];
 
 const INTERVAL = 4500;
-const FADE_MS  = 300;
+const FADE_MS = 300;
 
 export default function WhyChooseUs() {
-  const [active, setActive]       = useState(0);
+  const [active, setActive] = useState(0);
   const [animating, setAnimating] = useState(false);
-  const timerRef                  = useRef(null);
+  const timerRef = useRef(null);
 
   const startTimer = () => {
     clearInterval(timerRef.current);
@@ -51,16 +51,16 @@ export default function WhyChooseUs() {
     return () => clearInterval(timerRef.current);
   }, []);
 
-  const handleDot = (idx) => {
-    if (idx === active || animating) return;
-    setAnimating(true);
-    setTimeout(() => {
-      setActive(idx);
-      setAnimating(false);
-    }, FADE_MS);
-    clearInterval(timerRef.current);
-    startTimer();
-  };
+  // const handleDot = (idx) => {
+  //   if (idx === active || animating) return;
+  //   setAnimating(true);
+  //   setTimeout(() => {
+  //     setActive(idx);
+  //     setAnimating(false);
+  //   }, FADE_MS);
+  //   clearInterval(timerRef.current);
+  //   startTimer();
+  // };
 
   const current = slides[active];
 
@@ -77,26 +77,25 @@ export default function WhyChooseUs() {
         }}
       />
 
-      <div className="relative z-10 max-w-6xl mx-auto">
+      <div className="relative z-10 w-full max-w-6xl mx-auto min-[1400px]:max-w-[82vw]">
 
         {/* ── ROW 1: Label | Headline + Description ── */}
-        <div className="flex flex-col lg:flex-row gap-6 lg:gap-32 mb-10 lg:mb-14">
-
-          {/* Far left — label */}
-          <div className="lg:w-[220px] shrink-0 pt-1">
+        <div className="relative mb-10 lg:mb-14 min-[1400px]:mb-16">
+          <div className="lg:absolute lg:left-0 lg:top-1">
             <p className="text-md font-medium tracking-widest text-[#000]">
               Why Choose Us?
             </p>
           </div>
 
-          {/* Right — headline + description */}
-          <div className="flex-1">
+          <div className="w-full max-w-[700px] lg:max-w-[760px] lg:ml-[22%] xl:mx-auto xl:max-w-[700px]">
             <p className="text-[24px] md:text-4xl lg:text-5xl font-light text-gray-400 leading-tight">
               We build more than storefronts.
             </p>
+
             <h2 className="text-[24px] md:text-4xl lg:text-5xl font-normal text-gray-900 leading-tight">
               We build revenue engines.
             </h2>
+
             <p className="mt-4 text-sm md:text-base text-[#000] max-w-sm leading-relaxed">
               Every decision is guided by data, user behavior, and business
               objectives to create a store that delivers lasting results, not
@@ -106,45 +105,60 @@ export default function WhyChooseUs() {
         </div>
 
         {/* ── ROW 2: Slide text (bottom-aligned) | Image ── */}
-        <div className="flex flex-col lg:flex-row gap-16 lg:gap-32 lg:items-end">
+        <div className="flex flex-col lg:flex-row lg:items-end gap-16 lg:gap-0">
 
-          {/* Left — slide text, bottom-aligned with image (mobile: shown second / below image) */}
-          <div className="order-2 lg:order-none lg:w-[420px] shrink-0 flex flex-col justify-end w-[240px]">
-            <div
-              style={{ transition: `opacity ${FADE_MS}ms ease, transform ${FADE_MS}ms ease` }}
-              className={animating ? "opacity-0 translate-y-2" : "opacity-100 translate-y-0"}
-            >
-              <div className="flex items-start gap-2 mb-2">
-                <h3 className="text-[12px] md:text-xl font-bold text-gray-900 leading-snug">
-                  {current.heading}
-                </h3>
-                <a
-                  href="#"
-                  className="mt-0.5 shrink-0 w-7 h-7 rounded-full bg-indigo-100 flex items-center justify-center hover:bg-indigo-200 transition-colors"
-                  aria-label="Learn more"
-                >
-                  <svg width="13" height="13" viewBox="0 0 13 13" fill="none">
-                    <path
-                      d="M2.5 10.5L10.5 2.5M10.5 2.5H5M10.5 2.5V8"
-                      stroke="#03235E"
-                      strokeWidth="1.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </a>
+          {/* LEFT */}
+          <div className="order-2 lg:order-none lg:w-1/2 shrink-0 flex justify-start">
+            <div className="w-full max-w-[420px]">
+              <div
+                style={{
+                  transition: `opacity ${FADE_MS}ms ease, transform ${FADE_MS}ms ease`,
+                }}
+                className={
+                  animating
+                    ? "opacity-0 translate-y-2"
+                    : "opacity-100 translate-y-0"
+                }
+              >
+                <div className="flex items-start gap-2 mb-2">
+                  <h3 className="text-[12px] md:text-xl font-bold text-gray-900 leading-snug">
+                    {current.heading}
+                  </h3>
+
+                  <a
+                    href="#"
+                    className="mt-0.5 shrink-0 w-7 h-7 rounded-full bg-indigo-100 flex items-center justify-center hover:bg-indigo-200 transition-colors"
+                    aria-label="Learn more"
+                  >
+                    <svg width="13" height="13" viewBox="0 0 13 13" fill="none">
+                      <path
+                        d="M2.5 10.5L10.5 2.5M10.5 2.5H5M10.5 2.5V8"
+                        stroke="#03235E"
+                        strokeWidth="1.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </a>
+                </div>
+
+                <p className="text-xs text-gray-500 leading-relaxed">
+                  {current.body}
+                </p>
               </div>
-              <p className="text-xs text-gray-500 leading-relaxed">
-                {current.body}
-              </p>
             </div>
           </div>
 
-          {/* Right — image (mobile: shown first / above text) */}
-          <div className="order-1 lg:order-none flex-1">
+          {/* RIGHT */}
+          <div className="order-1 lg:order-none lg:w-1/2 min-w-0 flex justify-end">
             <div
-              style={{ transition: `opacity ${FADE_MS}ms ease, transform ${FADE_MS}ms ease` }}
-              className={animating ? "opacity-0 scale-[0.99]" : "opacity-100 scale-100"}
+              style={{
+                transition: `opacity ${FADE_MS}ms ease, transform ${FADE_MS}ms ease`,
+              }}
+              className={`w-full max-w-[700px] ${animating
+                ? "opacity-0 scale-[0.99]"
+                : "opacity-100 scale-100"
+                }`}
             >
               <img
                 key={current.id}

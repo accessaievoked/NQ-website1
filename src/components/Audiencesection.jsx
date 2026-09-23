@@ -7,9 +7,9 @@ import { ArrowUpRight } from "lucide-react";
 const slides = [
   {
     desktopImage:
-  ClauraDesktop,
+      ClauraDesktop,
     mobileImage:
-  ClauraMobile,
+      ClauraMobile,
     label: "Our Approach",
     heading: "The Hidden Revenue Between PDP & Checkout",
     paragraph:
@@ -59,7 +59,7 @@ const AUTOPLAY_MS = 5000;
 
 export default function ConversionScienceSection() {
   const [activeIndex, setActiveIndex] = useState(0);
-    const navigate = useNavigate();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -70,7 +70,7 @@ export default function ConversionScienceSection() {
 
   const active = slides[activeIndex];
 
-   const handleCaseStudyClick = () => {
+  const handleCaseStudyClick = () => {
     navigate("/claura-casestudy"); // adjust path to match your route
   };
 
@@ -84,9 +84,8 @@ export default function ConversionScienceSection() {
             key={i}
             aria-label={`Go to slide ${i + 1} (${idPrefix})`}
             onClick={() => setActiveIndex(i)}
-            className={`rounded-full border-0 p-0 transition-all duration-300 ${
-              i === activeIndex ? `${activeSize} bg-white` : `${inactiveSize} bg-white/40`
-            }`}
+            className={`rounded-full border-0 p-0 transition-all duration-300 ${i === activeIndex ? `${activeSize} bg-white` : `${inactiveSize} bg-white/40`
+              }`}
           />
         ))}
       </div>
@@ -94,97 +93,100 @@ export default function ConversionScienceSection() {
   };
 
   return (
-    <div className="w-full bg-black rounded-tl-[40px] overflow-hidden">
+    <>
+      <div className="w-full bg-black rounded-tl-[40px] overflow-hidden">
 
-      {/* ===================== MOBILE / TABLET (below lg) ===================== */}
-      <div className="flex flex-col items-start lg:hidden px-3 py-10 gap-8">
-        <div className="flex flex-col items-start gap-2">
-          <span className="text-white text-xs">
-            {"[ The Science of Conversion ]"}
-          </span>
-          <Dots className="" idPrefix="mobile-top" size="sm" />
-        </div>
-        <h2 className="text-white font-normal text-3xl md:text-3xl lg:text-4xl leading-tight">
-          {active.mobileHeading}
-        </h2>
-
-        <p className="text-white text-sm leading-relaxed">
-          {active.mobileParagraph}
-        </p>
-
-        <button
-          className="flex items-center bg-white text-left py-3 px-7 gap-3 rounded-[100px] border-0"
-           onClick={handleCaseStudyClick}
-        >
-          <span className="text-[#03235E] text-sm">{active.ctaLabel}</span>
-           <ArrowUpRight size={16} />
-        </button>
-
-        <div className="flex flex-col items-start w-full mt-2">
-          <img
-            alt=""
-            src={active.mobileImage}
-            loading="lazy"
-            className="w-full h-auto object-contain"
-          />
-        </div>
-
-        <div className="flex flex-col items-start gap-14">
-          <span className="text-white text-[10px]">[{active.label}]</span>
-          <span className="text-white text-xs leading-relaxed">
-            {active.copy}
-          </span>
-        </div>
-      </div>
-
-      {/* ===================== DESKTOP (lg and up) — fully responsive, full width ===================== */}
-      <div className="hidden lg:flex lg:items-start lg:p-12 xl:p-15 w-full">
-        {/* Left column */}
-        <div className="flex flex-col items-start flex-1 min-w-0">
-          <div className="flex flex-col items-start gap-3 mb-24">
-            <span className="text-white text-sm">
+        {/* ===================== MOBILE / TABLET (below lg) ===================== */}
+        <div className="flex flex-col items-start lg:hidden px-3 py-10 gap-8">
+          <div className="flex flex-col items-start gap-2">
+            <span className="text-white text-xs">
               {"[ The Science of Conversion ]"}
             </span>
-            <Dots idPrefix="desktop" size="sm" />
+            <Dots className="" idPrefix="mobile-top" size="sm" />
           </div>
-          <div className="flex flex-col items-start w-full max-w-[554px]">
-            <h2 className="text-white font-normal text-3xl xl:text-5xl leading-tight mb-8">
-              {active.heading}
-            </h2>
-            <p className="text-white text-base leading-relaxed mb-8 max-w-[468px]">
-              {active.paragraph}
-            </p>
-            <button
-              className="flex items-center bg-white text-left py-4 px-8 gap-4 rounded-[100px] border-0"
-              onClick={handleCaseStudyClick}
-            >
-              <span className="text-[#03235E] text-md">{active.ctaLabel}</span>
-               <ArrowUpRight size={16} />
-            </button>
-          </div>
-        </div>
+          <h2 className="text-white font-normal text-3xl md:text-3xl lg:text-4xl leading-tight">
+            {active.mobileHeading}
+          </h2>
 
-        {/* Right column */}
-        <div className="flex flex-col items-center flex-1 min-w-0 max-w-[880px] pb-1 gap-10">
-          <div className="flex flex-col items-center w-full max-w-[450px] mx-auto">
+          <p className="text-white text-sm leading-relaxed">
+            {active.mobileParagraph}
+          </p>
+
+          <button
+            className="flex items-center bg-white text-left py-3 px-7 gap-3 rounded-[100px] border-0"
+            onClick={handleCaseStudyClick}
+          >
+            <span className="text-[#03235E] text-sm">{active.ctaLabel}</span>
+            <ArrowUpRight size={16} />
+          </button>
+
+          <div className="flex flex-col items-start w-full mt-2">
             <img
               alt=""
-              src={active.desktopImage}
+              src={active.mobileImage}
               loading="lazy"
               className="w-full h-auto object-contain"
             />
           </div>
 
-          <div className="flex flex-col items-start w-full max-w-[450px] mx-auto gap-6">
-            <span className="text-white text-xs mb-5">
-              [ {active.label} ]
-            </span>
+          <div className="flex flex-col items-start gap-14">
+            <span className="text-white text-[10px]">[{active.label}]</span>
             <span className="text-white text-xs leading-relaxed">
               {active.copy}
             </span>
           </div>
         </div>
+
+        {/* ===================== DESKTOP (lg and up) — fully responsive, full width ===================== */}
+        <div className="hidden lg:flex lg:items-start lg:p-12 xl:p-15 w-full">
+          {/* Left column */}
+          <div className="flex flex-col items-start flex-1 min-w-0">
+            <div className="flex flex-col items-start gap-3 mb-24">
+              <span className="text-white text-sm">
+                {"[ The Science of Conversion ]"}
+              </span>
+              <Dots idPrefix="desktop" size="sm" />
+            </div>
+            <div className="flex flex-col items-start w-full max-w-[554px]">
+              <h2 className="text-white font-normal text-3xl xl:text-5xl leading-tight mb-8">
+                {active.heading}
+              </h2>
+              <p className="text-white text-base leading-relaxed mb-8 max-w-[468px]">
+                {active.paragraph}
+              </p>
+              <button
+                className="flex items-center bg-white text-left py-4 px-8 gap-4 rounded-[100px] border-0"
+                onClick={handleCaseStudyClick}
+              >
+                <span className="text-[#03235E] text-md">{active.ctaLabel}</span>
+                <ArrowUpRight size={16} />
+              </button>
+            </div>
+          </div>
+
+          {/* Right column */}
+          <div className="flex flex-col items-center flex-1 min-w-0 max-w-[880px] pb-1 gap-10">
+            <div className="flex flex-col items-center w-full max-w-[450px] mx-auto">
+              <img
+                alt=""
+                src={active.desktopImage}
+                loading="lazy"
+                className="w-full h-auto object-contain"
+              />
+            </div>
+
+            <div className="flex flex-col items-start w-full max-w-[450px] mx-auto gap-6">
+              <span className="text-white text-xs mb-5">
+                [ {active.label} ]
+              </span>
+              <span className="text-white text-xs leading-relaxed">
+                {active.copy}
+              </span>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
+      <div className="h-[200px]" />
+    </>
   );
 }
