@@ -31,14 +31,14 @@ import bottom3M from "../assets/images/home/Herosection/Mobile/mrja1.png";
 import bottom4M from "../assets/images/home/Herosection/Mobile/threesixtycollection.png";
 
 const BRAND_THUMBS = [
-  { d: top1, m: top1M, cls: "left-[-4%] top-[6%] h-[120px] w-[170px] md:h-[190px] md:w-[285px]" },
-  { d: top2, m: top2M, cls: "left-[24%] top-[-2%] h-[110px] w-[170px] md:h-[190px] md:w-[330px]" },
-  { d: top3, m: top3M, cls: "left-[56%] top-[-3%] h-[110px] w-[170px] md:h-[190px] md:w-[330px]" },
-  { d: top4, m: top4M, cls: "right-[-4%] top-[10%] h-[120px] w-[170px] md:h-[190px] md:w-[290px]" },
-  { d: bottom1, m: bottom1M, cls: "bottom-[16%] left-[-4%] h-[120px] w-[170px] md:h-[190px] md:w-[285px]", fade: true },
-  { d: bottom2, m: bottom2M, cls: "bottom-[6%] left-[24%] h-[110px] w-[170px] md:h-[190px] md:w-[330px]", fade: true },
-  { d: bottom3, m: bottom3M, cls: "bottom-[8%] left-[56%] h-[110px] w-[170px] md:h-[190px] md:w-[330px]", fade: true },
-  { d: bottom4, m: bottom4M, cls: "bottom-[14%] right-[-4%] h-[120px] w-[170px] md:h-[190px] md:w-[290px]", fade: true },
+  { d: top1, m: top1M, cls: "left-[-5%] top-[5%] h-[145px] w-[200px] md:h-[230px] md:w-[340px]" },
+  { d: top2, m: top2M, cls: "left-[23%] top-[-2%] h-[135px] w-[200px] md:h-[230px] md:w-[390px]" },
+  { d: top3, m: top3M, cls: "left-[56%] top-[-3%] h-[135px] w-[200px] md:h-[230px] md:w-[390px]" },
+  { d: top4, m: top4M, cls: "right-[-5%] top-[10%] h-[145px] w-[200px] md:h-[230px] md:w-[340px]" },
+  { d: bottom1, m: bottom1M, cls: "bottom-[14%] left-[-5%] h-[145px] w-[200px] md:h-[230px] md:w-[340px]", fade: true },
+  { d: bottom2, m: bottom2M, cls: "bottom-[5%] left-[23%] h-[135px] w-[200px] md:h-[230px] md:w-[390px]", fade: true },
+  { d: bottom3, m: bottom3M, cls: "bottom-[7%] left-[56%] h-[135px] w-[200px] md:h-[230px] md:w-[390px]", fade: true },
+  { d: bottom4, m: bottom4M, cls: "bottom-[12%] right-[-5%] h-[145px] w-[200px] md:h-[230px] md:w-[340px]", fade: true },
 ];
 
 const FADE_MASK = "linear-gradient(to bottom, black 0%, black 55%, transparent 100%)";

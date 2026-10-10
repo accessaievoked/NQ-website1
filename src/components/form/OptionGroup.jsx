@@ -153,15 +153,14 @@ export default function OptionGroup({
                   <span />
                 )}
 
-                <span
-                  aria-hidden="true"
-                  className={`flex h-5 w-5 shrink-0 items-center justify-center rounded-full border transition-colors ${checked
-                    ? "border-[#001931] bg-[#001931] text-white"
-                    : "border-slate-300 bg-white text-transparent"
-                    }`}
-                >
-                  <Check size={12} strokeWidth={3} />
-                </span>
+                {checked && (
+                  <span
+                    aria-hidden="true"
+                    className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full border border-[#001931] bg-[#001931] text-white"
+                  >
+                    <Check size={12} strokeWidth={3} />
+                  </span>
+                )}
               </span>
 
               <span className="block text-[12px] font-semibold leading-tight text-[#03235E]">
