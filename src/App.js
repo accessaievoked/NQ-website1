@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
 import Home from "./pages/Home";
@@ -11,12 +11,21 @@ import ClauraCasestudy from "./pages/ClauraCasestudy";
 import MrjaCasestudy from "./pages/MrjaCasestudy";
 import MiriyamCasestudy from "./pages/MiriyamCasestudy";
 import MasculinoCasestudy from "./pages/MasculinoCasestudy";
+import Onboarding from "./pages/Onboarding";
 import ScrollToTop from "./components/ScrollToTop";
-function App() {
+
+// The onboarding form is a standalone full-screen page (own logo, no site
+// chrome), matching the Figma design.
+const STANDALONE_ROUTES = ["/onboarding"];
+
+function Shell() {
+  const { pathname } = useLocation();
+  const standalone = STANDALONE_ROUTES.includes(pathname.replace(/\/+$/, "") || "/");
+
   return (
-    <BrowserRouter basename="/">
-        <ScrollToTop />
-      <Navbar />
+    <>
+      <ScrollToTop />
+      {!standalone && <Navbar />}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/services" element={<Services />} />
@@ -28,9 +37,17 @@ function App() {
         <Route path="/mrja-casestudy" element={<MrjaCasestudy />} />
         <Route path="/miriyam-casestudy" element={<MiriyamCasestudy />} />
         <Route path="/masculino-casestudy" element={<MasculinoCasestudy />} />
-        
+        <Route path="/onboarding" element={<Onboarding />} />
       </Routes>
-      <Footer/>
+      {!standalone && <Footer />}
+    </>
+  );
+}
+
+function App() {
+  return (
+    <BrowserRouter basename="/">
+      <Shell />
     </BrowserRouter>
   );
 }
