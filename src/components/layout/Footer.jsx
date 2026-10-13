@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 
 export default function Footer() {
@@ -25,7 +26,7 @@ export default function Footer() {
         }
       `}</style>
       <div style={{ position:'relative', zIndex:2 }}>
-        <div style={{ maxWidth:1440, margin:'0 auto', padding:'24px clamp(20px, 4vw, 78px) 140px' }}>
+        <div style={{ maxWidth:1440, margin:'0 auto', padding:'24px clamp(20px, 4vw, 78px) 56px' }}>
           <div style={{ display:'flex', flexWrap:'wrap', justifyContent:'space-between', gap:'clamp(16px,2vw,32px)', alignItems:'start' }}>
             {/* Brand */}
             <div className="reveal" style={{ flex:'0 0 auto' }}>
@@ -164,6 +165,19 @@ export default function Footer() {
               </div>
             </div>
           </div>
+
+          {/* Legal row */}
+          <div style={{ display:'flex', flexWrap:'wrap', justifyContent:'space-between', alignItems:'center', gap:12, marginTop:48, paddingTop:20, borderTop:'1px solid rgba(255,255,255,0.1)' }}>
+            <p style={{ fontSize:13, color:'#a3a3a3' }}>© {new Date().getFullYear()} Next Quarter · AI Evoked Private Limited</p>
+            <Link
+              to="/outreach-policy"
+              style={{ fontSize:13, color:'#a3a3a3', textDecoration:'none', transition:'color .2s' }}
+              onMouseEnter={(e) => { e.currentTarget.style.color = '#ffffff'; }}
+              onMouseLeave={(e) => { e.currentTarget.style.color = '#a3a3a3'; }}
+            >
+              Outreach Policy
+            </Link>
+          </div>
         </div>
 
         {/* Watermark */}
@@ -182,4 +196,4 @@ export default function Footer() {
       </div>
     </footer>
   );
-}
+}
