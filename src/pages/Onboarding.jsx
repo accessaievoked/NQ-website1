@@ -230,7 +230,7 @@ export default function Onboarding() {
 
         {/* Right panel — the form card */}
         <section className="flex w-full justify-center px-4 pb-10 sm:px-8 lg:ml-[50%] lg:min-h-screen lg:w-1/2 lg:items-center lg:px-12 lg:py-12">
-          <div className="w-full max-w-[1080px] rounded-[24px] border border-slate-300 bg-white/90 p-6 shadow-[0_24px_60px_rgba(47,68,100,0.14)] backdrop-blur-md sm:p-9 lg:p-10">
+          <div className="flex h-[calc(100vh-3rem)] w-full max-w-[1080px] flex-col overflow-hidden rounded-[24px] border border-slate-300 bg-white/90 p-6 shadow-[0_24px_60px_rgba(47,68,100,0.14)] backdrop-blur-md sm:p-9 lg:h-[calc(100vh-6rem)] lg:p-10">
             {submitted ? (
               <div className="nq-fade">
                 <FormStatus status={status} onDismiss={() => setStatus(null)} />
@@ -253,10 +253,18 @@ export default function Onboarding() {
                 </button>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} noValidate aria-label="Client onboarding form">
+              <form
+                onSubmit={handleSubmit}
+                noValidate
+                aria-label="Client onboarding form"
+                className="flex h-full min-h-0 flex-col"
+              >
                 <StepProgress steps={formConfig} current={step} onSelect={(i) => { setErrors({}); setStatus(null); setStep(i); }} />
 
-                <div key={step} className="nq-fade mt-5">
+                <div
+                  key={step}
+                  className="nq-fade mt-5 min-h-0 flex-1 overflow-y-auto scrollbar-none"
+                >
                   <p className="text-[10px] font-medium uppercase tracking-[0.18em] text-slate-400">
                     {section.eyebrow || section.title}
                   </p>

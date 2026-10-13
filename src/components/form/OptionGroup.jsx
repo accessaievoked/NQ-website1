@@ -1,6 +1,6 @@
 import React from "react";
 import { Check } from "lucide-react";
-import getIcon from "./iconMap";
+import getIcon, { BRAND_ICONS } from "./iconMap";
 import { isMultiple } from "../../utils/formHelpers";
 
 export default function OptionGroup({
@@ -71,7 +71,8 @@ export default function OptionGroup({
     >
       {orderedOptions.map((option) => {
         const checked = isSelected(option.value);
-        const Icon = option.icon ? getIcon(option.icon) : null;
+        const brandIcon = option.icon ? BRAND_ICONS[option.icon] : null;
+        const Icon = option.icon && !brandIcon ? getIcon(option.icon) : null;
 
         const isOther =
           option.value === "Other" || option.title === "Other";
@@ -137,7 +138,22 @@ export default function OptionGroup({
                 peer-focus-visible:ring-2 peer-focus-visible:ring-[#03235E]/40 peer-focus-visible:ring-offset-2`}
             >
               <span className="flex items-start justify-between gap-2">
-                {Icon ? (
+                {brandIcon ? (
+                  <span
+                    className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg"
+                    style={{
+                      backgroundColor: option.color
+                        ? `${option.color}1f`
+                        : "#eef4ff",
+                    }}
+                  >
+                    <img
+                      src={brandIcon}
+                      alt=""
+                      className="h-5 w-5 object-contain"
+                    />
+                  </span>
+                ) : Icon ? (
                   <span
                     className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg"
                     style={{

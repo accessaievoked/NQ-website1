@@ -227,7 +227,7 @@ const formConfig = [
             value: "Email",
             title: "Email",
             explanation: "Email marketing and automations.",
-            icon: "mail",
+            icon: "gmail",
             color: "#EA4335",
           },
           {
@@ -416,13 +416,6 @@ const formConfig = [
             explanation: "Customer stories and experiences.",
             icon: "message",
             color: "#10B981",
-          },
-          {
-            value: "Reviews",
-            title: "Reviews",
-            explanation: "Customer reviews and ratings.",
-            icon: "star",
-            color: "#F59E0B",
           },
           {
             value: "Before - After Content",

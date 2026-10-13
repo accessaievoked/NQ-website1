@@ -4,15 +4,19 @@
 @tailwind components;
 @tailwind utilities;
 
-html, body {
+html,
+body {
   font-family: 'Public Sans', sans-serif;
 }
-html, body {
+
+html,
+body {
   overflow-x: hidden;
   max-width: 100%;
 }
 
-img, video {
+img,
+video {
   max-width: 100%;
   height: auto;
   display: block;
@@ -26,11 +30,22 @@ img, video {
 ::-webkit-scrollbar {
   width: 6px;
 }
+
 ::-webkit-scrollbar-thumb {
   background-color: #fff;
   border-radius: 0px;
 }
+
 html {
   scrollbar-width: thin;
   scrollbar-color: #fff transparent;
+}
+
+.scrollbar-none {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
 }
