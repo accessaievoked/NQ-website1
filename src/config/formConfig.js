@@ -1,11 +1,11 @@
 /**
  * NQ Client Onboarding Form
  *
- * 30 existing question IDs preserved for Google Sheets compatibility.
+ * Compound questions are split into single-answer fields; each question id
+ * is one Google Sheet column (see the Apps Script for the order).
  *
  * Layout:
  * - 8 total steps
- * - Maximum 6 questions per step
  * - Icon-choice questions occupy their own steps
  * - Business Stage: single-select icon cards
  * - Ad Platforms: multi-select icon cards
@@ -17,7 +17,7 @@
  */
 
 const formConfig = [
-  // STEP 1 — Business Basics (5 questions)
+  // STEP 1 — Business Basics
   {
     id: "business",
     title: "Business Information",
@@ -50,24 +50,37 @@ const formConfig = [
         placeholder: "you@brand.com",
       },
       {
-        id: "brandWebsite",
-        name: "Brand name & website URL",
+        id: "brandName",
+        name: "Brand name",
         required: true,
         inputType: "text",
-        placeholder: "Brand name + website URL",
+        placeholder: "Your brand name",
+      },
+      {
+        id: "websiteUrl",
+        name: "Website URL",
+        required: true,
+        inputType: "url",
+        placeholder: "https://yourbrand.com",
       },
       {
         id: "industry",
-        name: "Industry/category & products/services offered",
+        name: "Industry / category",
         required: true,
-        inputType: "textarea",
-        placeholder:
-          "Tell us about your industry and what you sell...",
+        inputType: "text",
+        placeholder: "e.g. Fashion, Skincare, SaaS",
+      },
+      {
+        id: "productsServices",
+        name: "Products / services offered",
+        required: true,
+        inputType: "text",
+        placeholder: "Tell us what you sell...",
       },
     ],
   },
 
-  // STEP 2 — Business & Market (5 questions)
+  // STEP 2 — Business & Market
   {
     id: "businessMarket",
     title: "Business & Market",
@@ -81,42 +94,80 @@ const formConfig = [
     questions: [
       {
         id: "targetMarket",
-        name: "Target market, locations & business model",
-        required: true,
-        inputType: "textarea",
-        placeholder:
-          "Describe your target market, locations and business model...",
-      },
-      {
-        id: "revenue",
-        name: "Current monthly revenue & target monthly revenue",
+        name: "Target market",
         required: true,
         inputType: "text",
-        placeholder: "e.g. ₹5L current, ₹15L target",
+        placeholder: "Who are you selling to?",
       },
       {
-        id: "competitorsUSP",
-        name: "Main competitors & your unique selling proposition (USP)",
+        id: "locations",
+        name: "Locations you sell to",
+        required: true,
+        inputType: "text",
+        placeholder: "e.g. India, UAE, US",
+      },
+      {
+        id: "businessModel",
+        name: "Business model",
+        required: true,
+        inputType: "text",
+        placeholder: "e.g. D2C, B2B, marketplace, subscription",
+      },
+      {
+        id: "currentRevenue",
+        name: "Current monthly revenue",
+        required: true,
+        inputType: "text",
+        placeholder: "e.g. ₹5L",
+      },
+      {
+        id: "targetRevenue",
+        name: "Target monthly revenue",
+        required: true,
+        inputType: "text",
+        placeholder: "e.g. ₹15L",
+      },
+      {
+        id: "competitors",
+        name: "Main competitors",
         required: false,
-        inputType: "textarea",
-        placeholder:
-          "Who are your main competitors and what makes you different?",
+        inputType: "text",
+        placeholder: "Who are your main competitors?",
+      },
+      {
+        id: "usp",
+        name: "Your unique selling proposition (USP)",
+        required: false,
+        inputType: "text",
+        placeholder: "What makes you different?",
       },
       {
         id: "bestSellingProducts",
-        name: "Key/best-selling products & any upcoming launches",
+        name: "Key / best-selling products",
         required: true,
-        inputType: "textarea",
-        placeholder:
-          "Tell us about your best-selling products and upcoming launches...",
+        inputType: "text",
+        placeholder: "Tell us about your best-selling products...",
+      },
+      {
+        id: "upcomingLaunches",
+        name: "Upcoming launches",
+        required: false,
+        inputType: "text",
+        placeholder: "Any new products or launches planned?",
       },
       {
         id: "businessGoal",
-        name: "Primary business goal & timeline to hit it",
+        name: "Primary business goal",
         required: true,
-        inputType: "textarea",
-        placeholder:
-          "What is your main goal and when do you want to achieve it?",
+        inputType: "text",
+        placeholder: "What is your main goal?",
+      },
+      {
+        id: "goalTimeline",
+        name: "Timeline to hit it",
+        required: true,
+        inputType: "text",
+        placeholder: "e.g. 6 months",
       },
     ],
   },
@@ -243,7 +294,7 @@ const formConfig = [
     ],
   },
 
-  // STEP 5 — Marketing Performance (5 questions)
+  // STEP 5 — Marketing Performance
   {
     id: "marketingHistory",
     title: "Marketing Performance",
@@ -256,19 +307,60 @@ const formConfig = [
       "Past results and experiments help us identify opportunities and avoid repeating mistakes.",
     questions: [
       {
-        id: "monthlySpend",
-        name: "Monthly spend by platform & total marketing spend",
-        required: false,
-        inputType: "textarea",
-        placeholder:
-          "Google: ₹___ | Meta: ₹___ | Other: ₹___ | Total: ₹___",
-      },
-      {
-        id: "roasCAC",
-        name: "Historical ROAS & CAC",
+        id: "spendGoogle",
+        name: "Monthly spend: Google Ads",
         required: false,
         inputType: "text",
-        placeholder: "e.g. ROAS 3.2x, CAC ₹850",
+        placeholder: "e.g. ₹1L",
+      },
+      {
+        id: "spendMeta",
+        name: "Monthly spend: Meta Ads",
+        required: false,
+        inputType: "text",
+        placeholder: "e.g. ₹1L",
+      },
+      {
+        id: "spendWhatsApp",
+        name: "Monthly spend: WhatsApp",
+        required: false,
+        inputType: "text",
+        placeholder: "e.g. ₹20K",
+      },
+      {
+        id: "spendEmail",
+        name: "Monthly spend: Email",
+        required: false,
+        inputType: "text",
+        placeholder: "e.g. ₹10K",
+      },
+      {
+        id: "spendOther",
+        name: "Monthly spend: Other platforms",
+        required: false,
+        inputType: "text",
+        placeholder: "e.g. ₹30K",
+      },
+      {
+        id: "totalMarketingSpend",
+        name: "Total monthly marketing spend",
+        required: false,
+        inputType: "text",
+        placeholder: "e.g. ₹3L",
+      },
+      {
+        id: "historicalRoas",
+        name: "Historical ROAS",
+        required: false,
+        inputType: "text",
+        placeholder: "e.g. 3.2x",
+      },
+      {
+        id: "historicalCac",
+        name: "Historical CAC",
+        required: false,
+        inputType: "text",
+        placeholder: "e.g. ₹850",
       },
       {
         id: "purchasesLeads",
@@ -278,25 +370,37 @@ const formConfig = [
         placeholder: "Enter approximate number",
       },
       {
-        id: "campaignPerformance",
-        name: "Best- and worst-performing campaigns/creatives",
+        id: "bestCampaigns",
+        name: "Best-performing campaigns / creatives",
         required: false,
-        inputType: "textarea",
-        placeholder:
-          "Which campaigns or creatives performed best and worst?",
+        inputType: "text",
+        placeholder: "Which campaigns or creatives worked best?",
+      },
+      {
+        id: "worstCampaigns",
+        name: "Worst-performing campaigns / creatives",
+        required: false,
+        inputType: "text",
+        placeholder: "Which campaigns or creatives performed worst?",
       },
       {
         id: "previousAgencies",
-        name: "Previous agencies/freelancers & their strategy",
+        name: "Previous agencies / freelancers",
         required: false,
-        inputType: "textarea",
-        placeholder:
-          "Who did you work with and what strategy did they use?",
+        inputType: "text",
+        placeholder: "Who did you work with before?",
+      },
+      {
+        id: "previousStrategy",
+        name: "Strategy they used",
+        required: false,
+        inputType: "text",
+        placeholder: "What strategy did they follow?",
       },
     ],
   },
 
-  // STEP 6 — Customers & Products (6 questions)
+  // STEP 6 — Customers & Products
   {
     id: "customers",
     title: "Customers & Products",
@@ -309,55 +413,123 @@ const formConfig = [
       "Understanding customer motivations and product margins helps us identify growth opportunities.",
     questions: [
       {
-        id: "previousStrategyResults",
-        name:
-          "What worked, what didn't, and why previous campaigns or partnerships stopped",
+        id: "whatWorked",
+        name: "What worked in previous campaigns",
         required: false,
-        inputType: "textarea",
-        placeholder:
-          "What worked? What didn't? What would you change?",
+        inputType: "text",
+        placeholder: "What worked well?",
       },
       {
-        id: "targetCustomer",
-        name:
-          "Target customer: demographics, location, age range & gender split",
+        id: "whatDidntWork",
+        name: "What didn't work, and why",
+        required: false,
+        inputType: "text",
+        placeholder: "What didn't work and why?",
+      },
+      {
+        id: "whyStopped",
+        name: "Why previous campaigns / agency stopped",
+        required: false,
+        inputType: "text",
+        placeholder: "Why did it end?",
+      },
+      {
+        id: "customerDemographics",
+        name: "Target customer demographics",
         required: true,
-        inputType: "textarea",
+        inputType: "text",
         placeholder: "Describe your typical customer...",
       },
       {
-        id: "customerPainPoints",
-        name: "Customer pain points & purchase motivations",
+        id: "customerLocation",
+        name: "Target customer location",
         required: true,
-        inputType: "textarea",
-        placeholder:
-          "What problems are customers trying to solve?",
+        inputType: "text",
+        placeholder: "e.g. Tier 1 cities in India",
+      },
+      {
+        id: "customerAge",
+        name: "Target customer age range",
+        required: true,
+        inputType: "text",
+        placeholder: "e.g. 25–40",
+      },
+      {
+        id: "genderSplit",
+        name: "Gender split",
+        required: true,
+        inputType: "text",
+        placeholder: "e.g. 70% women / 30% men",
+      },
+      {
+        id: "customerPainPoints",
+        name: "Customer pain points",
+        required: true,
+        inputType: "text",
+        placeholder: "What problems are customers trying to solve?",
+      },
+      {
+        id: "purchaseMotivations",
+        name: "Purchase motivations",
+        required: true,
+        inputType: "text",
+        placeholder: "What makes them buy?",
       },
       {
         id: "buyingFrequency",
-        name:
-          "Average buying frequency & new-vs-returning customer split",
+        name: "Average buying frequency",
         required: false,
-        inputType: "textarea",
-        placeholder:
-          "e.g. 2 purchases/year, 70% new / 30% returning",
+        inputType: "text",
+        placeholder: "e.g. 2 purchases/year",
       },
       {
-        id: "productMargins",
-        name: "Best-selling, highest-margin & low-margin products",
+        id: "newVsReturning",
+        name: "New vs returning customer split",
+        required: false,
+        inputType: "text",
+        placeholder: "e.g. 70% new / 30% returning",
+      },
+      {
+        id: "topSellers",
+        name: "Best-selling products",
         required: true,
-        inputType: "textarea",
-        placeholder:
-          "List your key products and their margin profile...",
+        inputType: "text",
+        placeholder: "List your best sellers...",
+      },
+      {
+        id: "highMarginProducts",
+        name: "Highest-margin products",
+        required: true,
+        inputType: "text",
+        placeholder: "Which products earn the most margin?",
+      },
+      {
+        id: "lowMarginProducts",
+        name: "Low-margin products",
+        required: true,
+        inputType: "text",
+        placeholder: "Which products have low margins?",
       },
       {
         id: "productsToScale",
-        name:
-          "Products to scale, liquidate, or seasonal/upcoming launches",
+        name: "Products to scale",
         required: true,
-        inputType: "textarea",
-        placeholder:
-          "Which products should we focus on and why?",
+        inputType: "text",
+        placeholder: "Which products should we focus on and why?",
+      },
+      {
+        id: "productsToLiquidate",
+        name: "Products to liquidate",
+        required: false,
+        inputType: "text",
+        placeholder: "Any stock you want to clear?",
+      },
+      {
+        id: "seasonalLaunches",
+        name: "Seasonal / upcoming launches",
+        required: false,
+        inputType: "text",
+        placeholder: "Any seasonal or upcoming products?",
       },
     ],
   },
@@ -437,7 +609,7 @@ const formConfig = [
     ],
   },
 
-  // STEP 8 — Goals & Requirements (6 questions)
+  // STEP 8 — Goals & Requirements
   {
     id: "goals",
     title: "Goals & Requirements",
@@ -458,12 +630,17 @@ const formConfig = [
       },
       {
         id: "inHouseCreative",
-        name:
-          "In-house creative production capability & monthly output capacity",
+        name: "In-house creative production capability",
         required: false,
-        inputType: "textarea",
-        placeholder:
-          "Tell us about your team and monthly creative capacity...",
+        inputType: "text",
+        placeholder: "Tell us about your creative team and setup...",
+      },
+      {
+        id: "creativeCapacity",
+        name: "Monthly creative output capacity",
+        required: false,
+        inputType: "text",
+        placeholder: "e.g. 20 static + 8 videos",
       },
       {
         id: "brandGuidelines",
@@ -474,30 +651,53 @@ const formConfig = [
       },
       {
         id: "revenueTarget",
-        name:
-          "Monthly revenue target, order/lead target & marketing budget",
+        name: "Monthly revenue target",
         required: true,
-        inputType: "textarea",
-        placeholder:
-          "Revenue: ₹___ | Orders/Leads: ___ | Marketing budget: ₹___",
+        inputType: "text",
+        placeholder: "e.g. ₹15L",
       },
       {
-        id: "targetMetrics",
-        name: "Target CAC, target ROAS & break-even ROAS",
+        id: "orderLeadTarget",
+        name: "Monthly order / lead target",
+        required: true,
+        inputType: "text",
+        placeholder: "e.g. 1,500 orders",
+      },
+      {
+        id: "marketingBudget",
+        name: "Monthly marketing budget",
+        required: true,
+        inputType: "text",
+        placeholder: "e.g. ₹3L",
+      },
+      {
+        id: "targetCac",
+        name: "Target CAC",
         required: false,
         inputType: "text",
-        placeholder:
-          "e.g. CAC ₹500 | Target ROAS 4x | Break-even ROAS 2.5x",
+        placeholder: "e.g. ₹500",
+      },
+      {
+        id: "targetRoas",
+        name: "Target ROAS",
+        required: false,
+        inputType: "text",
+        placeholder: "e.g. 4x",
+      },
+      {
+        id: "breakEvenRoas",
+        name: "Break-even ROAS",
+        required: false,
+        inputType: "text",
+        placeholder: "e.g. 2.5x",
       },
       {
         id: "constraints",
         name: "Non-negotiables or constraints",
-        hint:
-          "Budget caps, brand restrictions, platform exclusions, etc.",
+        hint: "Budget caps, brand restrictions, platform exclusions, etc.",
         required: false,
-        inputType: "textarea",
-        placeholder:
-          "Anything we should know before we start...",
+        inputType: "text",
+        placeholder: "Anything we should know before we start...",
       },
     ],
   },

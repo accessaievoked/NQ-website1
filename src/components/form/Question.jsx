@@ -12,7 +12,6 @@ const BASE_INPUT =
   "w-full border bg-white/90 text-[14px] text-[#03235E] placeholder:text-slate-400 outline-none transition " +
   "focus:border-[#03235E] focus:ring-2 focus:ring-[#03235E]/15";
 const PILL = `${BASE_INPUT} h-12 rounded-full px-5`;
-const AREA = `${BASE_INPUT} min-h-[24px] max-h-[64px] overflow-y-auto resize-y rounded-[22px] px-5 py-3.5 leading-relaxed`;
 
 const borderFor = (invalid) => (invalid ? "border-red-400" : "border-slate-200");
 
@@ -43,17 +42,6 @@ export default function Question({ question, value, otherValue, error, onChange,
         onChange={onChange}
         describedBy={describedBy}
         invalid={invalid}
-      />
-    );
-  } else if (inputType === "textarea") {
-    control = (
-      <textarea
-        {...common}
-        rows={3}
-        value={value}
-        placeholder={placeholder}
-        onChange={(e) => onChange(e.target.value)}
-        className={`${AREA} ${borderFor(invalid)}`}
       />
     );
   } else if (inputType === "tel") {

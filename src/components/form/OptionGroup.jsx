@@ -42,7 +42,7 @@ export default function OptionGroup({
     display !== "cards"
       ? "flex flex-wrap gap-2 outline-none"
       : hasIcons
-        ? "grid grid-cols-2 gap-2 outline-none"
+        ? "grid grid-cols-1 gap-2.5 outline-none md:grid-cols-2 md:gap-2"
         : "grid grid-cols-1 gap-3 outline-none min-[420px]:grid-cols-2";
 
   // Put "Other" last and make it span the entire grid width.
@@ -119,8 +119,7 @@ export default function OptionGroup({
           <label
             key={option.value}
             htmlFor={inputId}
-            className={`block h-full cursor-pointer ${hasIcons && isOther ? "col-span-2" : ""
-              }`}
+            className={`block h-full cursor-pointer ${hasIcons && isOther ? "md:col-span-2" : ""}`}
           >
             <input
               id={inputId}
@@ -132,60 +131,49 @@ export default function OptionGroup({
             />
 
             <span
-              className={`relative flex h-full min-h-[128px] flex-col gap-1.5 rounded-xl border bg-white p-2.5 transition-all
+              className={`relative flex h-full min-h-[64px] items-center gap-3 rounded-[22px] border bg-white px-4 py-3 transition-all md:min-h-[128px] md:flex-col md:items-start md:gap-1.5 md:rounded-xl md:p-2.5
                 border-slate-200 hover:border-[#03235E]/40 hover:shadow-sm
                 peer-checked:border-[#03235E] peer-checked:bg-[#eef4ff] peer-checked:shadow-[0_0_0_1px_#03235E]
                 peer-focus-visible:ring-2 peer-focus-visible:ring-[#03235E]/40 peer-focus-visible:ring-offset-2`}
             >
-              <span className="flex items-start justify-between gap-2">
-                {brandIcon ? (
-                  <span
-                    className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg"
-                    style={{
-                      backgroundColor: option.color
-                        ? `${option.color}1f`
-                        : "#eef4ff",
-                    }}
-                  >
-                    <img
-                      src={brandIcon}
-                      alt=""
-                      className="h-5 w-5 object-contain"
-                    />
-                  </span>
-                ) : Icon ? (
-                  <span
-                    className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg"
-                    style={{
-                      backgroundColor: option.color
-                        ? `${option.color}1f`
-                        : "#eef4ff",
-                      color: option.color || "#03235E",
-                    }}
-                  >
-                    <Icon size={15} aria-hidden="true" />
-                  </span>
-                ) : (
-                  <span />
-                )}
+              {brandIcon ? (
+                <span
+                  className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl md:h-7 md:w-7 md:rounded-lg"
+                  style={{
+                    backgroundColor: option.color ? `${option.color}1f` : "#eef4ff",
+                  }}
+                >
+                  <img src={brandIcon} alt="" className="h-6 w-6 object-contain md:h-5 md:w-5" />
+                </span>
+              ) : Icon ? (
+                <span
+                  className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl md:h-7 md:w-7 md:rounded-lg"
+                  style={{
+                    backgroundColor: option.color ? `${option.color}1f` : "#eef4ff",
+                    color: option.color || "#03235E",
+                  }}
+                >
+                  <Icon size={18} className="md:h-[15px] md:w-[15px]" aria-hidden="true" />
+                </span>
+              ) : null}
 
-                {checked && (
-                  <span
-                    aria-hidden="true"
-                    className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full border border-[#001931] bg-[#001931] text-white"
-                  >
-                    <Check size={12} strokeWidth={3} />
+              <span className="min-w-0 flex-1 md:w-full md:flex-none">
+                <span className="block text-[14px] font-semibold leading-tight text-[#03235E] md:text-[12px]">
+                  {option.title}
+                </span>
+                {option.explanation && (
+                  <span className="mt-0.5 block text-[12px] leading-snug text-slate-500 md:mt-1.5 md:text-[11px]">
+                    {option.explanation}
                   </span>
                 )}
               </span>
 
-              <span className="block text-[12px] font-semibold leading-tight text-[#03235E]">
-                {option.title}
-              </span>
-
-              {option.explanation && (
-                <span className="block text-[11px] leading-snug text-slate-500">
-                  {option.explanation}
+              {checked && (
+                <span
+                  aria-hidden="true"
+                  className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full border border-[#001931] bg-[#001931] text-white md:absolute md:right-2.5 md:top-2.5"
+                >
+                  <Check size={12} strokeWidth={3} />
                 </span>
               )}
             </span>
