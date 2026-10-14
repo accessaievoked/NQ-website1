@@ -209,7 +209,7 @@ export default function Onboarding() {
   };
 
   return (
-    <main className="relative h-[100svh] w-full overflow-clip bg-[linear-gradient(180deg,#ffe4f2_0%,#f3e6f7_25%,#dff6ff_55%,#ffffff_85%)] md:bg-[linear-gradient(125deg,#ffe4f2_0%,#f3e6f7_32%,#dff6ff_70%,#e9f1ff_100%)] lg:h-auto lg:min-h-screen lg:overflow-visible font-['Public_Sans',sans-serif]">
+    <main className="relative h-[100svh] w-full overflow-clip bg-[linear-gradient(180deg,#ffe4f2_0%,#f3e6f7_25%,#dff6ff_55%,#ffffff_85%)] md:bg-[linear-gradient(125deg,#ffe4f2_0%,#f3e6f7_32%,#dff6ff_70%,#e9f1ff_100%)] lg:h-auto lg:min-h-screen lg:overflow-clip font-['Public_Sans',sans-serif]">
       <style>{`
         @keyframes nqFadeUp { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
         .nq-fade { animation: nqFadeUp .35s ease-out both; }
@@ -243,9 +243,9 @@ export default function Onboarding() {
           <FlipStage
             stepKey={submitted ? "done" : step}
             onFlipChange={setFlipping}
-            className="h-full w-full max-w-[1080px] rounded-[24px] shadow-[0_24px_60px_rgba(47,68,100,0.14)] lg:h-[calc(100vh-6rem)]"
+            className="h-full w-full max-w-[1080px] rounded-[24px] lg:h-[calc(100vh-6rem)]"
           >
-          <div className="flex h-full w-full flex-col overflow-hidden rounded-[24px] border border-slate-300 bg-white/90 p-5 backdrop-blur-md sm:p-9 lg:p-10">
+          <div className="flex h-full w-full flex-col overflow-hidden rounded-[24px] border border-slate-300 bg-white/90 p-5 shadow-[0_24px_60px_rgba(47,68,100,0.14)] backdrop-blur-md sm:p-9 lg:p-10">
             {submitted ? (
               <div className="nq-fade">
                 <FormStatus status={status} onDismiss={() => setStatus(null)} />
