@@ -12,6 +12,7 @@ import MrjaCasestudy from "./pages/MrjaCasestudy";
 import MiriyamCasestudy from "./pages/MiriyamCasestudy";
 import MasculinoCasestudy from "./pages/MasculinoCasestudy";
 import Onboarding from "./pages/Onboarding";
+import OutreachPolicy from "./pages/OutreachPolicy";
 import ScrollToTop from "./components/ScrollToTop";
 
 // The onboarding form is a standalone full-screen page (own logo, no site
@@ -38,6 +39,7 @@ function Shell() {
         <Route path="/miriyam-casestudy" element={<MiriyamCasestudy />} />
         <Route path="/masculino-casestudy" element={<MasculinoCasestudy />} />
         <Route path="/onboarding" element={<Onboarding />} />
+        <Route path="/outreach-policy" element={<OutreachPolicy />} />
       </Routes>
       {!standalone && <Footer />}
     </>
